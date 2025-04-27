@@ -9,15 +9,18 @@ int main(){
 
     scanf("%d", &a);
 
-    while (a != 0){
-        int tmp1 = a % 10;
-        a /= 10;
-        int tmp2 = a % 10;
+    int prevDigit = a % 10;
+    a /= 10;
 
-        if( tmp1 <= tmp2){
+    while (a != 0){
+        int currentDigit = a % 10;
+
+        if( currentDigit >= prevDigit){
             flag = false;
             break;
         }
+
+        prevDigit = currentDigit;
         a /= 10;
     }
     
