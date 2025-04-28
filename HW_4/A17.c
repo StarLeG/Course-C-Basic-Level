@@ -1,11 +1,23 @@
 #include <stdio.h>
 #include <stdlib.h>
 
+/*
+                    Какое время года
+    Ввести номер месяца и вывести название времени года.
+
+    Формат входных данных
+    Целое число от 1 до 12 - номер месяца.
+    Формат результата
+    Время года на английском: winter, spring, summer, autumn
+*/
+
 int main()
 {
     int numbMonth;
 
-    scanf("%d", &numbMonth);
+    int result = scanf("%d", &numbMonth);
+    if(result != 1) abort();
+
     if(numbMonth < 1 || numbMonth > 12) abort();
 
     switch (numbMonth) {

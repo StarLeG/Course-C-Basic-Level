@@ -1,4 +1,16 @@
 #include <stdio.h>
+#include <stdlib.h>
+
+/*
+                Максимальная цифра
+    Дано трехзначное число, напечатать макисмальную цифру
+
+    Формат входных данных
+    Целое положительное трехзначное число
+
+    Формат результата
+    Одна цифр
+*/
 
 int main()
 {
@@ -7,7 +19,8 @@ int main()
     int secondNumb;
     int thirdNumb;
 
-    scanf("%d", &a);
+    int result = scanf("%d", &a);
+    if(result != 1) abort();
 
     firstNumb = a / 100;
     secondNumb = (a - (firstNumb * 100)) / 10;
