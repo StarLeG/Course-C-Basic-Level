@@ -13,7 +13,7 @@
     Последовательность цифр введенного числа в обратном порядке через пробел
 */
 
-int printDigits(int x);
+void printDigits(int x);
 
 int main(){
     int x;
@@ -26,7 +26,7 @@ int main(){
     return 0;
 }
 
-int printDigits(int x){
+void printDigits(int x){
     if (x < 0) abort();
     
     if (x < 10) {
