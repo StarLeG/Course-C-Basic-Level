@@ -3,14 +3,14 @@
 #include <stdbool.h>
 
 /*
-        Циклический сдвиг массива вправо
-    Считать массив из 10 элементов и выполнить циклический сдвиг ВПРАВО на 1.
+        Циклический сдвиг массива вправо на 4
+    Считать массив из 12 элементов и выполнить циклический сдвиг ВПРАВО на 4 элемента.
 
     Формат входных данных
-    10 целых чисел через пробел
+    12 целых чисел через пробел
 
     Формат результата
-    10 целых чисел через пробел сдвинутых вправо на 1 элемент циклически
+    12 целых чисел через пробел
 */
 
 bool initArray(int *array, int size){
@@ -51,12 +51,12 @@ void arrayRotateRight(int *array, int size, int shift){
 }
 
 int main(){
-    const int SIZE = 10;
+    const int SIZE = 12;
     int array[SIZE];
 
     if(initArray(array, SIZE)) abort();
 
-    arrayRotateRight(array, SIZE, 1);  
+    arrayRotateRight(array, SIZE, 4);  
     
     printArray(array, SIZE);
 
