@@ -30,8 +30,8 @@ void find_Min_Max(int *array,
                  int *idx_Min,
                  int *min){
 
-    *idx_Min = 0;
-    *idx_Max = 0;
+    *idx_Min = 1;
+    *idx_Max = 1;
     *min = array[0];
     *max = array[0];             
 
@@ -59,7 +59,9 @@ int main(){
 
     find_Min_Max(array, SIZE, &idx_Max, &max, &idx_Min, &min);
 
-    printf("%d %d %d %d", idx_Max, max, idx_Min, min);
+    printf("%d %d %d %d\n", idx_Max, max, idx_Min, min);
+
+    system("pause");
 
 
     return 0;    
