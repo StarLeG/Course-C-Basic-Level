@@ -19,13 +19,12 @@
 
 int acounter(void){
     char ch;
-    int cnt = 0;
+    static int cnt = 0;
 
-    do{
-        ch = getchar();
-        if(ch == 'a') cnt++;
-
-    }while(ch != '.');
+    ch = getchar();      
+        
+    if(ch == 'a') cnt++;
+    if(ch != '.') acounter();    
 
     return cnt;
 }
