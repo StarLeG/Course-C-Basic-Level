@@ -30,13 +30,28 @@ void printArray(const int *array, const int size){
     }
 }
 
+bool isTensZero(const int n){
+    return (abs(n) / 10) % 10 == 0;
+}  
+
 int main(){
     const int SIZE = 10;
-    int array[SIZE];
+    int array1[SIZE];
+    int array2[SIZE];
+    int cnt = -1;
 
-    if(initArray(array, SIZE)) abort();    
+    if(initArray(array1, SIZE)) abort();
+    
+    for(int i = 0; i < SIZE; i++){
+        if(isTensZero(array1[i])){
+            array2[cnt + 1] = array1[i];
+            cnt++;
+        } 
+    }
 
-    printArray(array, SIZE);
+    if(cnt == -1) return 0;
+
+    printArray(array2, cnt + 1);
 
     return 0;
 }
