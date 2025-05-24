@@ -15,7 +15,7 @@
     Цифры через пробел
 */
 
-#define ARRAY_SIZE(arr) (sizeof(arr) / sizeof((arr)[0]))
+//#define ARRAY_SIZE(arr) (sizeof(arr) / sizeof((arr)[0]))
 
 int countDigit(int num){
     if(num == 0) return 1;
@@ -30,9 +30,9 @@ int countDigit(int num){
     return cnt;
 }
 
-void printArray(const int* array){    
+void printArray(const int* array, const int size){    
 
-    for(int i = 0; i < ARRAY_SIZE(array); i++){
+    for(int i = size - 1; i >= 0; i--){
         printf("%d ", array[i]);
     }
     printf("\n");
@@ -59,14 +59,13 @@ int main(){
     int number = 0;
     
     if(scanf("%d", &number) != 1 || number < 0) abort();
-     
 
-    int array[number];
+    int size = countDigit(number);    
+    
+    int array[size];
 
     splitNumberIntoDigits(number, array);
-    
 
-    printArray(array);
-
+    printArray(array, size);
 
 }
