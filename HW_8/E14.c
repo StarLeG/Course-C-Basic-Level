@@ -20,7 +20,7 @@
 int array2[SIZE];
 int cnt = -1;
 
-bool initArray(int *array, int size){
+bool initArray(int *array, const int size){
     int n;
     for(int i = 0; i < size; i++){
         if(scanf("%d", &n) != 1) return true;
@@ -51,7 +51,7 @@ void bubleSort(int *array, const int size){
     }
 }
 
-void findDuplicates(int arr[], const int size){
+void findDuplicates(const int arr[], const int size){
      for (int i = 1; i < size; i++) {
         if (arr[i] == arr[i - 1]) {  
             array2[++cnt] = arr[i];

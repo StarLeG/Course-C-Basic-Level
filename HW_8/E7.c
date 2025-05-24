@@ -14,7 +14,7 @@
     10 целых элементов массива через пробел.
 */
 
-bool initArray(int *array, int size){
+bool initArray(int *array, const int size){
     int n;
     for(int i = 0; i < size; i++){
         if(scanf("%d", &n) != 1) return true;
@@ -32,7 +32,7 @@ void printArray(const int *array, const int size){
     
 }
 
-void reverseArray(int *array, int size){
+void reverseArray(int *array, const int size){
 
     
     int half = size / 2;
@@ -53,8 +53,8 @@ void reverseArray(int *array, int size){
 
 
 int main(){
-    const int SIZE = 10;
-    int array[SIZE];
+    #define SIZE  10
+    int array[SIZE] = {0};
 
     if(initArray(array, SIZE)) abort();
 

@@ -13,7 +13,7 @@
     12 целых чисел через пробел
 */
 
-bool initArray(int *array, int size){
+bool initArray(int *array, const int size){
     int n;
     for(int i = 0; i < size; i++){
         if(scanf("%d", &n) != 1) return true;
@@ -51,8 +51,8 @@ void arrayRotateRight(int *array, int size, int shift){
 }
 
 int main(){
-    const int SIZE = 12;
-    int array[SIZE];
+    #define SIZE 12
+    int array[SIZE] = {0};
 
     if(initArray(array, SIZE)) abort();
 

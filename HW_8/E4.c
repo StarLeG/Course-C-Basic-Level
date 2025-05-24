@@ -14,7 +14,7 @@
     Сумма двух максимальных элементов.
 */
 
-bool initArray(int *array, int size){
+bool initArray(int *array, const int size){
     int n;
     for(int i = 0; i < size; i++){
         if(scanf("%d", &n) != 1) return true;
@@ -24,7 +24,7 @@ bool initArray(int *array, int size){
     return false;
 }
 
-int maxTwoSum(int* array, int size){
+int maxTwoSum(const int* array, const int size){
 
     int max1 = INT_MIN;
     int max2 = max1;
@@ -51,8 +51,8 @@ int maxTwoSum(int* array, int size){
 
 int main(){
 
-    const int SIZE = 10;
-    int array[SIZE];
+    #define SIZE 10
+    int array[SIZE] = {0};
 
     if(initArray(array, SIZE)) abort();
 

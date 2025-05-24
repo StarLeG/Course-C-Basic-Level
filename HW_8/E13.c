@@ -13,7 +13,7 @@
     Целые числа через пробел, у котороых вторая с конца цифра - ноль
 */
 
-bool initArray(int *array, int size){
+bool initArray(int *array, const int size){
     int n;
     for(int i = 0; i < size; i++){
         if(scanf("%d", &n) != 1) return true;
@@ -35,9 +35,9 @@ bool isTensZero(const int n){
 }  
 
 int main(){
-    const int SIZE = 10;
-    int array1[SIZE];
-    int array2[SIZE];
+    #define SIZE 10
+    int array1[SIZE] = {0};
+    int array2[SIZE] = {0};
     int cnt = -1;
 
     if(initArray(array1, SIZE)) abort();

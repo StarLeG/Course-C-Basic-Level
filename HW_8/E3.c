@@ -13,7 +13,7 @@
     4 целых числа через пробел: номер максимума, максимум, номер минимума, минимум.
 */
 
-bool initArray(int *array, int size){
+bool initArray(int *array, const int size){
     int n;
     for(int i = 0; i < size; i++){
         if(scanf("%d", &n) != 1) return true;
@@ -52,17 +52,14 @@ void find_Min_Max(int *array,
 int main(){
     int idx_Max, idx_Min, min, max;
 
-    const int SIZE = 10;
-    int array[SIZE];
+    #define SIZE  10
+    int array[SIZE] = {0};
 
     if(initArray(array, SIZE)) abort();
 
     find_Min_Max(array, SIZE, &idx_Max, &max, &idx_Min, &min);
 
     printf("%d %d %d %d\n", idx_Max, max, idx_Min, min);
-
-    system("pause");
-
-
+  
     return 0;    
 }

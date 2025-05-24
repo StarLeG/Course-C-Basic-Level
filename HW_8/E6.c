@@ -13,7 +13,7 @@
     Среднее арифметическое в формате "%.2f"
 */
 
-bool initArray(int *array, int size){
+bool initArray(int *array, const int size){
     int n;
     for(int i = 0; i < size; i++){
         if(scanf("%d", &n) != 1) return true;
@@ -23,7 +23,7 @@ bool initArray(int *array, int size){
     return false;
 }
 
-double avg(int *array, int size){
+double avg(const int *array, const int size){
 
     double retVal = 0.f;
 
@@ -37,7 +37,7 @@ double avg(int *array, int size){
 
 int main(){
 
-    const int SIZE = 12;
+    #define SIZE  12
     int array[SIZE];
 
     if(initArray(array, SIZE)) abort();

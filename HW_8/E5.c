@@ -13,7 +13,7 @@
     Одно целое число - сумма положительных элементов массива
 */
 
-bool initArray(int *array, int size){
+bool initArray(int *array, const int size){
     int n;
     for(int i = 0; i < size; i++){
         if(scanf("%d", &n) != 1) return true;
@@ -23,7 +23,7 @@ bool initArray(int *array, int size){
     return false;
 }
 
-int positiveSum(int *array, int size){
+int positiveSum(const int *array, const int size){
     int retValue = 0;
 
     for(int i = 0; i < size; i++){
@@ -36,8 +36,8 @@ int positiveSum(int *array, int size){
 
 int main(){
 
-    const int SIZE = 10;
-    int array[SIZE];
+    #define SIZE  10
+    int array[SIZE] = {0};
 
     if(initArray(array, SIZE)) abort();
 

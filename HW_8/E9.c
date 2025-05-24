@@ -13,7 +13,7 @@
     10 целых чисел через пробел сдвинутых вправо на 1 элемент циклически
 */
 
-bool initArray(int *array, int size){
+bool initArray(int *array, const int size){
     int n;
     for(int i = 0; i < size; i++){
         if(scanf("%d", &n) != 1) return true;
@@ -31,7 +31,7 @@ void printArray(const int *array, const int size){
     
 }
 
-void reverse(int *array, int begin, int end){
+void reverse(int *array,  int begin, int end){
     while (begin < end)
     {
         int tmp = array[begin];
@@ -51,8 +51,8 @@ void arrayRotateRight(int *array, int size, int shift){
 }
 
 int main(){
-    const int SIZE = 10;
-    int array[SIZE];
+    #define SIZE 10
+    int array[SIZE] = {0};
 
     if(initArray(array, SIZE)) abort();
 

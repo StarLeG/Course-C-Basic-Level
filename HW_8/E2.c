@@ -12,7 +12,7 @@
     Одно единственное целое число
 */
 
-void initArray(int *array, int size){
+void initArray(int *array, const int size){
     int n;
     for(int i = 0; i < size; i++){
         if(scanf("%d", &n) != 1) abort();
@@ -20,7 +20,7 @@ void initArray(int *array, int size){
     }
 }
 
-int find_MIN(int *array, int size){
+int find_MIN(int *array, const int size){
     int retVal = array[0];
 
     for(int i = 1; i < size; i++){
@@ -32,8 +32,8 @@ int find_MIN(int *array, int size){
 
 int main(){
 
-    const int SIZE = 5;
-    int array[SIZE];
+    #define SIZE  5
+    int array[SIZE] = {0};
 
     initArray(array, SIZE);
 

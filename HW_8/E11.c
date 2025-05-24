@@ -14,7 +14,7 @@
 
 */
 
-bool initArray(int *array, int size){
+bool initArray(int *array, const int size){
     int n;
     for(int i = 0; i < size; i++){
         if(scanf("%d", &n) != 1) return true;
@@ -54,8 +54,8 @@ void BubbleSortLastDigit(int *array, const int size){
 }
 
 int main(){
-    const int SIZE = 10;
-    int array[SIZE];
+    #define SIZE 10
+    int array[SIZE] = {0};
 
     if(initArray(array, SIZE)) abort();
 
