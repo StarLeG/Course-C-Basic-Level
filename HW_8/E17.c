@@ -45,8 +45,17 @@ void bubleSort(int *array, const int size){
     }
 }
 
-bool isUniqueNumb(const int array[], const int size){
+bool isUniqueNumb(const int array[], const int size, const int target){
+     int cnt = 0;
+    for(int i = 0; i < size; i++){      
+        if(array[i] == target){
+            cnt++;
+            if(cnt > 1) return false;
+        }
+        // else if(array[i] > target) break; // для упорядоченного массива
+    }
 
+    return (cnt == 1) ? true : false;
 }
 
 int main(){
@@ -57,9 +66,15 @@ int main(){
 
     if(initArray(array, SIZE)) abort();
 
-    bubleSort(array, SIZE);
+    //bubleSort(array, SIZE); // для упорядовачивания массива
 
-    (idx != -1) ? printArray(arrayFind, SIZE) : exit(0);
+    for(int i = 0; i < SIZE; i++){
+        if(isUniqueNumb(array, SIZE, array[i])){
+            arrayFind[++idx] = array[i];
+        }
+    }
+
+    (idx != -1) ? printArray(arrayFind, ++idx) : exit(0);
 
     return 0;
 }
