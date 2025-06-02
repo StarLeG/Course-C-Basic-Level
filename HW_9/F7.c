@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <stdlib.h>
 
 /*
     Упаковать 0 и 1
@@ -22,8 +23,29 @@
 */
 
 int compression(int a[], int b[], int N){
-    
+    if (N == 0) return 0;
 
+    int current = a[0];
+    int count = 1;
+    int index = 0;
+
+    if (current == 1) {
+        b[index++] = 0;
+    }
+
+    for (int i = 1; i < N; i++) {
+        if (a[i] == current) {
+            count++;
+        } else {
+            b[index++] = count;
+            current = a[i];
+            count = 1;
+        }
+    }
+
+    b[index++] = count;
+    
+    return index;
 }
 
 int main(){
@@ -37,10 +59,15 @@ int main(){
         *p = 0;
     }
 
-    compression(array1, array2, size);
+    int size2 = compression(array1, array2, size);
 
-   
+    for(int i = 0; i < size2; i++){
+        printf("%d ", array2[i]);
+    }
     
-
+    
+    printf("\n");   
+  
+    system("pause");
     return 0;
 }
