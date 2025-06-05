@@ -13,15 +13,19 @@
 #include <stdio.h>
 #include <time.h>
 #include <stdlib.h>
-#include <limits.h>
+
 
 #define SIZE 1000
 
 int sum_between_ab(int from, int to, int size, int a[]){
-    int sum = 0;   
+    int sum = 0;
+   
+    
 
-    for(int *p = a; p < a + size; p++){
-        if(p - a >= from && p - a <= to){
+    for(int *p = a + size - 1; p >= a; p--){        
+
+        if(p - a <= size - from - 1  && p - a >= size - to - 1){          
+                       
             sum += *p;
         }
     }
@@ -40,7 +44,7 @@ int main(){
 
     int size = sizeof(a) / sizeof(a[0]);
 
-    printf("%d\n", sum_between_ab(5, 7, size, a));
+    printf("%d\n", sum_between_ab(4, 6, size, a));
 
    //printf("%d\n", sum_between_ab(5, 13, SIZE, array));
 
