@@ -15,26 +15,20 @@
     Формат результата
     В выходной файл нужно вывести «WHITE», если указанная клетка имеет белый цвет и «BLACK», если она черная.
 */
-
 #include <stdio.h>
 
-#define SIZE 8 
-
-
-int main(){
-
-    int chessBoard[SIZE][SIZE] = {0};
-    char str[3];
+int main() {
+    char coord[3]; 
+    scanf("%2s", coord);
     
-    for (int i = 0; i < SIZE; i++) {
-        for (int j = 0; j < SIZE; j++) {
-            chessBoard[i][j] = (i + j) % 2;  
-        }
+    int col = coord[0] - 'A';      
+    int row = coord[1] - '1';  
+    
+    if ((row + col) % 2 == 0) {
+        printf("BLACK\n");
+    } else {
+        printf("WHITE\n");
     }
-
-    int res = scanf("%s[1..8, A..G]", &str);
-
-    printf("%d\n", res);
 
     getchar();
 

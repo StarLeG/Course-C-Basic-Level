@@ -11,44 +11,44 @@
 */
 
 #include <stdio.h>
-#include <time.h>
 #include <stdlib.h>
 
-
-#define SIZE 1000
-
 int sum_between_ab(int from, int to, int size, int a[]){
-    int sum = 0;
-   
-    
-
-    for(int *p = a + size - 1; p >= a; p--){        
-
-        if(p - a <= size - from - 1  && p - a >= size - to - 1){          
-                       
-            sum += *p;
+    int sum = 0;     
+    #if 1
+        for(int *p =a; p < a + size; p++){    
+            if(*p >= from && *p <= to){        
+                sum += *p;
+            }
         }
-    }
+    #endif
+
+    #if 0
+        for(int *p =a + size - 1; p >= a; p--){    
+            if(*p >= from && *p <= to){        
+                sum += *p;
+            }
+        }
+    #endif
+
+
     return sum;
 }
 
 int main(){
-    int array[SIZE];
-    srand(time(NULL));
+    
+    int from, to;
+    
+    scanf("%d%d", &from, &to);
 
-    for(int i = 0; i < SIZE; i++){
-        array[i] = rand() % INT_MAX;
-    }
-
-    int a[] = {4, 6, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
+    //int a[] = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
+    int a[] = {11, 25, 5, -48, -15, -16, 27, 43, -22, -1 };
 
     int size = sizeof(a) / sizeof(a[0]);
 
-    printf("%d\n", sum_between_ab(4, 6, size, a));
+    printf("%d\n", sum_between_ab(from, to, size, a));  
 
-   //printf("%d\n", sum_between_ab(5, 13, SIZE, array));
-
-    getchar();
+    system("pause");
 
     return 0;
 }
