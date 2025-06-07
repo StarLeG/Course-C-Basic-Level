@@ -21,22 +21,24 @@ int main(){
         return -1;
     }
 
-    char buffer[100] = {'\0'};
+    char buffer[101] = {'\0'};
 
     fgets(buffer, sizeof(buffer), file);
 
     fclose(file);
 
-    int size = strlen(buffer);
+    buffer[strcspn(buffer, "\n")] = '\0';
+
+    int length = strlen(buffer);
 
     file = fopen("output.txt", "w");
-
-    for(int i = 0; i < 3; i++){
-        fprintf(file,"%s", buffer);
-        if(i < 2) fprintf(file,", ");
-        if(i == 2) fprintf(file," %d", size);
+    if(file == NULL){
+        return -1;
     }
 
+    fprintf(file, "%s, %s, %s %d", buffer, buffer, buffer, length);
+
+    
     fclose(file);
 
     return 0;
