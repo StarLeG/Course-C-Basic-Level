@@ -57,3 +57,4 @@ build/
 .vscode/
 CW_*/
 output.txt
+input.txt
