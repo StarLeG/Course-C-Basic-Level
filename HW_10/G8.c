@@ -18,20 +18,35 @@
 #include <stdbool.h>
 
 
-#define SIZE 1001
+#define SIZE 1000
 
-int extractDigits(const char *str, int *digits_array, int array_size) {
-    if (str == NULL) return -1;
-    if (array_size < 0) return -3;
-    if (digits_array == NULL && array_size > 0) return -2;
+int extractNumbers(const char *str, int *numbers, int max_numbers) {
+    if (!str || !numbers || max_numbers <= 0) return -1;
 
-    int digit_count = 0;
+    int count = 0;
+    int num = 0;
+    bool in_number = false;
 
-    for (int i = 0; str[i] != '\0'; i++){
-        if(isdigit(str[i])) digits_array[digit_count++] = str[i];
+    for (int i = 0; str[i] != '\0'; i++) {
+        if (isdigit(str[i])) {
+            num = num * 10 + (str[i] - '0'); 
+            in_number = true;
+        } else {
+            if (in_number) {
+                if (count < max_numbers) {
+                    numbers[count++] = num;
+                }
+                num = 0;
+                in_number = false;
+            }
+        }
     }
     
-    return digit_count;
+    if (in_number && count < max_numbers) {
+        numbers[count++] = num;
+    }
+
+    return count;
 }
 
 void bubleSort(int *array, const int size){ 
@@ -73,14 +88,14 @@ int main(){
         digits_array[i] = 0;
     }
 
-    int size = extractDigits(buffer, digits_array, lenght);
+    int size = extractNumbers(buffer, digits_array, lenght);
 
     
     
     if(size < -1){
         return -1;
     }else{
-       // bubleSort(digits_array, size);
+        bubleSort(digits_array, size);
         for(int i = 0; i < size; i++){
            fprintf(output,"%d ", digits_array[i]); 
        }
