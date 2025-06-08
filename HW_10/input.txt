@@ -1,1 +1,1 @@
-abc cde def
+/DOC.TXT/qqq
