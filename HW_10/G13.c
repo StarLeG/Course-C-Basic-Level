@@ -35,11 +35,16 @@ int main(){
 
     buffer[strcspn(buffer, "\n")] = '\0';
 
-    char extension[] = ".html";
-    char adress[106] = {'\0'};
-    int idxPoint = strchr(buffer, '.') - buffer;
+    char extension[] = ".html";    
+    int idxPoint = strrchr(buffer, '.') - buffer; 
+       
+    char pathFile[255] = {'\0'};
 
-  
+    strncpy(pathFile,buffer,idxPoint);  
+   
+    strcat(pathFile, extension);   
+    
+    fprintf(output, "%s", pathFile);
 
     fclose(input);
     fclose(output);
