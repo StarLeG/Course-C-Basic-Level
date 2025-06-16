@@ -1,1 +1,5 @@
+<<<<<<< HEAD
 Pupkin Vasiliy Ivanovich
+=======
+Ling, Ling, Ling and Ling!!!ВВВВLings
+>>>>>>> aa16f3db1e7471fed04122f8b870aae480cef9cd

@@ -16,15 +16,15 @@
 #define LEN 100
 
 struct FullName{
-    char firstName[50]; 
-    char lastName[50];  
-    char patronymic[50];
+    char firstName[100]; 
+    char lastName[100];  
+    char patronymic[100];
 };
 
 typedef struct FullName FullName_t;
 
 int main(){
-     FILE *input = fopen("input.txt", "r");
+    FILE *input = fopen("input.txt", "r");
     FILE *output = fopen("output.txt", "w");
 
     if(input == NULL || output == NULL){
@@ -43,6 +43,29 @@ int main(){
     buffer[strcspn(buffer, "\n")] = '\0';
 
     FullName_t fullName;
+
+    // Pupkin Vasiliy Ivanovich
+    
+    int idx = 0;
+    while (buffer[idx] != ' '){
+        fullName.lastName[idx] = buffer[idx];
+        idx++;
+    }
+
+    fullName.lastName[idx++] = '\0';
+    int idx1 = 0;
+
+    while (buffer[idx] != ' '){
+        fullName.firstName[idx1] = buffer[idx];
+        idx++;
+        idx1++;
+    }
+
+    fullName.firstName[idx++] = '\0';
+    
+
+
+    fprintf(output, "Hello, %s %s!", fullName.firstName, fullName.lastName);
 
     
 
