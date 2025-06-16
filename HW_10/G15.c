@@ -23,13 +23,16 @@ void raplace(char *str){
 
     while ((pos = strstr(str,"Cao")) != NULL)
     {
-       if((pos == str || *(pos - 1) == ' ') && 
+       /* if((pos == str || *(pos - 1) == ' ') && 
             (*(pos + caoLen) == ' ' || *(pos + caoLen) == '\0' || ispunct(*(pos + caoLen)))){
                 memmove(pos + lingLen, pos + caoLen, strlen(pos + caoLen) + 1);
                 memcpy(pos, "Ling", lingLen);
             }else{
                 str = pos + caoLen;
-            }
+            }  */
+
+        memmove(pos + lingLen, pos + caoLen, strlen(pos + caoLen) + 1);
+        memcpy(pos, "Ling", lingLen);
     }
     
 
