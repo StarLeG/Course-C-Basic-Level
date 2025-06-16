@@ -69,8 +69,9 @@ int main()
 
     if (fgets(buffer, sizeof(buffer), input) == NULL)
     {
-        fputs("The file is empty or reading error.\n", stderr);
-        return -1;
+        //fputs("The file is empty or reading error.\n", stderr);
+        return 0;
+        
     }
 
     buffer[strcspn(buffer, "\n")] = '\0';

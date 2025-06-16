@@ -1,5 +1,1 @@
-<<<<<<< HEAD
-/DOC.TXT/qqq.html
-=======
-Cao, Cao, Cao and Cao!!!ВВВВCaos
->>>>>>> aa16f3db1e7471fed04122f8b870aae480cef9cd
+Hello world!
