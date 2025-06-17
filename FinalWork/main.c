@@ -1,5 +1,5 @@
 #include <stdio.h>
-#include "temp_functions.h"
+#include "temp_api.h"
 
 int main(){
 
