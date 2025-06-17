@@ -14,37 +14,38 @@
 #include <string.h>
 #include <errno.h>
 
-#define LEN 100
+#define LEN 1000  
 
-int main(){
+int main() {
     FILE *input = fopen("input.txt", "r");
     FILE *output = fopen("output.txt", "w");
 
-    if(input == NULL || output == NULL){
-        printf("Error code: %d\n", errno);               
+    if (input == NULL || output == NULL) {
+        printf("Error code: %d\n", errno);
         printf("Error message: %s\n", strerror(errno));
         return -1;
     }
 
     char buffer[LEN] = {'\0'};
 
-    if(fgets(buffer, sizeof(buffer), input) == NULL){                       
-        fputs("The file is empty or reading error.\n", stderr);  
-        return -1;      
+    if (fgets(buffer, sizeof(buffer), input) == NULL) {
+        fputs("The file is empty or reading error.\n", stderr);
+        return -1;
     }
 
+    
     buffer[strcspn(buffer, "\n")] = '\0';
 
-    char extension[] = ".html";    
-    int idxPoint = strrchr(buffer, '.') - buffer; 
-       
-    char pathFile[255] = {'\0'};
-
-    strncpy(pathFile,buffer,idxPoint);  
-   
-    strcat(pathFile, extension);   
     
-    fprintf(output, "%s", pathFile);
+    char *last_dot = strrchr(buffer, '.');
+    char *last_slash = strrchr(buffer, '/');
+
+   
+    if (last_dot != NULL && (last_slash == NULL || last_dot > last_slash)) {        
+        *last_dot = '\0';
+    }    
+   
+    fprintf(output, "%s.html", buffer);
 
     fclose(input);
     fclose(output);
