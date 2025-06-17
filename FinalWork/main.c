@@ -1,7 +1,9 @@
 #include <stdio.h>
 #include "temp_api.h"
+#include <windows.h>
 
 int main(){
+    SetConsoleOutputCP(CP_UTF8);
 
     addRecord(2023, 1, 15, 12, 30, -5);
     addRecord(2023, 1, 15, 18, 45, -7);
