@@ -83,7 +83,7 @@ int main()
         total = n * (n + 1) / 2;
     }
 
-    if (total != starCount)
+    if (total != starCount || starCount == 0)
     {
         fprintf(output, "NO\n");
     }
@@ -95,7 +95,7 @@ int main()
             {
                 fprintf(output, " ");
             }
-                      
+
             for (int j = 0; j < i; j++)
             {
                 if (j > 0)
