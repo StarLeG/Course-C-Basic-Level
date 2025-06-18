@@ -18,16 +18,16 @@
         * * * *
     Во входном файле input.txt записано некоторое количество символов * (камней).
     Необходимо построить равносторонний треугольник используя все символы * и символ пробел,
-    записать ответ в выходной файл output.txt. Между соседними символами * строго один пробел. Если треугольник невозможно составить,
+    записать ответ в выходной файл output.txt. Между соседними символами * строго один пробел.
+    Если треугольник невозможно составить,
     используя все камни, то необходимо записать единственное слово NO в файл output.txt.
 
     Формат входных данных
     Текстовый файл состоит из различных символов и символов *.
-    
+
     Формат результата
     Равносторонний треугольник составленный из символов *, символов пробела и символов переноса строк или слово NO.
 */
-
 
 #include <stdio.h>
 #include <string.h>
@@ -37,7 +37,8 @@
 
 #define LEN 1001
 
-int main(){
+int main()
+{
     FILE *input = fopen("input.txt", "r");
     FILE *output = fopen("output.txt", "w");
 
@@ -49,10 +50,23 @@ int main(){
     }
 
     char buffer[LEN] = {'\0'};
+    size_t starCount = 0;
 
-    if (fgets(buffer, sizeof(buffer), input) == NULL)
+    while (fgets(buffer, sizeof(buffer), input))
     {
-        fputs("The file is empty or reading error.\n", stderr);
+        size_t len = strlen(buffer);
+        for (size_t i = 0; i < len; i++)
+        {
+            if (buffer[i] == '*')
+            {
+                starCount++;
+            }
+        }
+    }
+
+    if (ferror(input))
+    {
+        fputs("Reading error..\n", stderr);
         return -1;
     }
 
