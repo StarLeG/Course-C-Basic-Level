@@ -83,9 +83,24 @@ int main(){
     fclose(input);
 
     char soundex[5] = "0000";
-    int soundePos = 0;
+    int soundexPos = 0;
 
-
+     if (buffer[0] != '\0') {
+       
+        soundex[soundexPos++] = buffer[0];
+        
+        int previous_digit = 0;
+        for (int i = 1; buffer[i] != '\0' && soundexPos < 4; i++) {
+            int current_digit = getSoundexDigit(buffer[i]);            
+            
+            if (current_digit == 0) continue;            
+            
+            if (current_digit == previous_digit) continue;            
+            
+            soundex[soundexPos++] = '0' + current_digit;
+            previous_digit = current_digit;
+        }
+    }
 
     fprintf(output, "%s", soundex);
 
