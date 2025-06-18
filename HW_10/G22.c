@@ -38,7 +38,26 @@
 #include <ctype.h>
 #include <stdbool.h>
 
-#define LEN 1001
+#define LEN 21
+
+int getSoundexDigit(char c) {
+    switch(tolower(c)) {
+        case 'b': case 'f': case 'p': case 'v': 
+            return 1;
+        case 'c': case 'g': case 'j': case 'k': case 'q': case 's': case 'x': case 'z':
+            return 2;
+        case 'd': case 't':
+            return 3;
+        case 'l':
+            return 4;
+        case 'm': case 'n':
+            return 5;
+        case 'r':
+            return 6;
+        default:
+            return 0; 
+    }
+}
 
 int main(){
     FILE *input = fopen("input.txt", "r");
@@ -62,6 +81,14 @@ int main(){
     buffer[strcspn(buffer, "\n")] = '\0';
 
     fclose(input);
+
+    char soundex[5] = "0000";
+    int soundePos = 0;
+
+
+
+    fprintf(output, "%s", soundex);
+
     fclose(output);
 
     return 0;
