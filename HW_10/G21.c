@@ -73,6 +73,44 @@ int main()
     buffer[strcspn(buffer, "\n")] = '\0';
 
     fclose(input);
+
+    int n = 0;
+    int total = 0;
+
+    while (total < starCount)
+    {
+        n++;
+        total = n * (n + 1) / 2;
+    }
+
+    if (total != starCount)
+    {
+        fprintf(output, "NO\n");
+    }
+    else
+    {       
+        for (int i = 1; i <= n; i++)
+        {            
+            for (int j = 0; j < n - i; j++)
+            {
+                fprintf(output, " ");
+            }
+                      
+            for (int j = 0; j < i; j++)
+            {
+                if (j > 0)
+                {
+                    fprintf(output, " *");
+                }
+                else
+                {
+                    fprintf(output, "*");
+                }
+            }
+            fprintf(output, "\n");
+        }
+    }
+
     fclose(output);
 
     return 0;
