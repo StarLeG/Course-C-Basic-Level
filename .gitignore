@@ -58,3 +58,9 @@ build/
 CW_*/
 output.txt
 input.txt
+# Игнорировать исполняемый файл
+/Temperature_Statistics
+
+# Игнорировать все исполняемые файлы (опционально)
+/*.exe
+/*.out
