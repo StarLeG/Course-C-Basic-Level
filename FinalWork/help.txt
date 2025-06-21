@@ -1,0 +1,4 @@
+Set of supported keys:
+-h ---- help
+-f <fileName> ---- file name for load this file
+-m <xx> ---- statistic for xx month

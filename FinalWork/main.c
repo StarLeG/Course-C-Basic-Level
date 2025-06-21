@@ -16,9 +16,13 @@ int main(int argc, char *argv[])
     addRecord(2023, 1, 15, 18, 45, -7);
     addRecord(2023, 2, 20, 10, 15, 10);
     addRecord(2023, 2, 21, 9, 0, 8);
-    addRecord(2023, 12, 31, 23, 59, -15);
+    addRecord(2024, 2, 21, 9, 0, 8);
+    addRecord(2017, 2, 21, 9, 0, 8);
+    addRecord(2018, 2, 12, 9, 0, 8);
+    addRecord(2022, 12, 31, 23, 59, -15);
 
     int result = 0;
+    // opterr = 0;
     char fileName[255] = {'\0'};
 
     while ((result = getopt(argc, argv, "hf:m:")) != -1)
@@ -33,7 +37,7 @@ int main(int argc, char *argv[])
             }
 
             char buff[1024];
-            
+
             while (fgets(buff, sizeof(buff), file))
             {
                 fputs(buff, stdout);
@@ -46,7 +50,13 @@ int main(int argc, char *argv[])
             strcpy(fileName, optarg);
             break;
         case 'm':
-            /* code */
+            int month = atoi(optarg);
+            if (month < 1 || month > 12)
+            {
+                printf("Invalid month! Month should be between 1 and 12.\n");
+                return 1;
+            }
+            printStatsForMonthAllYears(month);
             break;
         case '?':
             printf("Error found !\n");
@@ -58,7 +68,7 @@ int main(int argc, char *argv[])
 
     result = readFileToBuffer(fileName, buffer);
 
-    printf("%d\n", result);
+    //printf("%d\n", result);
 
     /* printf("Monthly Statistics for 2023:\n");
     printMonthlyStats(2023);
