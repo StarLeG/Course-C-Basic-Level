@@ -3,11 +3,21 @@
 #include <windows.h>
 #include <unistd.h>
 #include <string.h>
+#include <limits.h>
+#include "readFileToBuffer.h"
+
+#define SIZE 1000000
 
 
 
 int main(int argc, char *argv[]){
-    SetConsoleOutputCP(CP_UTF8);    
+    SetConsoleOutputCP(CP_UTF8); 
+    
+    addRecord(2023, 1, 15, 12, 30, -5);
+    addRecord(2023, 1, 15, 18, 45, -7);
+    addRecord(2023, 2, 20, 10, 15, 10);
+    addRecord(2023, 2, 21, 9, 0, 8);
+    addRecord(2023, 12, 31, 23, 59, -15);
 
     int result = 0;
     char fileName[255] = {'\0'};
@@ -30,20 +40,23 @@ int main(int argc, char *argv[]){
         }
     }
 
-    addRecord(2023, 1, 15, 12, 30, -5);
-    addRecord(2023, 1, 15, 18, 45, -7);
-    addRecord(2023, 2, 20, 10, 15, 10);
-    addRecord(2023, 2, 21, 9, 0, 8);
-    addRecord(2023, 12, 31, 23, 59, -15);
+    char buffer[SIZE] = {'\0'};
 
-    printf("Monthly Statistics for 2023:\n");
+    result = readFileToBuffer(fileName, buffer);
+
+    printf("%d\n", result);
+
+   
+    
+
+    /* printf("Monthly Statistics for 2023:\n");
     printMonthlyStats(2023);
 
     printf("\nYearly Statistics for 2023:\n");
-    printYearlyStats(2023);
+    printYearlyStats(2023); */
 
-    printf("*********************************\n");
-    printf("%s\n", fileName);
+    
+   
 
     return 0;
 }

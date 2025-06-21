@@ -2,9 +2,9 @@
 CC = gcc
 CFLAGS = -Wall -Wextra -std=c99 -O2
 
-TARGET = temp_app
-SOURCES = main.c temp_api.c
-HEADERS = temp_api.h
+TARGET = Temperature_Statistics
+SOURCES = main.c temp_api.c readFileToBuffer.c
+HEADERS = temp_api.h readFileToBuffer.h
 
 all: $(TARGET)
 
