@@ -6,6 +6,7 @@
 #include <limits.h>
 #include "readFileToBuffer.h"
 
+
 #define SIZE 1000000
 
 int main(int argc, char *argv[])

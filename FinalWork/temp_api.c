@@ -19,6 +19,21 @@ void addRecord(uint16_t year, uint8_t month, uint8_t day, uint8_t hours, uint8_t
     }
 }
 
+void removeRecord(size_t index)
+{
+    if (index >= recordsCount)
+    {
+        return;
+    }
+
+    for (size_t i = index; i < recordsCount - 1; i++)
+    {
+        tempRecords[i] = tempRecords[i + 1];
+    }
+
+    recordsCount--;
+}
+
 float getAverageMonthlyTemp(uint16_t year, uint8_t month)
 {
     int sum = 0;
@@ -125,10 +140,13 @@ int8_t getMaxYearlyTemp(uint16_t year)
     return max != INT8_MIN ? max : 0;
 }
 
-size_t countMonthlyRecords(uint16_t year, uint8_t month) {
+size_t countMonthlyRecords(uint16_t year, uint8_t month)
+{
     size_t count = 0;
-    for (size_t i = 0; i < recordsCount; i++) {
-        if (tempRecords[i].year == year && tempRecords[i].month == month) {
+    for (size_t i = 0; i < recordsCount; i++)
+    {
+        if (tempRecords[i].year == year && tempRecords[i].month == month)
+        {
             count++;
         }
     }
@@ -164,7 +182,6 @@ void printStatsForMonthAllYears(uint8_t month)
 
     printf("Statistics for month %02d across all years:\n", month);
 
-    
     uint16_t years[MAX_RECORDS];
     size_t yearsCount = 0;
 
@@ -172,7 +189,7 @@ void printStatsForMonthAllYears(uint8_t month)
     {
         if (tempRecords[i].month == month)
         {
-            
+
             int found = 0;
             for (size_t j = 0; j < yearsCount; j++)
             {
@@ -194,7 +211,7 @@ void printStatsForMonthAllYears(uint8_t month)
         printf("Year %d:\n", years[i]);
         printf("  Average: %.1f°C\n", getAverageMonthlyTemp(years[i], month));
         printf("  Min: %d°C\n", getMinMonthlyTemp(years[i], month));
-        printf("  Max: %d°C\n", getMaxMonthlyTemp(years[i], month));       
+        printf("  Max: %d°C\n", getMaxMonthlyTemp(years[i], month));
         printf("\n");
-    }    
+    }
 }

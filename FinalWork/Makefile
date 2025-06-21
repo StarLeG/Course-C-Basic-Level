@@ -1,6 +1,6 @@
 
 CC = gcc
-CFLAGS = -Wall -Wextra -std=c99 -O2
+CFLAGS = -g -Wall -Wextra -std=c99 -O2
 
 TARGET = Temperature_Statistics
 SOURCES = main.c temp_api.c readFileToBuffer.c

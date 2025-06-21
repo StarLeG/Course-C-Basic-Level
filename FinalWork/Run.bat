@@ -1,0 +1,2 @@
+cd FinalWork
+Temperature_Statistics.exe 
