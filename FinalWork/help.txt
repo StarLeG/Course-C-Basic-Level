@@ -1,4 +1,12 @@
-Set of supported keys:
--h ---- help
--f <fileName> ---- file name for load this file
--m <xx> ---- statistic for xx month
+***********************************************************************************************
+The Temperature Statistics program is designed to work with temperature data, allowing you to:
+Storing temperature records with date and time
+Analyzing temperature data
+Displaying statistics by month and year
+Loading data from CSV files
+
+The program supports the following command line switches:
+-h ---- help (display this message)
+-f <fileName> ---- load data from the specified file
+-m <xx> ---- display statistics for the specified month (1-12)
+************************************************************************************************
