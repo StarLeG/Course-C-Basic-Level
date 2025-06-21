@@ -8,11 +8,10 @@
 
 #define SIZE 1000000
 
+int main(int argc, char *argv[])
+{
+    SetConsoleOutputCP(CP_UTF8);
 
-
-int main(int argc, char *argv[]){
-    SetConsoleOutputCP(CP_UTF8); 
-    
     addRecord(2023, 1, 15, 12, 30, -5);
     addRecord(2023, 1, 15, 18, 45, -7);
     addRecord(2023, 2, 20, 10, 15, 10);
@@ -22,16 +21,31 @@ int main(int argc, char *argv[]){
     int result = 0;
     char fileName[255] = {'\0'};
 
-    while ( (result = getopt(argc,argv,"hf:m:")) != -1){
+    while ((result = getopt(argc, argv, "hf:m:")) != -1)
+    {
         switch (result)
         {
         case 'h':
-            /* code */
+            FILE *file = fopen("help.txt", "r");
+            if (file == NULL)
+            {
+                return 1;
+            }
+
+            char buff[1024];
+            
+            while (fgets(buff, sizeof(buff), file))
+            {
+                fputs(buff, stdout);
+            }
+
+            fclose(file);
+            return 0;
+
+        case 'f':
+            strcpy(fileName, optarg);
             break;
-        case 'f':            
-            strcpy(fileName, optarg);  
-            break;
-        case 'm':        
+        case 'm':
             /* code */
             break;
         case '?':
@@ -46,17 +60,11 @@ int main(int argc, char *argv[]){
 
     printf("%d\n", result);
 
-   
-    
-
     /* printf("Monthly Statistics for 2023:\n");
     printMonthlyStats(2023);
 
     printf("\nYearly Statistics for 2023:\n");
     printYearlyStats(2023); */
-
-    
-   
 
     return 0;
 }
