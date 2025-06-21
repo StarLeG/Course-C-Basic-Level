@@ -34,6 +34,25 @@ void removeRecord(size_t index)
     recordsCount--;
 }
 
+int findAndRemoveRecord(uint16_t year, uint8_t month, uint8_t day,
+                        uint8_t hours, uint8_t minutes, int8_t temperature)
+{
+    for (size_t i = 0; i < recordsCount; i++)
+    {
+        if (tempRecords[i].year == year &&
+            tempRecords[i].month == month &&
+            tempRecords[i].day == day &&
+            tempRecords[i].hours == hours &&
+            tempRecords[i].minutes == minutes &&
+            tempRecords[i].temperature == temperature)
+        {
+            removeRecord(i);
+            return 1;
+        }
+    }
+    return 0;
+}
+
 float getAverageMonthlyTemp(uint16_t year, uint8_t month)
 {
     int sum = 0;
