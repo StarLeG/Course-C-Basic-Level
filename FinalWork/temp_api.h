@@ -2,7 +2,7 @@
 
 #include <stdint.h>
 
-#define MAX_RECORDS 1000
+#define MAX_RECORDS 100000
 
 typedef struct {
     uint16_t year;
