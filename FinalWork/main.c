@@ -1,18 +1,15 @@
 #include <stdio.h>
 #include "climate_data.h"
-#include <windows.h>
-#include <unistd.h>
 #include <string.h>
 #include <limits.h>
 #include "readFileToBuffer.h"
+#include <unistd.h>
 
 
 #define SIZE 1000000
 
 int main(int argc, char *argv[])
-{
-    SetConsoleOutputCP(CP_UTF8);
-
+{    
     addRecord(2023, 1, 15, 12, 30, -5);
     addRecord(2023, 1, 15, 18, 45, -7);
     addRecord(2023, 2, 20, 10, 15, 10);

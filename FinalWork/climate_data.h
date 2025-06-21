@@ -1,6 +1,9 @@
 #pragma once
 
 #include <stdint.h>
+#include <stddef.h>
+#include <stdlib.h>
+#include <unistd.h>
 
 #define MAX_RECORDS 100000
 
