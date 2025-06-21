@@ -57,7 +57,7 @@ int main(int argc, char *argv[])
                 return 1;
             }
             printStatsForMonthAllYears(month);
-            break;
+            return 0;
         case '?':
             printf("Error found !\n");
             break;
@@ -70,11 +70,11 @@ int main(int argc, char *argv[])
 
     //printf("%d\n", result);
 
-    /* printf("Monthly Statistics for 2023:\n");
+    printf("Monthly Statistics for 2023:\n");
     printMonthlyStats(2023);
 
     printf("\nYearly Statistics for 2023:\n");
-    printYearlyStats(2023); */
+    printYearlyStats(2023);
 
     return 0;
 }
