@@ -1,12 +1,38 @@
 ***********************************************************************************************
 The Temperature Statistics program is designed to work with temperature data, allowing you to:
-Storing temperature records with date and time
-Analyzing temperature data
-Displaying statistics by month and year
-Loading data from CSV files
+- Store temperature records with date and time
+- Analyze temperature data
+- Display statistics by month and year
+- Load data from CSV files
+- View all records in a formatted table
 
-The program supports the following command line switches:
--h ---- help (display this message)
--f <fileName> ---- load data from the specified file
--m <xx> ---- display statistics for the specified month (1-12)
-************************************************************************************************
+COMMAND LINE OPTIONS:
+-h       : Display this help message
+-f <file>: Load data from the specified CSV file
+-m <1-12>: Display statistics for the specified month (1=Jan, 12=Dec)
+
+INTERACTIVE MENU OPTIONS:
+1. Add new temperature record
+2. Remove temperature record
+3. View statistics (monthly/yearly/cross-year)
+4. Load data from file
+5. View all records in table format
+0. Exit program
+
+DATA FORMAT:
+Records should be in CSV format with semicolon (;) separator:
+Year;Month;Day;Hour;Minute;Temperature
+Example: 2023;01;15;12;30;-5
+
+TABLE VIEW FORMAT:
++-------+-------------+--------+------------+
+| Index | Date (Y-M-D)| Time   | Temp.      |
++-------+-------------+--------+------------+
+| 0     | 2023-01-15  | 12:30  |  -5°C      |
++-------+-------------+--------+------------+
+
+LIMITATIONS:
+- Max records: 100000
+- Temperature range: -128 to +127°C
+- Month range: 1-12
+***********************************************************************************************
