@@ -76,11 +76,16 @@ void displayAddRecordMenu() {
         while(getchar() != '\n');
         return;
     }
-    
-    if (month == 2) {
         
-        if (day < 1 || day > 28) {
-            printf("February has only 28 days (29 in leap years)!\n");
+    if (month == 2) {
+        int isLeapYear = 0;        
+        if ((year % 4 == 0 && year % 100 != 0) || (year % 400 == 0)) {
+            isLeapYear = 1;
+        }
+        
+        int maxDays = isLeapYear ? 29 : 28;
+        if (day < 1 || day > maxDays) {
+            printf("February has only %d days in %d!\n", maxDays, year);
             return;
         }
     } else if (month == 4 || month == 6 || month == 9 || month == 11) {
