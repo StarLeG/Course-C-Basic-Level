@@ -259,6 +259,13 @@ void loadDataFromFile() {
         return;
     }
     
+    
+    char *dot = strrchr(fileName, '.');
+    if (dot == NULL || strcmp(dot, ".csv") != 0) {
+        printf("Error: File must have .csv extension!\n");
+        return;
+    }
+    
     char buffer[SIZE] = {'\0'};
     int result = readFileToBuffer(fileName, buffer);
     
