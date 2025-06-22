@@ -234,3 +234,28 @@ void printStatsForMonthAllYears(uint8_t month)
         printf("\n");
     }
 }
+
+void printAllRecords() {
+    printf("\n=== All Temperature Records ===\n");
+    printf("+-------+-------------+--------+------------+\n");
+    printf("| Index | Date (Y-M-D)| Time   | Temp.      |\n");
+    printf("+-------+-------------+--------+------------+\n");
+    
+    for (size_t i = 0; i < recordsCount; i++) {
+        printf("| %-5zu | %04d-%02d-%02d  | %02d:%02d  | %+4d°C     |\n",
+               i,
+               sensorData[i].year,
+               sensorData[i].month,
+               sensorData[i].day,
+               sensorData[i].hours,
+               sensorData[i].minutes,
+               sensorData[i].temperature);
+    }
+    
+    if (recordsCount == 0) {
+        printf("|       No records available             |\n");
+    }
+    
+    printf("+-------+-------------+--------+------------+\n");
+    printf("Total records: %zu\n", recordsCount);
+}

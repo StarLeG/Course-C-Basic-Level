@@ -12,7 +12,8 @@ void displayMainMenu() {
     printf("2. Remove temperature record\n");
     printf("3. View statistics\n");
     printf("4. Load data from file\n");
-    printf("0. Exit\n");
+    printf("5. View all records\n");
+    printf("0. Exit program\n"); 
 }
 
 void handleUserChoice(int choice) {
@@ -28,6 +29,9 @@ void handleUserChoice(int choice) {
             break;
         case 4:
             loadDataFromFile();
+            break;
+        case 5:  
+            displayAllRecordsMenu();
             break;
         case 0:
             printf("Exiting program...\n");
@@ -98,14 +102,16 @@ void displayRemoveRecordMenu() {
     size_t index;
     
     printf("\n=== Remove Temperature Record ===\n");
-    printf("Current records count: %zu\n", recordsCount);
+    
+    
+    printAllRecords();
     
     if (recordsCount == 0) {
         printf("No records to remove.\n");
         return;
     }
     
-    printf("Enter record index to remove (0-%zu): ", recordsCount - 1);
+    printf("\nEnter record index to remove (0-%zu): ", recordsCount - 1);
     if (scanf("%zu", &index) != 1) {
         printf("Invalid input for index!\n");
         while(getchar() != '\n');
@@ -116,9 +122,31 @@ void displayRemoveRecordMenu() {
         printf("Invalid index!\n");
         return;
     }
+       
+    printf("\nRemoving record:\n");
+    printf("Index %zu: %04d-%02d-%02d %02d:%02d, Temperature: %d°C\n",
+           index,
+           sensorData[index].year,
+           sensorData[index].month,
+           sensorData[index].day,
+           sensorData[index].hours,
+           sensorData[index].minutes,
+           sensorData[index].temperature);
     
-    removeRecord(index);
-    printf("Record removed successfully!\n");
+    printf("Are you sure? (1 = Yes, 0 = No): ");
+    int confirm;
+    if (scanf("%d", &confirm) != 1 || (confirm != 0 && confirm != 1)) {
+        printf("Invalid input!\n");
+        while(getchar() != '\n');
+        return;
+    }
+    
+    if (confirm == 1) {
+        removeRecord(index);
+        printf("Record removed successfully!\n");
+    } else {
+        printf("Removal canceled.\n");
+    }
 }
 
 void displayStatsMenu() {
@@ -199,4 +227,9 @@ void loadDataFromFile() {
     } else {
         printf("Error loading data from file. Error code: %d\n", result);
     }
+}
+
+void displayAllRecordsMenu() {
+    printf("\n=== View All Records ===\n");
+    printAllRecords();
 }

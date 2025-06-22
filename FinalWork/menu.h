@@ -6,3 +6,4 @@ void displayAddRecordMenu();
 void displayRemoveRecordMenu();
 void displayStatsMenu();
 void loadDataFromFile();
+void displayAllRecordsMenu();

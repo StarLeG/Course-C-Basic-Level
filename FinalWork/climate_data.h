@@ -2,8 +2,6 @@
 
 #include <stdint.h>
 #include <stddef.h>
-#include <stdlib.h>
-#include <unistd.h>
 #include "config.h"
 
 
@@ -17,7 +15,7 @@ typedef struct {
     int8_t temperature;
 } TemperatureRecord;
 
-extern TemperatureRecord tempRecords[MAX_RECORDS];
+extern TemperatureRecord sensorData[MAX_RECORDS];
 extern size_t recordsCount;
 
 void addRecord(uint16_t year, uint8_t month, uint8_t day, uint8_t hours, uint8_t minutes, int8_t temperature);
@@ -30,6 +28,7 @@ size_t countMonthlyRecords(uint16_t year, uint8_t month);
 void printMonthlyStats(uint16_t year);
 void printYearlyStats(uint16_t year);
 void printStatsForMonthAllYears(uint8_t month);
+void printAllRecords();
 
 float getAverageMonthlyTemp(uint16_t year, uint8_t month);
 int8_t getMinMonthlyTemp(uint16_t year, uint8_t month);
