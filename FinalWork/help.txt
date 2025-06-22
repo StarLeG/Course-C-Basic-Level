@@ -1,4 +1,6 @@
 ***********************************************************************************************
+                        Temperature Statistics Program - Help
+*********************************************************************************************** 
 The Temperature Statistics program is designed to work with temperature data, allowing you to:
 - Store temperature records with date and time
 - Analyze temperature data
