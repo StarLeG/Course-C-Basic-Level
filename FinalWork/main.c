@@ -61,29 +61,11 @@ int main(int argc, char *argv[])
                 printf("Error found !\n");
                 break;
             }
-        }
+        }        
 
-        char buffer[SIZE] = {'\0'};
+        /* result = readFileToBuffer(fileName, buffer);
 
-        result = readFileToBuffer(fileName, buffer);
-
-        switch (result)
-        {
-        case 0:
-            printf("File loaded successfully, all lines are valid\n");
-            break;
-         case -1:
-            printf("Error: Opening file. File not found.\n");
-            break;    
-        case -3:
-            printf("Error: Buffer overflow.\n");
-            break;
-        case -4:
-            printf("Error: File must have .csv extension!\n");
-            break;
-        default:
-            printf("Error loading file\n");
-        }
+         */
     }
 
     int choice;
