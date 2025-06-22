@@ -1,4 +1,3 @@
-// menu.c
 #include "menu.h"
 #include "climate_data.h"
 #include "readFileToBuffer.h"
@@ -51,7 +50,7 @@ void displayAddRecordMenu() {
     printf("Enter year: ");
     if (scanf("%hu", &year) != 1) {
         printf("Invalid input for year!\n");
-        while(getchar() != '\n'); // Clear input buffer
+        while(getchar() != '\n'); 
         return;
     }
     

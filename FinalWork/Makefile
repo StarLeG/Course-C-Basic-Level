@@ -17,7 +17,8 @@ $(TARGET): $(SOURCES) $(HEADERS)
 
 clean:
 	rm -f $(TARGET) *.o
-	rm -f $(TARGET) 
+	rm -f $(TARGET)
+	rm -f $(TARGET) *.exe 
 
 .PHONY: all clean
 
