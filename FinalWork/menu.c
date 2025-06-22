@@ -43,6 +43,7 @@ void handleUserChoice(int choice) {
 void displayAddRecordMenu() {
     uint16_t year;
     uint8_t month, day, hours, minutes;
+    int temp_input; 
     int8_t temperature;
     
     printf("\n=== Add New Temperature Record ===\n");
@@ -53,6 +54,10 @@ void displayAddRecordMenu() {
         while(getchar() != '\n'); 
         return;
     }
+    if (year < 1900 || year > 2100) {
+        printf("Year must be between 1900 and 2100!\n");
+        return;
+    }
     
     printf("Enter month (1-12): ");
     if (scanf("%hhu", &month) != 1) {
@@ -61,7 +66,7 @@ void displayAddRecordMenu() {
         return;
     }
     if (month < 1 || month > 12) {
-        printf("Invalid month!\n");
+        printf("Month must be between 1 and 12!\n");
         return;
     }
     
@@ -72,10 +77,32 @@ void displayAddRecordMenu() {
         return;
     }
     
+    if (month == 2) {
+        
+        if (day < 1 || day > 28) {
+            printf("February has only 28 days (29 in leap years)!\n");
+            return;
+        }
+    } else if (month == 4 || month == 6 || month == 9 || month == 11) {
+        if (day < 1 || day > 30) {
+            printf("This month has only 30 days!\n");
+            return;
+        }
+    } else {
+        if (day < 1 || day > 31) {
+            printf("Invalid day for this month!\n");
+            return;
+        }
+    }
+    
     printf("Enter hours (0-23): ");
     if (scanf("%hhu", &hours) != 1) {
         printf("Invalid input for hours!\n");
         while(getchar() != '\n');
+        return;
+    }
+    if (hours > 23) {
+        printf("Hours must be between 0 and 23!\n");
         return;
     }
     
@@ -85,13 +112,22 @@ void displayAddRecordMenu() {
         while(getchar() != '\n');
         return;
     }
+    if (minutes > 59) {
+        printf("Minutes must be between 0 and 59!\n");
+        return;
+    }
     
     printf("Enter temperature (-128 to 127): ");
-    if (scanf("%hhd", &temperature) != 1) {
+    if (scanf("%d", &temp_input) != 1) { 
         printf("Invalid input for temperature!\n");
         while(getchar() != '\n');
         return;
     }
+    if (temp_input < -128 || temp_input > 127) {
+        printf("Temperature must be between -128 and 127°C!\n");
+        return;
+    }
+    temperature = (int8_t)temp_input; 
     
     addRecord(year, month, day, hours, minutes, temperature);
     printf("Record added successfully!\n");
