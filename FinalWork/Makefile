@@ -17,6 +17,7 @@ $(TARGET): $(SOURCES) $(HEADERS)
 
 clean:
 	rm -f $(TARGET) *.o
+	rm -f $(TARGET) 
 
 .PHONY: all clean
 
