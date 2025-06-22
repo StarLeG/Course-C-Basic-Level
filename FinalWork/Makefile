@@ -4,9 +4,11 @@ CFLAGS = -g -Wall -Wextra -std=gnu99 -O2
 TARGET = Temperature_Statistics
 SOURCES = main.c \
 		  climate_data.c \
-		  readFileToBuffer.c
+		  readFileToBuffer.c\
+		  menu.c
 HEADERS = climate_data.h \
-		  readFileToBuffer.h
+		  readFileToBuffer.h\
+		  menu.h
 
 all: $(TARGET)
 
