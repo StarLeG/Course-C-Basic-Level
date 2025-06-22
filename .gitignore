@@ -64,3 +64,6 @@ input.txt
 # Игнорировать все исполняемые файлы (опционально)
 /*.exe
 /*.out
+/*.o
+
+Temperature_Statistics
