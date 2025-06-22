@@ -2,19 +2,19 @@
 #include <stdio.h>
 #include <limits.h>
 
-TemperatureRecord tempRecords[MAX_RECORDS];
+TemperatureRecord sensorData[MAX_RECORDS];
 size_t recordsCount = 0;
 
 void addRecord(uint16_t year, uint8_t month, uint8_t day, uint8_t hours, uint8_t minutes, int8_t temperature)
 {
     if (recordsCount < MAX_RECORDS)
     {
-        tempRecords[recordsCount].year = year;
-        tempRecords[recordsCount].month = month;
-        tempRecords[recordsCount].day = day;
-        tempRecords[recordsCount].hours = hours;
-        tempRecords[recordsCount].minutes = minutes;
-        tempRecords[recordsCount].temperature = temperature;
+        sensorData[recordsCount].year = year;
+        sensorData[recordsCount].month = month;
+        sensorData[recordsCount].day = day;
+        sensorData[recordsCount].hours = hours;
+        sensorData[recordsCount].minutes = minutes;
+        sensorData[recordsCount].temperature = temperature;
         recordsCount++;
     }
 }
@@ -28,7 +28,7 @@ void removeRecord(size_t index)
 
     for (size_t i = index; i < recordsCount - 1; i++)
     {
-        tempRecords[i] = tempRecords[i + 1];
+        sensorData[i] = sensorData[i + 1];
     }
 
     recordsCount--;
@@ -39,12 +39,12 @@ int findAndRemoveRecord(uint16_t year, uint8_t month, uint8_t day,
 {
     for (size_t i = 0; i < recordsCount; i++)
     {
-        if (tempRecords[i].year == year &&
-            tempRecords[i].month == month &&
-            tempRecords[i].day == day &&
-            tempRecords[i].hours == hours &&
-            tempRecords[i].minutes == minutes &&
-            tempRecords[i].temperature == temperature)
+        if (sensorData[i].year == year &&
+            sensorData[i].month == month &&
+            sensorData[i].day == day &&
+            sensorData[i].hours == hours &&
+            sensorData[i].minutes == minutes &&
+            sensorData[i].temperature == temperature)
         {
             removeRecord(i);
             return 1;
@@ -60,9 +60,9 @@ float getAverageMonthlyTemp(uint16_t year, uint8_t month)
 
     for (size_t i = 0; i < recordsCount; i++)
     {
-        if (tempRecords[i].year == year && tempRecords[i].month == month)
+        if (sensorData[i].year == year && sensorData[i].month == month)
         {
-            sum += tempRecords[i].temperature;
+            sum += sensorData[i].temperature;
             count++;
         }
     }
@@ -76,11 +76,11 @@ int8_t getMinMonthlyTemp(uint16_t year, uint8_t month)
 
     for (size_t i = 0; i < recordsCount; i++)
     {
-        if (tempRecords[i].year == year && tempRecords[i].month == month)
+        if (sensorData[i].year == year && sensorData[i].month == month)
         {
-            if (tempRecords[i].temperature < min)
+            if (sensorData[i].temperature < min)
             {
-                min = tempRecords[i].temperature;
+                min = sensorData[i].temperature;
             }
         }
     }
@@ -94,11 +94,11 @@ int8_t getMaxMonthlyTemp(uint16_t year, uint8_t month)
 
     for (size_t i = 0; i < recordsCount; i++)
     {
-        if (tempRecords[i].year == year && tempRecords[i].month == month)
+        if (sensorData[i].year == year && sensorData[i].month == month)
         {
-            if (tempRecords[i].temperature > max)
+            if (sensorData[i].temperature > max)
             {
-                max = tempRecords[i].temperature;
+                max = sensorData[i].temperature;
             }
         }
     }
@@ -113,9 +113,9 @@ float getAverageYearlyTemp(uint16_t year)
 
     for (size_t i = 0; i < recordsCount; i++)
     {
-        if (tempRecords[i].year == year)
+        if (sensorData[i].year == year)
         {
-            sum += tempRecords[i].temperature;
+            sum += sensorData[i].temperature;
             count++;
         }
     }
@@ -129,11 +129,11 @@ int8_t getMinYearlyTemp(uint16_t year)
 
     for (size_t i = 0; i < recordsCount; i++)
     {
-        if (tempRecords[i].year == year)
+        if (sensorData[i].year == year)
         {
-            if (tempRecords[i].temperature < min)
+            if (sensorData[i].temperature < min)
             {
-                min = tempRecords[i].temperature;
+                min = sensorData[i].temperature;
             }
         }
     }
@@ -147,11 +147,11 @@ int8_t getMaxYearlyTemp(uint16_t year)
 
     for (size_t i = 0; i < recordsCount; i++)
     {
-        if (tempRecords[i].year == year)
+        if (sensorData[i].year == year)
         {
-            if (tempRecords[i].temperature > max)
+            if (sensorData[i].temperature > max)
             {
-                max = tempRecords[i].temperature;
+                max = sensorData[i].temperature;
             }
         }
     }
@@ -164,7 +164,7 @@ size_t countMonthlyRecords(uint16_t year, uint8_t month)
     size_t count = 0;
     for (size_t i = 0; i < recordsCount; i++)
     {
-        if (tempRecords[i].year == year && tempRecords[i].month == month)
+        if (sensorData[i].year == year && sensorData[i].month == month)
         {
             count++;
         }
@@ -206,13 +206,13 @@ void printStatsForMonthAllYears(uint8_t month)
 
     for (size_t i = 0; i < recordsCount; i++)
     {
-        if (tempRecords[i].month == month)
+        if (sensorData[i].month == month)
         {
 
             int found = 0;
             for (size_t j = 0; j < yearsCount; j++)
             {
-                if (years[j] == tempRecords[i].year)
+                if (years[j] == sensorData[i].year)
                 {
                     found = 1;
                     break;
@@ -220,7 +220,7 @@ void printStatsForMonthAllYears(uint8_t month)
             }
             if (!found)
             {
-                years[yearsCount++] = tempRecords[i].year;
+                years[yearsCount++] = sensorData[i].year;
             }
         }
     }

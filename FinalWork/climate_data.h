@@ -4,8 +4,9 @@
 #include <stddef.h>
 #include <stdlib.h>
 #include <unistd.h>
+#include "config.h"
 
-#define MAX_RECORDS 100000
+
 
 typedef struct {
     uint16_t year;
