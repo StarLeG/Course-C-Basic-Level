@@ -1,21 +1,25 @@
 #include "readFileToBuffer.h"
 
-int readFileToBuffer(char *fileName, char *buffer)
-{
-    if(fileName == NULL) return -1;
+#define SUCCESS 0
+#define FILE_OPEN_ERROR -1
+#define INVALID_FORMAT -2
+#define BUFFER_OVERFLOW -3
+#define INVALID_EXTENSION -4
 
-    FILE *input = fopen(fileName, "r");
-
-    if(input == NULL){
-        return -2;
+int readFileToBuffer(char *fileName, char *buffer) {
+    
+     char *dot = strrchr(fileName, '.');
+    if (dot == NULL || strcmp(dot, ".csv") != 0) {        
+        return INVALID_EXTENSION;
     }
 
-    if(fgets(buffer, sizeof(buffer), input) == NULL){                   
-          
-        return -3;      
+    FILE *file = fopen(fileName, "r");
+    if (!file) {
+        return FILE_OPEN_ERROR;
     }
 
+    
 
-    fclose(input);
-    return 0;
+    fclose(file);
+    return SUCCESS;
 }
