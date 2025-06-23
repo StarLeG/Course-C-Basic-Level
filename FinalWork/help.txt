@@ -24,6 +24,13 @@ INTERACTIVE MENU OPTIONS:
 DATA FORMAT:
 Records should be in CSV format with semicolon (;) separator:
 Year;Month;Day;Hour;Minute;Temperature
+dddd;mm;dd;hh;mm;temperature 
+dddd - year 4 digits 
+mm - month 2 digits 
+dd - day 2 digits 
+hh - hours 2 digits 
+mm - minutes 2 digits 
+temperature - integer from -99 to 99
 Example: 2023;01;15;12;30;-5
 
 TABLE VIEW FORMAT:
@@ -35,6 +42,6 @@ TABLE VIEW FORMAT:
 
 LIMITATIONS:
 - Max records: 100000
-- Temperature range: -128 to +127°C
+- Temperature range: -99 to +99°C
 - Month range: 1-12
 ***********************************************************************************************

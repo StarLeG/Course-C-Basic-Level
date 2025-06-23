@@ -11,7 +11,7 @@
 
 int main(int argc, char *argv[])
 {
-    // Инициализация тестовых данных
+
     addRecord(2023, 1, 15, 12, 30, -5);
     addRecord(2023, 1, 15, 18, 45, -7);
     addRecord(2023, 2, 20, 10, 15, 10);
@@ -21,7 +21,6 @@ int main(int argc, char *argv[])
     addRecord(2018, 2, 12, 9, 0, 8);
     addRecord(2022, 12, 31, 23, 59, -15);
 
-    // Обработка аргументов командной строки
     if (argc > 1)
     {
         int result = 0;
@@ -62,13 +61,13 @@ int main(int argc, char *argv[])
                 printf("Error found !\n");
                 break;
             }
-        }
+        }        
 
-        char buffer[SIZE] = {'\0'};
-        result = readFileToBuffer(fileName, buffer);
+        /* result = readFileToBuffer(fileName, buffer);
+
+         */
     }
 
-    // Основное интерактивное меню
     int choice;
     do
     {
@@ -78,12 +77,12 @@ int main(int argc, char *argv[])
         {
             printf("Invalid input!\n");
             while (getchar() != '\n')
-                ; 
+                ;
             continue;
         }
-        
-         while (getchar() != '\n')
-            ; 
+
+        while (getchar() != '\n')
+            ;
 
         handleUserChoice(choice);
     } while (choice != 0);

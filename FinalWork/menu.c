@@ -122,14 +122,14 @@ void displayAddRecordMenu() {
         return;
     }
     
-    printf("Enter temperature (-128 to 127): ");
+    printf("Enter temperature (-99 to 99): ");
     if (scanf("%d", &temp_input) != 1) { 
         printf("Invalid input for temperature!\n");
         while(getchar() != '\n');
         return;
     }
-    if (temp_input < -128 || temp_input > 127) {
-        printf("Temperature must be between -128 and 127°C!\n");
+    if (temp_input < -99 || temp_input > 99) {
+        printf("Temperature must be between -99 and 99°C!\n");
         return;
     }
     temperature = (int8_t)temp_input; 
@@ -259,14 +259,33 @@ void loadDataFromFile() {
         return;
     }
     
+    
+    char *dot = strrchr(fileName, '.');
+    if (dot == NULL || strcmp(dot, ".csv") != 0) {
+        printf("Error: File must have .csv extension!\n");
+        return;
+    }
+    
     char buffer[SIZE] = {'\0'};
     int result = readFileToBuffer(fileName, buffer);
     
-    if (result == 0) {
-        printf("Data loaded successfully from %s\n", fileName);
-    } else {
-        printf("Error loading data from file. Error code: %d\n", result);
-    }
+    switch (result)
+        {
+        case 0:
+            printf("File loaded successfully, all lines are valid\n");
+            break;
+         case -1:
+            printf("Error: Opening file. File not found.\n");
+            break;    
+        case -3:
+            printf("Error: Buffer overflow.\n");
+            break;
+        case -4:
+            printf("Error: File must have .csv extension!\n");
+            break;
+        default:
+            printf("Error loading file\n");
+        }
 }
 
 void displayAllRecordsMenu() {
