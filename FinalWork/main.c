@@ -1,4 +1,3 @@
-// main.c
 #include <stdio.h>
 #include "climate_data.h"
 #include <string.h>
@@ -63,9 +62,6 @@ int main(int argc, char *argv[])
             }
         }        
 
-        /* result = readFileToBuffer(fileName, buffer);
-
-         */
     }
 
     int choice;
