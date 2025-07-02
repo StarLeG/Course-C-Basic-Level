@@ -10,16 +10,7 @@
 
 int main(int argc, char *argv[])
 {
-
-    addRecord(2023, 1, 15, 12, 30, -5);
-    addRecord(2023, 1, 15, 18, 45, -7);
-    addRecord(2023, 2, 20, 10, 15, 10);
-    addRecord(2023, 2, 21, 9, 0, 8);
-    addRecord(2024, 2, 21, 9, 0, 8);
-    addRecord(2017, 2, 21, 9, 0, 8);
-    addRecord(2018, 2, 12, 9, 0, 8);
-    addRecord(2022, 12, 31, 23, 59, -15);
-
+      
     if (argc > 1)
     {
         int result = 0;
