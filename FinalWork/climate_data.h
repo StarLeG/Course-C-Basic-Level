@@ -4,17 +4,6 @@
 #include <stddef.h>
 #include "config.h"
 
-
-
-typedef struct {
-    uint16_t year;
-    uint8_t month;
-    uint8_t day;
-    uint8_t hours;
-    uint8_t minutes;
-    int8_t temperature;
-} TemperatureRecord;
-
 extern TemperatureRecord sensorData[MAX_RECORDS];
 extern size_t recordsCount;
 
