@@ -272,19 +272,19 @@ void loadDataFromFile() {
     switch (result)
         {
         case 0:
-            printf("File loaded successfully, all lines are valid\n");
+            printf(GREEN_TEXT"File loaded successfully.\n"RESET_TEXT);
             break;
          case -1:
-            printf("Error: Opening file. File not found.\n");
+            printf(RED_TEXT"Error: Opening file. File not found.\n"RESET_TEXT);
             break;    
         case -3:
-            printf("Error: Buffer overflow.\n");
+            printf(RED_TEXT"Error: Buffer overflow.\n"RESET_TEXT);
             break;
         case -4:
-            printf("Error: File must have .csv extension!\n");
+            printf(RED_TEXT"Error: File must have .csv extension!\n"RESET_TEXT);
             break;
         default:
-            printf("Error loading file\n");
+            printf(RED_TEXT"Error: loading file\n"RESET_TEXT);
         }
 }
 
