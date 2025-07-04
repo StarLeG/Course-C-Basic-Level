@@ -1,3 +1,7 @@
+/**
+ * @file config.h
+ * @brief Конфигурационные константы и структуры данных
+ */
 
 #pragma once
 
@@ -10,6 +14,9 @@
 #define GREEN_TEXT "\x1B[32m"
 #define RESET_TEXT "\x1B[0m"
 
+/**
+ * @brief Структура для хранения данных о температуре
+ */
 
 typedef struct {
     uint16_t year;

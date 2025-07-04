@@ -1,3 +1,8 @@
+/**
+ * @file readFileToBuffer.c
+ * @brief Реализация функций чтения данных о температуре из файла
+ */
+
 #include "readFileToBuffer.h"
 #include <stdio.h>
 #include <string.h>
@@ -13,6 +18,13 @@
 #define INVALID_PARAM -5
 
 extern TemperatureRecord tmpSensorData;
+
+/**
+ * @brief Читает данные о температуре из CSV файла в буфер
+ * @param fileName Имя файла для чтения
+ * @param buffer Буфер для хранения содержимого файла
+ * @return int Код статуса (SUCCESS или код ошибки)
+ */
 
 int readFileToBuffer(char *fileName, char *buffer) {
     if (!fileName || !buffer) return INVALID_PARAM;

@@ -1,9 +1,18 @@
+/**
+ * @file menu.c
+ * @brief Реализация функций меню для программы статистики температуры
+ */
+
 #include "menu.h"
 #include "climate_data.h"
 #include "readFileToBuffer.h"
 #include <stdio.h>
 #include <stdlib.h>
 #include "config.h"
+
+/**
+ * @brief Отображает главное меню программы
+ */
 
 void displayMainMenu() {
     printf("\n=== Temperature Statistics Program ===\n");
@@ -14,6 +23,11 @@ void displayMainMenu() {
     printf("5. View all records\n");
     printf("0. Exit program\n"); 
 }
+
+/**
+ * @brief Обрабатывает выбор пользователя в меню
+ * @param choice Выбранный пункт меню
+ */
 
 void handleUserChoice(int choice) {
     switch (choice) {
@@ -39,6 +53,10 @@ void handleUserChoice(int choice) {
             printf("Invalid choice! Please try again.\n");
     }
 }
+
+/**
+ * @brief Отображает меню добавления новой записи о температуре
+ */
 
 void displayAddRecordMenu() {
     uint16_t year;
@@ -138,6 +156,10 @@ void displayAddRecordMenu() {
     printf("Record added successfully!\n");
 }
 
+/**
+ * @brief Отображает меню удаления записи о температуре
+ */
+
 void displayRemoveRecordMenu() {
     size_t index;
     
@@ -188,6 +210,10 @@ void displayRemoveRecordMenu() {
         printf("Removal canceled.\n");
     }
 }
+
+/**
+ * @brief Отображает меню статистики
+ */
 
 void displayStatsMenu() {
     int choice;
@@ -248,6 +274,10 @@ void displayStatsMenu() {
     }
 }
 
+/**
+ * @brief Загружает данные из CSV файла
+ */
+
 void loadDataFromFile() {
     char fileName[256];
     
@@ -287,6 +317,10 @@ void loadDataFromFile() {
             printf(RED_TEXT"Error: loading file\n"RESET_TEXT);
         }
 }
+
+/**
+ * @brief Отображает все записи о температуре
+ */
 
 void displayAllRecordsMenu() {
     printf("\n=== View All Records ===\n");

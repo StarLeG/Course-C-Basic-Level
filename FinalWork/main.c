@@ -1,3 +1,8 @@
+/**
+ * @file main.c
+ * @brief Главный модуль программы статистики температуры
+ */
+
 #include <stdio.h>
 #include "climate_data.h"
 #include <string.h>
@@ -7,6 +12,13 @@
 #include <stdlib.h>
 #include "menu.h"
 #include "config.h"
+
+/**
+ * @brief Главная функция программы
+ * @param argc Количество аргументов
+ * @param argv Массив аргументов
+ * @return int Статус завершения программы
+ */
 
 int main(int argc, char *argv[])
 {
