@@ -17,5 +17,4 @@
  * @param buffer Буфер для хранения содержимого
  * @return int Код статуса (0 при успехе, отрицательный при ошибках)
  */
-
 int readFileToBuffer(char *fileName, char *buffer);

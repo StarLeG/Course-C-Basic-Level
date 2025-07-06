@@ -2,7 +2,6 @@
  * @file menu.c
  * @brief Реализация функций меню для программы статистики температуры
  */
-
 #include "menu.h"
 #include "climate_data.h"
 #include "readFileToBuffer.h"
@@ -13,7 +12,6 @@
 /**
  * @brief Отображает главное меню программы
  */
-
 void displayMainMenu() {
     printf("\n=== Temperature Statistics Program ===\n");
     printf("1. Add new temperature record\n");
@@ -28,7 +26,6 @@ void displayMainMenu() {
  * @brief Обрабатывает выбор пользователя в меню
  * @param choice Выбранный пункт меню
  */
-
 void handleUserChoice(int choice) {
     switch (choice) {
         case 1:
@@ -57,7 +54,6 @@ void handleUserChoice(int choice) {
 /**
  * @brief Отображает меню добавления новой записи о температуре
  */
-
 void displayAddRecordMenu() {
     uint16_t year;
     uint8_t month, day, hours, minutes;
@@ -159,7 +155,6 @@ void displayAddRecordMenu() {
 /**
  * @brief Отображает меню удаления записи о температуре
  */
-
 void displayRemoveRecordMenu() {
     size_t index;
     
@@ -214,7 +209,6 @@ void displayRemoveRecordMenu() {
 /**
  * @brief Отображает меню статистики
  */
-
 void displayStatsMenu() {
     int choice;
     uint16_t year;
@@ -277,7 +271,6 @@ void displayStatsMenu() {
 /**
  * @brief Загружает данные из CSV файла
  */
-
 void loadDataFromFile() {
     char fileName[256];
     
@@ -321,7 +314,6 @@ void loadDataFromFile() {
 /**
  * @brief Отображает все записи о температуре
  */
-
 void displayAllRecordsMenu() {
     printf("\n=== View All Records ===\n");
     printAllRecords();

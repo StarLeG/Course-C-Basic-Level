@@ -25,7 +25,6 @@ extern TemperatureRecord tmpSensorData;
  * @param buffer Буфер для хранения содержимого файла
  * @return int Код статуса (SUCCESS или код ошибки)
  */
-
 int readFileToBuffer(char *fileName, char *buffer) {
     if (!fileName || !buffer) return INVALID_PARAM;
     

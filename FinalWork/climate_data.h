@@ -21,14 +21,12 @@ extern size_t recordsCount;
  * @param minutes Минуты записи (0-59)
  * @param temperature Значение температуры (-99 до 99)
  */
-
 void addRecord(uint16_t year, uint8_t month, uint8_t day, uint8_t hours, uint8_t minutes, int8_t temperature);
 
 /**
  * @brief Удаляет запись по индексу
  * @param index Индекс записи для удаления
  */
-
 void removeRecord(size_t index);
 
 /**
@@ -41,7 +39,6 @@ void removeRecord(size_t index);
  * @param temperature Температура для поиска
  * @return int 1 если найдена и удалена, 0 в противном случае
  */
-
 int findAndRemoveRecord(uint16_t year, uint8_t month, uint8_t day, 
                        uint8_t hours, uint8_t minutes, int8_t temperature);
 
@@ -50,35 +47,30 @@ int findAndRemoveRecord(uint16_t year, uint8_t month, uint8_t day,
  * @param year Год для подсчета
  * @param month Месяц для подсчета (1-12)
  * @return size_t Количество найденных записей
- */
-                       
+ */                       
 size_t countMonthlyRecords(uint16_t year, uint8_t month);
 
 /**
  * @brief Выводит месячную статистику за год
  * @param year Год для вывода статистики
  */
-
 void printMonthlyStats(uint16_t year);
 
 /**
  * @brief Выводит годовую статистику
  * @param year Год для вывода статистики
  */
-
 void printYearlyStats(uint16_t year);
 
 /**
  * @brief Выводит статистику по конкретному месяцу за все годы
  * @param month Месяц для вывода статистики (1-12)
  */
-
 void printStatsForMonthAllYears(uint8_t month);
 
 /**
  * @brief Выводит все записи в форматированной таблице
  */
-
 void printAllRecords();
 
 /**
@@ -87,7 +79,6 @@ void printAllRecords();
  * @param month Месяц для проверки (1-12)
  * @return float Средняя температура
  */
-
 float getAverageMonthlyTemp(uint16_t year, uint8_t month);
 
 /**
@@ -96,7 +87,6 @@ float getAverageMonthlyTemp(uint16_t year, uint8_t month);
  * @param month Месяц для проверки (1-12)
  * @return int8_t Минимальная температура
  */
-
 int8_t getMinMonthlyTemp(uint16_t year, uint8_t month);
 
 /**
@@ -105,7 +95,6 @@ int8_t getMinMonthlyTemp(uint16_t year, uint8_t month);
  * @param month Месяц для проверки (1-12)
  * @return int8_t Максимальная температура
  */
-
 int8_t getMaxMonthlyTemp(uint16_t year, uint8_t month);
 
 /**
@@ -113,7 +102,6 @@ int8_t getMaxMonthlyTemp(uint16_t year, uint8_t month);
  * @param year Год для проверки
  * @return float Средняя температура
  */
-
 float getAverageYearlyTemp(uint16_t year);
 
 /**
@@ -121,7 +109,6 @@ float getAverageYearlyTemp(uint16_t year);
  * @param year Год для проверки
  * @return int8_t Минимальная температура
  */
-
 int8_t getMinYearlyTemp(uint16_t year);
 
 /**
@@ -129,6 +116,5 @@ int8_t getMinYearlyTemp(uint16_t year);
  * @param year Год для проверки
  * @return int8_t Максимальная температура
  */
-
 int8_t getMaxYearlyTemp(uint16_t year);
 
