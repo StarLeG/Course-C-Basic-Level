@@ -1,6 +1,8 @@
 var searchData=
 [
-  ['описание_0',['Описание',['../D:/Qt_Project/MFTI/Course-C-Basic-Level/FinalWork/ReadMe.md#autotoc_md1',1,'']]],
-  ['основные_20функции_1',['Основные функции',['../D:/Qt_Project/MFTI/Course-C-Basic-Level/FinalWork/ReadMe.md#autotoc_md3',1,'']]],
-  ['ошибок_2',['Коды ошибок',['../D:/Qt_Project/MFTI/Course-C-Basic-Level/FinalWork/ReadMe.md#autotoc_md13',1,'']]]
+  ['инструкция_20по_20сборке_0',['Инструкция по сборке',['../D:/Qt_Project/MFTI/Course-C-Basic-Level/FinalWork/ReadMe.md#autotoc_md19',1,'']]],
+  ['интерактивный_20режим_1',['Интерактивный режим.',['../D:/Qt_Project/MFTI/Course-C-Basic-Level/FinalWork/ReadMe.md#autotoc_md9',1,'']]],
+  ['использование_2',['Установка и использование',['../D:/Qt_Project/MFTI/Course-C-Basic-Level/FinalWork/ReadMe.md#autotoc_md7',1,'']]],
+  ['использования_3',['Примеры использования',['../D:/Qt_Project/MFTI/Course-C-Basic-Level/FinalWork/ReadMe.md#autotoc_md14',1,'']]],
+  ['и_20использование_4',['Установка и использование',['../D:/Qt_Project/MFTI/Course-C-Basic-Level/FinalWork/ReadMe.md#autotoc_md7',1,'']]]
 ];

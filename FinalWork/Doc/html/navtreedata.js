@@ -25,6 +25,7 @@
 var NAVTREE =
 [
   [ "Temperature Statistics", "index.html", [
+    [ "Temperature Statistics Program", "index.html", "index" ],
     [ "Data Structures", "annotated.html", [
       [ "Data Structures", "annotated.html", "annotated_dup" ],
       [ "Data Structure Index", "classes.html", null ]
