@@ -1,0 +1,60 @@
+\doxysection{climate\+\_\+data.\+h}
+\hypertarget{climate__data_8h_source}{}\label{climate__data_8h_source}\index{D:/Qt\_Project/MFTI/Course-\/C-\/Basic-\/Level/FinalWork/climate\_data.h@{D:/Qt\_Project/MFTI/Course-\/C-\/Basic-\/Level/FinalWork/climate\_data.h}}
+\mbox{\hyperlink{climate__data_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00005\ }
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00007\ }
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#include\ <stdint.h>}}
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#include\ <stddef.h>}}
+\DoxyCodeLine{00010\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{config_8h}{config.h}}"{}}}
+\DoxyCodeLine{00011\ }
+\DoxyCodeLine{00012\ \textcolor{keyword}{extern}\ \mbox{\hyperlink{struct_temperature_record}{TemperatureRecord}}\ sensorData[MAX\_RECORDS];}
+\DoxyCodeLine{00013\ \textcolor{keyword}{extern}\ \textcolor{keywordtype}{size\_t}\ recordsCount;}
+\DoxyCodeLine{00014\ }
+\DoxyCodeLine{00024\ }
+\DoxyCodeLine{00025\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{climate__data_8h_a7391dac1dfdc4ea6ae022ecf72eb7161}{addRecord}}(uint16\_t\ year,\ uint8\_t\ month,\ uint8\_t\ day,\ uint8\_t\ hours,\ uint8\_t\ minutes,\ int8\_t\ temperature);}
+\DoxyCodeLine{00026\ }
+\DoxyCodeLine{00031\ }
+\DoxyCodeLine{00032\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{climate__data_8h_a8d97a34f6ece203fca28132592c722d9}{removeRecord}}(\textcolor{keywordtype}{size\_t}\ index);}
+\DoxyCodeLine{00033\ }
+\DoxyCodeLine{00044\ }
+\DoxyCodeLine{00045\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{climate__data_8h_ae73cf9a1052ea014dba8739619c6cda0}{findAndRemoveRecord}}(uint16\_t\ year,\ uint8\_t\ month,\ uint8\_t\ day,\ }
+\DoxyCodeLine{00046\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ uint8\_t\ hours,\ uint8\_t\ minutes,\ int8\_t\ temperature);}
+\DoxyCodeLine{00047\ }
+\DoxyCodeLine{00054\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00055\ \textcolor{keywordtype}{size\_t}\ \mbox{\hyperlink{climate__data_8h_a3322e4894367bc7388d9bdccdd560137}{countMonthlyRecords}}(uint16\_t\ year,\ uint8\_t\ month);}
+\DoxyCodeLine{00056\ }
+\DoxyCodeLine{00061\ }
+\DoxyCodeLine{00062\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{climate__data_8h_a42c079ec254dc577cd8e2b4b3698dcfd}{printMonthlyStats}}(uint16\_t\ year);}
+\DoxyCodeLine{00063\ }
+\DoxyCodeLine{00068\ }
+\DoxyCodeLine{00069\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{climate__data_8h_aea96cf324190bf44ab42572fdd07867f}{printYearlyStats}}(uint16\_t\ year);}
+\DoxyCodeLine{00070\ }
+\DoxyCodeLine{00075\ }
+\DoxyCodeLine{00076\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{climate__data_8h_a8ddf9e35e6921ed4007347001a6e38db}{printStatsForMonthAllYears}}(uint8\_t\ month);}
+\DoxyCodeLine{00077\ }
+\DoxyCodeLine{00081\ }
+\DoxyCodeLine{00082\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{climate__data_8h_a88d147364e977477ff26ef0f081a20ab}{printAllRecords}}();}
+\DoxyCodeLine{00083\ }
+\DoxyCodeLine{00090\ }
+\DoxyCodeLine{00091\ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{climate__data_8h_ac2aeaec92546ae66147f7147ee287601}{getAverageMonthlyTemp}}(uint16\_t\ year,\ uint8\_t\ month);}
+\DoxyCodeLine{00092\ }
+\DoxyCodeLine{00099\ }
+\DoxyCodeLine{00100\ int8\_t\ \mbox{\hyperlink{climate__data_8h_a89d7112e3d6f5ba622db73d2263da4fe}{getMinMonthlyTemp}}(uint16\_t\ year,\ uint8\_t\ month);}
+\DoxyCodeLine{00101\ }
+\DoxyCodeLine{00108\ }
+\DoxyCodeLine{00109\ int8\_t\ \mbox{\hyperlink{climate__data_8h_adb241010c87bc22a48a1b9bc85727c63}{getMaxMonthlyTemp}}(uint16\_t\ year,\ uint8\_t\ month);}
+\DoxyCodeLine{00110\ }
+\DoxyCodeLine{00116\ }
+\DoxyCodeLine{00117\ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{climate__data_8h_a779b0677c864ee2d5111e3d1d102ab25}{getAverageYearlyTemp}}(uint16\_t\ year);}
+\DoxyCodeLine{00118\ }
+\DoxyCodeLine{00124\ }
+\DoxyCodeLine{00125\ int8\_t\ \mbox{\hyperlink{climate__data_8h_a774649890449a014b7cf3f1c8bc01131}{getMinYearlyTemp}}(uint16\_t\ year);}
+\DoxyCodeLine{00126\ }
+\DoxyCodeLine{00132\ }
+\DoxyCodeLine{00133\ int8\_t\ \mbox{\hyperlink{climate__data_8h_a9b85fc9c6d1ffb68b08330452c1a7d2c}{getMaxYearlyTemp}}(uint16\_t\ year);}
+\DoxyCodeLine{00134\ }
+
+\end{DoxyCode}

@@ -1,0 +1,107 @@
+\doxysection{D\+:/\+Qt\+\_\+\+Project/\+MFTI/\+Course-\/\+C-\/\+Basic-\/\+Level/\+Final\+Work/menu.c File Reference}
+\hypertarget{menu_8c}{}\label{menu_8c}\index{D:/Qt\_Project/MFTI/Course-\/C-\/Basic-\/Level/FinalWork/menu.c@{D:/Qt\_Project/MFTI/Course-\/C-\/Basic-\/Level/FinalWork/menu.c}}
+
+
+Реализация функций меню для программы статистики температуры  
+
+
+{\ttfamily \#include "{}menu.\+h"{}}\newline
+{\ttfamily \#include "{}climate\+\_\+data.\+h"{}}\newline
+{\ttfamily \#include "{}read\+File\+To\+Buffer.\+h"{}}\newline
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include $<$stdlib.\+h$>$}\newline
+{\ttfamily \#include "{}config.\+h"{}}\newline
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{menu_8c_a3f59019099538e8aa23e72a544461c26}{display\+Main\+Menu}} ()
+\begin{DoxyCompactList}\small\item\em Отображает главное меню программы \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{menu_8c_ae56915d57ca4e27bd132a459ca83ed3d}{handle\+User\+Choice}} (int choice)
+\begin{DoxyCompactList}\small\item\em Обрабатывает выбор пользователя в меню \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{menu_8c_a7674a0c3701093c68e0ebe377251b0f1}{display\+Add\+Record\+Menu}} ()
+\begin{DoxyCompactList}\small\item\em Отображает меню добавления новой записи о температуре \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{menu_8c_a7c177e87305e3a58c5ed79e8598ae687}{display\+Remove\+Record\+Menu}} ()
+\begin{DoxyCompactList}\small\item\em Отображает меню удаления записи о температуре \end{DoxyCompactList}\item 
+\Hypertarget{menu_8c_aa4da8ae286f95189175c89bbf249851f}\label{menu_8c_aa4da8ae286f95189175c89bbf249851f} 
+void {\bfseries display\+Stats\+Menu} ()
+\begin{DoxyCompactList}\small\item\em Отображает меню статистики \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{menu_8c_a4cfa87a81a57d04b37b450580084e9d2}{load\+Data\+From\+File}} ()
+\begin{DoxyCompactList}\small\item\em Загружает данные из CSV файла \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{menu_8c_ac396e0896eccd3a8bf8439adb18bf394}{display\+All\+Records\+Menu}} ()
+\begin{DoxyCompactList}\small\item\em Отображает все записи о температуре \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Реализация функций меню для программы статистики температуры 
+
+
+
+\label{doc-func-members}
+\Hypertarget{menu_8c_doc-func-members}
+\doxysubsection{Function Documentation}
+\Hypertarget{menu_8c_a7674a0c3701093c68e0ebe377251b0f1}\index{menu.c@{menu.c}!displayAddRecordMenu@{displayAddRecordMenu}}
+\index{displayAddRecordMenu@{displayAddRecordMenu}!menu.c@{menu.c}}
+\doxysubsubsection{\texorpdfstring{displayAddRecordMenu()}{displayAddRecordMenu()}}
+{\footnotesize\ttfamily \label{menu_8c_a7674a0c3701093c68e0ebe377251b0f1} 
+void display\+Add\+Record\+Menu (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Отображает меню добавления новой записи о температуре 
+
+Отображает меню добавления записи \Hypertarget{menu_8c_ac396e0896eccd3a8bf8439adb18bf394}\index{menu.c@{menu.c}!displayAllRecordsMenu@{displayAllRecordsMenu}}
+\index{displayAllRecordsMenu@{displayAllRecordsMenu}!menu.c@{menu.c}}
+\doxysubsubsection{\texorpdfstring{displayAllRecordsMenu()}{displayAllRecordsMenu()}}
+{\footnotesize\ttfamily \label{menu_8c_ac396e0896eccd3a8bf8439adb18bf394} 
+void display\+All\+Records\+Menu (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Отображает все записи о температуре 
+
+Отображает все записи \Hypertarget{menu_8c_a3f59019099538e8aa23e72a544461c26}\index{menu.c@{menu.c}!displayMainMenu@{displayMainMenu}}
+\index{displayMainMenu@{displayMainMenu}!menu.c@{menu.c}}
+\doxysubsubsection{\texorpdfstring{displayMainMenu()}{displayMainMenu()}}
+{\footnotesize\ttfamily \label{menu_8c_a3f59019099538e8aa23e72a544461c26} 
+void display\+Main\+Menu (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Отображает главное меню программы 
+
+Отображает главное меню \Hypertarget{menu_8c_a7c177e87305e3a58c5ed79e8598ae687}\index{menu.c@{menu.c}!displayRemoveRecordMenu@{displayRemoveRecordMenu}}
+\index{displayRemoveRecordMenu@{displayRemoveRecordMenu}!menu.c@{menu.c}}
+\doxysubsubsection{\texorpdfstring{displayRemoveRecordMenu()}{displayRemoveRecordMenu()}}
+{\footnotesize\ttfamily \label{menu_8c_a7c177e87305e3a58c5ed79e8598ae687} 
+void display\+Remove\+Record\+Menu (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Отображает меню удаления записи о температуре 
+
+Отображает меню удаления записи \Hypertarget{menu_8c_ae56915d57ca4e27bd132a459ca83ed3d}\index{menu.c@{menu.c}!handleUserChoice@{handleUserChoice}}
+\index{handleUserChoice@{handleUserChoice}!menu.c@{menu.c}}
+\doxysubsubsection{\texorpdfstring{handleUserChoice()}{handleUserChoice()}}
+{\footnotesize\ttfamily \label{menu_8c_ae56915d57ca4e27bd132a459ca83ed3d} 
+void handle\+User\+Choice (\begin{DoxyParamCaption}\item[{int}]{choice}{}\end{DoxyParamCaption})}
+
+
+
+Обрабатывает выбор пользователя в меню 
+
+
+\begin{DoxyParams}{Parameters}
+{\em choice} & Выбранный пункт меню \\
+\hline
+\end{DoxyParams}
+\Hypertarget{menu_8c_a4cfa87a81a57d04b37b450580084e9d2}\index{menu.c@{menu.c}!loadDataFromFile@{loadDataFromFile}}
+\index{loadDataFromFile@{loadDataFromFile}!menu.c@{menu.c}}
+\doxysubsubsection{\texorpdfstring{loadDataFromFile()}{loadDataFromFile()}}
+{\footnotesize\ttfamily \label{menu_8c_a4cfa87a81a57d04b37b450580084e9d2} 
+void load\+Data\+From\+File (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Загружает данные из CSV файла 
+
+Обрабатывает загрузку данных из файла 

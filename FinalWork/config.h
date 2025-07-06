@@ -26,3 +26,4 @@ typedef struct {
     uint8_t minutes;
     int8_t temperature;
 } TemperatureRecord;
+
