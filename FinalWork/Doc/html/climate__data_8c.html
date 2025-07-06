@@ -97,6 +97,7 @@ $(function(){initNavTree('climate__data_8c.html','',''); });
 <div class="textblock"><code>#include &quot;<a class="el" href="climate__data_8h_source.html">climate_data.h</a>&quot;</code><br />
 <code>#include &lt;stdio.h&gt;</code><br />
 <code>#include &lt;limits.h&gt;</code><br />
+<code>#include &lt;stdlib.h&gt;</code><br />
 </div><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-func-members" class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
@@ -129,11 +130,14 @@ Functions</h2></td></tr>
 <tr class="memitem:a88d147364e977477ff26ef0f081a20ab" id="r_a88d147364e977477ff26ef0f081a20ab"><td class="memItemLeft" align="right" valign="top"><a id="a88d147364e977477ff26ef0f081a20ab" name="a88d147364e977477ff26ef0f081a20ab"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>printAllRecords</b> ()</td></tr>
 <tr class="memdesc:a88d147364e977477ff26ef0f081a20ab"><td class="mdescLeft">&#160;</td><td class="mdescRight">Выводит все записи в форматированной таблице <br /></td></tr>
+<tr class="memitem:a39082ffb8cc77e087bf07ba73740c43e" id="r_a39082ffb8cc77e087bf07ba73740c43e"><td class="memItemLeft" align="right" valign="top"><a id="a39082ffb8cc77e087bf07ba73740c43e" name="a39082ffb8cc77e087bf07ba73740c43e"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>freeTemperatureList</b> ()</td></tr>
+<tr class="memdesc:a39082ffb8cc77e087bf07ba73740c43e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Освобождает память, занятую списком <br /></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-var-members" class="groupheader"><a id="var-members" name="var-members"></a>
 Variables</h2></td></tr>
-<tr class="memitem:ab3c2d339ddba8d59d96407e70f859c7f" id="r_ab3c2d339ddba8d59d96407e70f859c7f"><td class="memItemLeft" align="right" valign="top"><a id="ab3c2d339ddba8d59d96407e70f859c7f" name="ab3c2d339ddba8d59d96407e70f859c7f"></a>
-<a class="el" href="struct_temperature_record.html">TemperatureRecord</a>&#160;</td><td class="memItemRight" valign="bottom"><b>sensorData</b> [MAX_RECORDS]</td></tr>
+<tr class="memitem:aff71978f4c4b583d63318a62ed67b58b" id="r_aff71978f4c4b583d63318a62ed67b58b"><td class="memItemLeft" align="right" valign="top"><a id="aff71978f4c4b583d63318a62ed67b58b" name="aff71978f4c4b583d63318a62ed67b58b"></a>
+<a class="el" href="struct_temperature_node.html">TemperatureNode</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>sensorDataHead</b> = NULL</td></tr>
 <tr class="memitem:a5e1e713784bbe237d1efd41da4be17b4" id="r_a5e1e713784bbe237d1efd41da4be17b4"><td class="memItemLeft" align="right" valign="top"><a id="a5e1e713784bbe237d1efd41da4be17b4" name="a5e1e713784bbe237d1efd41da4be17b4"></a>
 size_t&#160;</td><td class="memItemRight" valign="bottom"><b>recordsCount</b> = 0</td></tr>
 </table>
@@ -469,7 +473,7 @@ size_t&#160;</td><td class="memItemRight" valign="bottom"><b>recordsCount</b> = 
 <p>Выводит месячную статистику за год </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">year</td><td>Год для вывода статистики </td></tr>
+    <tr><td class="paramname">year</td><td>Год для вывода статистикиФ </td></tr>
   </table>
   </dd>
 </dl>

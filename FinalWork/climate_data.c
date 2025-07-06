@@ -6,99 +6,165 @@
 #include "climate_data.h"
 #include <stdio.h>
 #include <limits.h>
+#include <stdlib.h>
 
-TemperatureRecord sensorData[MAX_RECORDS];
+TemperatureNode *sensorDataHead = NULL;
 size_t recordsCount = 0;
 
 /**
- * @brief Добавляет новую запись о температуре
- * @param year Год записи
- * @param month Месяц записи (1-12)
- * @param day День записи
- * @param hours Часы записи (0-23)
- * @param minutes Минуты записи (0-59)
- * @param temperature Значение температуры (-99 до 99)
+ * @brief Проверяет корректность данных температуры
  */
-void addRecord(uint16_t year, uint8_t month, uint8_t day, uint8_t hours, uint8_t minutes, int8_t temperature)
+static bool isValidRecord(uint16_t year, uint8_t month, uint8_t day,
+                         uint8_t hours, uint8_t minutes, int8_t temp)
 {
-    if (recordsCount < MAX_RECORDS)
-    {
-        sensorData[recordsCount].year = year;
-        sensorData[recordsCount].month = month;
-        sensorData[recordsCount].day = day;
-        sensorData[recordsCount].hours = hours;
-        sensorData[recordsCount].minutes = minutes;
-        sensorData[recordsCount].temperature = temperature;
-        recordsCount++;
-    }
+    return (year >= 1900 && year <= 2100) &&  // Added year validation
+           (month >= 1 && month <= 12) &&
+           (day >= 1 && day <= 31) &&
+           (hours <= 23) &&
+           (minutes <= 59) &&
+           (temp >= -99 && temp <= 99);
 }
 
 /**
- * @brief Удаляет запись по индексу
- * @param index Индекс записи для удаления
+ * @brief Добавляет новую запись о температуре
  */
-void removeRecord(size_t index)
+void addRecord(uint16_t year, uint8_t month, uint8_t day,
+               uint8_t hours, uint8_t minutes, int8_t temperature)
 {
-    if (index >= recordsCount)
+
+    if (recordsCount >= MAX_RECORDS || !isValidRecord(year, month, day, hours, minutes, temperature))
     {
         return;
     }
 
-    for (size_t i = index; i < recordsCount - 1; i++)
+    TemperatureNode *newNode = (TemperatureNode *)malloc(sizeof(TemperatureNode));
+    if (!newNode)
     {
-        sensorData[i] = sensorData[i + 1];
+        return;
     }
 
+    newNode->data.year = year;
+    newNode->data.month = month;
+    newNode->data.day = day;
+    newNode->data.hours = hours;
+    newNode->data.minutes = minutes;
+    newNode->data.temperature = temperature;
+    newNode->next = NULL;
+
+    if (!sensorDataHead)
+    {
+        sensorDataHead = newNode;
+    }
+    else
+    {
+        TemperatureNode *current = sensorDataHead;
+        while (current->next)
+        {
+            current = current->next;
+        }
+        current->next = newNode;
+    }
+
+    recordsCount++;
+}
+
+/**
+ * @brief Удаляет запись по индексу
+ */
+void removeRecord(size_t index)
+{
+    if (index >= recordsCount || !sensorDataHead)
+    {
+        return;
+    }
+
+    TemperatureNode *toDelete = NULL;
+
+    if (index == 0)
+    {
+        toDelete = sensorDataHead;
+        sensorDataHead = sensorDataHead->next;
+    }
+    else
+    {
+        TemperatureNode *current = sensorDataHead;
+        for (size_t i = 0; i < index - 1 && current->next; i++)
+        {
+            current = current->next;
+        }
+
+        if (!current->next)
+        {
+            return;
+        }
+
+        toDelete = current->next;
+        current->next = toDelete->next;
+    }
+
+    free(toDelete);
     recordsCount--;
 }
 
 /**
  * @brief Находит и удаляет конкретную запись
- * @param year Год для поиска
- * @param month Месяц для поиска (1-12)
- * @param day День для поиска
- * @param hours Часы для поиска (0-23)
- * @param minutes Минуты для поиска (0-59)
- * @param temperature Температура для поиска
- * @return int 1 если найдена и удалена, 0 в противном случае
  */
 int findAndRemoveRecord(uint16_t year, uint8_t month, uint8_t day,
                         uint8_t hours, uint8_t minutes, int8_t temperature)
 {
-    for (size_t i = 0; i < recordsCount; i++)
+    TemperatureNode *current = sensorDataHead;
+    TemperatureNode *prev = NULL;
+    size_t index = 0;
+
+    while (current)
     {
-        if (sensorData[i].year == year &&
-            sensorData[i].month == month &&
-            sensorData[i].day == day &&
-            sensorData[i].hours == hours &&
-            sensorData[i].minutes == minutes &&
-            sensorData[i].temperature == temperature)
+        if (current->data.year == year &&
+            current->data.month == month &&
+            current->data.day == day &&
+            current->data.hours == hours &&
+            current->data.minutes == minutes &&
+            current->data.temperature == temperature)
         {
-            removeRecord(i);
+
+            if (prev)
+            {
+                prev->next = current->next;
+            }
+            else
+            {
+                sensorDataHead = current->next;
+            }
+
+            free(current);
+            recordsCount--;
             return 1;
         }
+
+        prev = current;
+        current = current->next;
+        index++;
     }
+
     return 0;
 }
 
 /**
  * @brief Получает среднюю температуру за месяц
- * @param year Год для проверки
- * @param month Месяц для проверки (1-12)
- * @return float Средняя температура
  */
 float getAverageMonthlyTemp(uint16_t year, uint8_t month)
 {
     int sum = 0;
     int count = 0;
+    TemperatureNode *current = sensorDataHead;
 
-    for (size_t i = 0; i < recordsCount; i++)
+    while (current)
     {
-        if (sensorData[i].year == year && sensorData[i].month == month)
+        if (current->data.year == year && current->data.month == month)
         {
-            sum += sensorData[i].temperature;
+            sum += current->data.temperature;
             count++;
         }
+        current = current->next;
     }
 
     return count > 0 ? (float)sum / count : 0;
@@ -106,23 +172,22 @@ float getAverageMonthlyTemp(uint16_t year, uint8_t month)
 
 /**
  * @brief Получает минимальную температуру за месяц
- * @param year Год для проверки
- * @param month Месяц для проверки (1-12)
- * @return int8_t Минимальная температура
  */
 int8_t getMinMonthlyTemp(uint16_t year, uint8_t month)
 {
     int8_t min = INT8_MAX;
+    TemperatureNode *current = sensorDataHead;
 
-    for (size_t i = 0; i < recordsCount; i++)
+    while (current)
     {
-        if (sensorData[i].year == year && sensorData[i].month == month)
+        if (current->data.year == year && current->data.month == month)
         {
-            if (sensorData[i].temperature < min)
+            if (current->data.temperature < min)
             {
-                min = sensorData[i].temperature;
+                min = current->data.temperature;
             }
         }
+        current = current->next;
     }
 
     return min != INT8_MAX ? min : 0;
@@ -130,23 +195,22 @@ int8_t getMinMonthlyTemp(uint16_t year, uint8_t month)
 
 /**
  * @brief Получает максимальную температуру за месяц
- * @param year Год для проверки
- * @param month Месяц для проверки (1-12)
- * @return int8_t Максимальная температура
  */
 int8_t getMaxMonthlyTemp(uint16_t year, uint8_t month)
 {
     int8_t max = INT8_MIN;
+    TemperatureNode *current = sensorDataHead;
 
-    for (size_t i = 0; i < recordsCount; i++)
+    while (current)
     {
-        if (sensorData[i].year == year && sensorData[i].month == month)
+        if (current->data.year == year && current->data.month == month)
         {
-            if (sensorData[i].temperature > max)
+            if (current->data.temperature > max)
             {
-                max = sensorData[i].temperature;
+                max = current->data.temperature;
             }
         }
+        current = current->next;
     }
 
     return max != INT8_MIN ? max : 0;
@@ -154,21 +218,21 @@ int8_t getMaxMonthlyTemp(uint16_t year, uint8_t month)
 
 /**
  * @brief Получает среднюю температуру за год
- * @param year Год для проверки
- * @return float Средняя температура
  */
 float getAverageYearlyTemp(uint16_t year)
 {
     int sum = 0;
     int count = 0;
+    TemperatureNode *current = sensorDataHead;
 
-    for (size_t i = 0; i < recordsCount; i++)
+    while (current)
     {
-        if (sensorData[i].year == year)
+        if (current->data.year == year)
         {
-            sum += sensorData[i].temperature;
+            sum += current->data.temperature;
             count++;
         }
+        current = current->next;
     }
 
     return count > 0 ? (float)sum / count : 0;
@@ -176,22 +240,22 @@ float getAverageYearlyTemp(uint16_t year)
 
 /**
  * @brief Получает минимальную температуру за год
- * @param year Год для проверки
- * @return int8_t Минимальная температура
  */
 int8_t getMinYearlyTemp(uint16_t year)
 {
     int8_t min = INT8_MAX;
+    TemperatureNode *current = sensorDataHead;
 
-    for (size_t i = 0; i < recordsCount; i++)
+    while (current)
     {
-        if (sensorData[i].year == year)
+        if (current->data.year == year)
         {
-            if (sensorData[i].temperature < min)
+            if (current->data.temperature < min)
             {
-                min = sensorData[i].temperature;
+                min = current->data.temperature;
             }
         }
+        current = current->next;
     }
 
     return min != INT8_MAX ? min : 0;
@@ -199,22 +263,22 @@ int8_t getMinYearlyTemp(uint16_t year)
 
 /**
  * @brief Получает максимальную температуру за год
- * @param year Год для проверки
- * @return int8_t Максимальная температура
  */
 int8_t getMaxYearlyTemp(uint16_t year)
 {
     int8_t max = INT8_MIN;
+    TemperatureNode *current = sensorDataHead;
 
-    for (size_t i = 0; i < recordsCount; i++)
+    while (current)
     {
-        if (sensorData[i].year == year)
+        if (current->data.year == year)
         {
-            if (sensorData[i].temperature > max)
+            if (current->data.temperature > max)
             {
-                max = sensorData[i].temperature;
+                max = current->data.temperature;
             }
         }
+        current = current->next;
     }
 
     return max != INT8_MIN ? max : 0;
@@ -222,26 +286,26 @@ int8_t getMaxYearlyTemp(uint16_t year)
 
 /**
  * @brief Подсчитывает записи за конкретный месяц
- * @param year Год для подсчета
- * @param month Месяц для подсчета (1-12)
- * @return size_t Количество найденных записей
  */
 size_t countMonthlyRecords(uint16_t year, uint8_t month)
 {
     size_t count = 0;
-    for (size_t i = 0; i < recordsCount; i++)
+    TemperatureNode *current = sensorDataHead;
+
+    while (current)
     {
-        if (sensorData[i].year == year && sensorData[i].month == month)
+        if (current->data.year == year && current->data.month == month)
         {
             count++;
         }
+        current = current->next;
     }
+
     return count;
 }
 
 /**
  * @brief Выводит месячную статистику за год
- * @param year Год для вывода статистики
  */
 void printMonthlyStats(uint16_t year)
 {
@@ -256,7 +320,6 @@ void printMonthlyStats(uint16_t year)
 
 /**
  * @brief Выводит годовую статистику
- * @param year Год для вывода статистики
  */
 void printYearlyStats(uint16_t year)
 {
@@ -268,7 +331,6 @@ void printYearlyStats(uint16_t year)
 
 /**
  * @brief Выводит статистику по конкретному месяцу за все годы
- * @param month Месяц для вывода статистики (1-12)
  */
 void printStatsForMonthAllYears(uint8_t month)
 {
@@ -282,16 +344,17 @@ void printStatsForMonthAllYears(uint8_t month)
 
     uint16_t years[MAX_RECORDS];
     size_t yearsCount = 0;
+    TemperatureNode *current = sensorDataHead;
 
-    for (size_t i = 0; i < recordsCount; i++)
+    // Собираем все уникальные годы для указанного месяца
+    while (current)
     {
-        if (sensorData[i].month == month)
+        if (current->data.month == month)
         {
-
             int found = 0;
             for (size_t j = 0; j < yearsCount; j++)
             {
-                if (years[j] == sensorData[i].year)
+                if (years[j] == current->data.year)
                 {
                     found = 1;
                     break;
@@ -299,11 +362,13 @@ void printStatsForMonthAllYears(uint8_t month)
             }
             if (!found)
             {
-                years[yearsCount++] = sensorData[i].year;
+                years[yearsCount++] = current->data.year;
             }
         }
+        current = current->next;
     }
 
+    // Выводим статистику для каждого года
     for (size_t i = 0; i < yearsCount; i++)
     {
         printf("Year %d:\n", years[i]);
@@ -313,31 +378,56 @@ void printStatsForMonthAllYears(uint8_t month)
         printf("\n");
     }
 }
+
 /**
  * @brief Выводит все записи в форматированной таблице
  */
-
-void printAllRecords() {
+void printAllRecords()
+{
     printf("\n=== All Temperature Records ===\n");
     printf("+-------+-------------+--------+------------+\n");
     printf("| Index | Date (Y-M-D)| Time   | Temp.      |\n");
     printf("+-------+-------------+--------+------------+\n");
-    
-    for (size_t i = 0; i < recordsCount; i++) {
+
+    size_t index = 0;
+    TemperatureNode *current = sensorDataHead;
+
+    while (current)
+    {
         printf("| %-5zu | %04d-%02d-%02d  | %02d:%02d  | %+4d°C     |\n",
-               i,
-               sensorData[i].year,
-               sensorData[i].month,
-               sensorData[i].day,
-               sensorData[i].hours,
-               sensorData[i].minutes,
-               sensorData[i].temperature);
+               index,
+               current->data.year,
+               current->data.month,
+               current->data.day,
+               current->data.hours,
+               current->data.minutes,
+               current->data.temperature);
+
+        current = current->next;
+        index++;
     }
-    
-    if (recordsCount == 0) {
+
+    if (recordsCount == 0)
+    {
         printf("|       No records available             |\n");
     }
-    
+
     printf("+-------+-------------+--------+------------+\n");
     printf("Total records: %zu\n", recordsCount);
+}
+
+/**
+ * @brief Освобождает память, занятую списком
+ */
+void freeTemperatureList()
+{
+    TemperatureNode *current = sensorDataHead;
+    while (current)
+    {
+        TemperatureNode *next = current->next;
+        free(current);
+        current = next;
+    }
+    sensorDataHead = NULL;
+    recordsCount = 0;
 }

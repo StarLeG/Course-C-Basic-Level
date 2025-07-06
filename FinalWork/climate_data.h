@@ -8,8 +8,9 @@
 #include <stdint.h>
 #include <stddef.h>
 #include "config.h"
+#include <stdbool.h>
 
-extern TemperatureRecord sensorData[MAX_RECORDS];
+extern TemperatureNode* sensorDataHead;
 extern size_t recordsCount;
 
 /**
@@ -52,7 +53,7 @@ size_t countMonthlyRecords(uint16_t year, uint8_t month);
 
 /**
  * @brief Выводит месячную статистику за год
- * @param year Год для вывода статистики
+ * @param year Год для вывода статистикиФ
  */
 void printMonthlyStats(uint16_t year);
 
@@ -118,3 +119,7 @@ int8_t getMinYearlyTemp(uint16_t year);
  */
 int8_t getMaxYearlyTemp(uint16_t year);
 
+/**
+ * @brief Освобождает память, занятую списком
+ */
+void freeTemperatureList();

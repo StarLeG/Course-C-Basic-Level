@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['statistics_20program_0',['Temperature Statistics Program',['../D:/Qt_Project/MFTI/Course-C-Basic-Level/FinalWork/ReadMe.md#autotoc_md0',1,'']]]
+  ['temperaturenode_0',['TemperatureNode',['../struct_temperature_node.html',1,'TemperatureNode'],['../config_8h.html#a716a0003ac246a011bd1998b4e2a53fe',1,'TemperatureNode:&#160;config.h']]],
+  ['temperaturerecord_1',['TemperatureRecord',['../struct_temperature_record.html',1,'']]]
 ];

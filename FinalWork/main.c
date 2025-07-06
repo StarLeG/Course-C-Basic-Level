@@ -13,7 +13,6 @@
 #include "menu.h"
 #include "config.h"
 
-
 /**
  * @brief Главная функция программы
  * @param argc Количество аргументов
@@ -47,23 +46,58 @@ int main(int argc, char *argv[])
                 return 0;
 
             case 'f':
+            {
                 strcpy(fileName, optarg);
+                char buffer[SIZE];
+                int loadStatus = readFileToBuffer(fileName, buffer);
+
+                if (loadStatus != SUCCESS)
+                {
+                    printf("File upload error: ");
+                    switch (loadStatus)
+                    {
+                    case FILE_OPEN_ERROR:
+                        printf("File not found.\n");
+                        break;
+                    case INVALID_FORMAT:
+                        printf("Invalid data format.\n");
+                        break;
+                    default:
+                        printf("Unknown error.\n");
+                    }
+                    return 1;
+                }
+                printf("Data uploaded successfully!\n");
                 break;
+            }
             case 'm':
+            {
+                char buffer[SIZE];
+                int loadStatus = readFileToBuffer("temperature_big.csv", buffer);
+
+                if (loadStatus != SUCCESS)
+                {
+                    printf(RED_TEXT "Error loading temperature_big.csv (code: %d)\n" RESET_TEXT, loadStatus);
+                    return 1;
+                }
+
                 int month = atoi(optarg);
                 if (month < 1 || month > 12)
                 {
-                    printf("Invalid month! Month should be between 1 and 12.\n");
+                    printf("Incorrect month! Acceptable values ​​are 1-12.\n");
                     return 1;
                 }
+
+                printf(GREEN_TEXT "Data loaded successfully!\n" RESET_TEXT);
                 printStatsForMonthAllYears(month);
                 return 0;
-            
+            }
+
             case '?':
                 printf("Error found !\n");
                 break;
             }
-        }        
+        }
     }
 
     int choice;
@@ -85,5 +119,6 @@ int main(int argc, char *argv[])
         handleUserChoice(choice);
     } while (choice != 0);
 
+    freeTemperatureList();
     return 0;
 }

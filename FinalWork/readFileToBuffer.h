@@ -11,6 +11,13 @@
 #include <ctype.h>
 #include "config.h"
 
+#define SUCCESS 0
+#define FILE_OPEN_ERROR -1
+#define INVALID_FORMAT -2
+#define BUFFER_OVERFLOW -3
+#define INVALID_EXTENSION -4
+#define INVALID_PARAM -5
+
 /**
  * @brief Читает содержимое файла в буфер
  * @param fileName Имя файла для чтения

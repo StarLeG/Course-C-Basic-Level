@@ -1,49 +1,62 @@
-***********************************************************************************************
-                        Temperature Statistics Program - Help
-*********************************************************************************************** 
-The Temperature Statistics program is designed to work with temperature data, allowing you to:
-- Store temperature records with date and time
-- Analyze temperature data
-- Display statistics by month and year
-- Load data from CSV files
-- View all records in a formatted table
-- Open documentation in browser DOC/html/index.html
+╔════════════════════════════════════════════════════════════╗
+║               Temperature Statistics Program - Help        ║
+╚════════════════════════════════════════════════════════════╝
 
-COMMAND LINE OPTIONS:
--h       : Display this help message
--f <file>: Load data from the specified CSV file
--m <1-12>: Display statistics for the specified month (1=Jan, 12=Dec)
+▌ Main Features:
+  • Add records manually or from file
+  • View and delete records
+  • Analyze statistics (monthly/yearly)
+  • Color-coded error (red) and success (green) messages
 
+▌ How to Use:
+1. Command line arguments:
+   -h          Show this help
+   -f file.csv Load data from CSV file
+   -m N        Show statistics for specified month (1-12) from temperature_big.csv
 
-INTERACTIVE MENU OPTIONS:
-1. Add new temperature record
-2. Remove temperature record
-3. View statistics (monthly/yearly/cross-year)
-4. Load data from file
-5. View all records in table format
-0. Exit program
+2. Interactive Menu:
+   1 → Add new record
+   2 → Remove record
+   3 → View statistics
+   4 → Load from file
+   5 → View all records
+   0 → Exit program
 
-DATA FORMAT:
-Records should be in CSV format with semicolon (;) separator:
-Year;Month;Day;Hour;Minute;Temperature
-dddd;mm;dd;hh;mm;temperature 
-dddd - year 4 digits 
-mm - month 2 digits 
-dd - day 2 digits 
-hh - hours 2 digits 
-mm - minutes 2 digits 
-temperature - integer from -99 to 99
-Example: 2023;01;15;12;30;-5
+▌ Data File Format:
+   Year;Month;Day;Hours;Minutes;Temperature
+   Example: 2023;05;15;14;30;25
 
-TABLE VIEW FORMAT:
-+-------+-------------+--------+------------+
-| Index | Date (Y-M-D)| Time   | Temp.      |
-+-------+-------------+--------+------------+
-| 0     | 2023-01-15  | 12:30  |  -5°C      |
-+-------+-------------+--------+------------+
+▌ Limitations:
+   • Maximum records: 900,000
+   • Temperature range: -99°C to +99°C
+   • Date requirements:
+     - Year: 1900-2100
+     - Month: 1-12
+     - Day: 1-31 (validated per month)
+   • Time requirements:
+     - Hours: 0-23
+     - Minutes: 0-59
 
-LIMITATIONS:
-- Max records: 100000
-- Temperature range: -99 to +99°C
-- Month range: 1-12
-***********************************************************************************************
+▌ Error Codes:
+   • 0: Success
+   • -1: File open error
+   • -2: Invalid data format
+   • -3: Buffer overflow
+   • -4: Invalid file extension (only .csv allowed)
+   • -5: Invalid parameters
+
+▌ Sample Records Table:
+   +-------+-------------+--------+------------+
+   | Index |    Date     | Time   | Temperature|
+   +-------+-------------+--------+------------+
+   |   0   | 2023-01-15  | 12:30  |    -5°C    |
+   |   1   | 2023-01-15  | 18:45  |    -7°C    |
+   +-------+-------------+--------+------------+
+
+▌ Notes:
+   • -m option automatically loads temperature_big.csv
+   • Run without arguments for interactive mode
+   • Date validation is performed when adding records
+   • February accounts for leap years
+   • Statistics include average, minimum and maximum values
+   

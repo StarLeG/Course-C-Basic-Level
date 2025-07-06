@@ -26,3 +26,10 @@ typedef struct {
     int8_t temperature;
 } TemperatureRecord;
 
+/**
+ * @brief Узел односвязного списка для TemperatureRecord
+ */
+typedef struct TemperatureNode {
+    TemperatureRecord data;
+    struct TemperatureNode* next;
+} TemperatureNode;

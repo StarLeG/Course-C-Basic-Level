@@ -1,4 +1,6 @@
 var searchData=
 [
-  ['командная_20строка_3a_0',['Командная строка:',['../D:/Qt_Project/MFTI/Course-C-Basic-Level/FinalWork/ReadMe.md#autotoc_md4',1,'']]]
+  ['описание_0',['Описание',['../D:/Qt_Project/MFTI/Course-C-Basic-Level/FinalWork/ReadMe.md#autotoc_md1',1,'']]],
+  ['основные_20функции_1',['Основные функции',['../D:/Qt_Project/MFTI/Course-C-Basic-Level/FinalWork/ReadMe.md#autotoc_md2',1,'']]],
+  ['ошибок_2',['Коды ошибок',['../D:/Qt_Project/MFTI/Course-C-Basic-Level/FinalWork/ReadMe.md#autotoc_md12',1,'']]]
 ];

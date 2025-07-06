@@ -113,143 +113,139 @@ Files</h2></td></tr>
 </table>
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
 <h1 class="doxsection"><a class="anchor" id="autotoc_md0"></a>
-Temperature Statistics Program</h1>
+Программа статистики температурных данных</h1>
 <h1 class="doxsection"><a class="anchor" id="autotoc_md1"></a>
 Описание</h1>
-<p>Программа Temperature Statistics предназначена для работы с данными о температуре. Она позволяет:</p>
-<ol type="1">
-<li>Хранить записи о температуре с указанием даты и времени</li>
-<li>Анализировать температурные данные</li>
-<li>Отображать статистику по месяцам и годам</li>
-<li>Загружать данные из CSV-файлов</li>
-</ol>
-<h1 class="doxsection"><a class="anchor" id="autotoc_md2"></a>
-Функциональность</h1>
-<h2 class="doxsection"><a class="anchor" id="autotoc_md3"></a>
-Основные возможности:</h2>
-<ol type="1">
-<li>Добавление новых записей о температуре</li>
-<li>Удаление существующих записей</li>
-<li><p class="startli">Просмотр статистики:</p>
-<p class="startli">3.1. Средняя, минимальная и максимальная температура по месяцам</p>
-<p class="startli">3.2. Средняя, минимальная и максимальная температура по годам</p>
-<p class="startli">3.3. Статистика для конкретного месяца за все годы</p>
-</li>
-<li>Загрузка данных из CSV-файлов</li>
-</ol>
-<h1 class="doxsection"><a class="anchor" id="autotoc_md4"></a>
-Командная строка:</h1>
-<p>Программа поддерживает следующие аргументы командной строки:</p>
-<div class="fragment"><div class="line">-h</div>
-</div><!-- fragment --><p> - отображение справки</p>
-<div class="fragment"><div class="line">-f &lt;fileName&gt;</div>
-</div><!-- fragment --><p> - загрузка данных из указанного файла</p>
-<div class="fragment"><div class="line">-m &lt;xx&gt;</div>
-</div><!-- fragment --><p> - отображение статистики для указанного месяца <span class="tt">(1-12)</span></p>
-<h1 class="doxsection"><a class="anchor" id="autotoc_md5"></a>
-Структура проекта</h1>
-<h2 class="doxsection"><a class="anchor" id="autotoc_md6"></a>
-Основные файлы:</h2>
-<div class="fragment"><div class="line">.c</div>
-</div><!-- fragment --><p> - точка входа в программу, обработка аргументов командной строки</p>
-<div class="fragment"><div class="line">_data.h/c</div>
-</div><!-- fragment --><p> - работа с температурными данными и статистикой</p>
-<div class="fragment"><div class="line">.h/c</div>
-</div><!-- fragment --><p> - реализация пользовательского меню</p>
-<div class="fragment"><div class="line">.h/c</div>
-</div><!-- fragment --><p> - функции для чтения данных из файлов</p>
-<div class="fragment"><div class="line">.h</div>
-</div><!-- fragment --><p> - конфигурационные параметры</p>
-<p>Вспомогательные файлы:</p>
-<div class="fragment"><div class="line">.txt</div>
-</div><!-- fragment --><p> - файл справки</p>
-<div class="fragment"><div class="line">.sh</div>
-</div><!-- fragment --><p> - скрипт для пересборки проекта</p>
-<div class="fragment"><div class="line">*.csv</div>
-</div><!-- fragment --><p> - пример файла с данными</p>
-<h2 class="doxsection"><a class="anchor" id="autotoc_md7"></a>
-Документация:</h2>
-<p><a href="Doc\html\index.html">Документация Doxygen</a> - полная документация по проекту, сгенерированная с помощью Doxygen.</p>
-<h1 class="doxsection"><a class="anchor" id="autotoc_md8"></a>
-Использование</h1>
-<ol type="1">
-<li>Запуск программы: <div class="fragment"><div class="line">./temperature_stats</div>
-</div><!-- fragment --></li>
-<li>Аргументы командной строки: <div class="fragment"><div class="line">./temperature_stats -h                # Показать справку</div>
-<div class="line">./temperature_stats -f data.csv       # Загрузить данные из файла</div>
-<div class="line">./temperature_stats -m 2              # Показать статистику для февраля</div>
-</div><!-- fragment --></li>
-<li>Интерактивное меню:</li>
-</ol>
-<p>После запуска программы без аргументов отображается интерактивное меню с возможностью:</p>
+<p>Программа <span class="tt">Temperature Statistics</span> для сбора, хранения и анализа температурных данных с привязкой ко времени. Основные возможности:</p>
 <ul>
-<li>Добавления новых записей</li>
-<li>Удаления записей</li>
-<li>Просмотра статистики</li>
-<li>Загрузки данных из файла</li>
+<li>Управление базой температурных записей</li>
+<li>Расширенный статистический анализ</li>
+<li>Импорт/экспорт данных в <span class="tt">*.CSV</span></li>
+<li>Интерактивный консольный интерфейс</li>
+<li>Режим командной строки</li>
 </ul>
-<h1 class="doxsection"><a class="anchor" id="autotoc_md9"></a>
-Формат данных</h1>
-<p>Программа ожидает данные в следующем формате: </p><div class="fragment"><div class="line">Год;Месяц;День;Часы;Минуты;Температура</div>
-<div class="line">dddd;mm;dd;hh;mm;temperature </div>
-<div class="line">dddd - год 4 цифры  </div>
-<div class="line">mm - месяц 2 цифры </div>
-<div class="line">dd - день 2 цифры </div>
-<div class="line">hh -   часы 2 цифры </div>
-<div class="line">mm - минуты 2 цифры </div>
-<div class="line">temperature -   целое число от -99 до 99</div>
-</div><!-- fragment --><p> Пример: </p><div class="fragment"><div class="line">2021;01;16;01;01;-47</div>
-<div class="line">2021;01;16;01;03;-44</div>
-</div><!-- fragment --><h1 class="doxsection"><a class="anchor" id="autotoc_md10"></a>
-Пример вывода всех записей</h1>
-<div class="fragment"><div class="line">=== All Temperature Records ===</div>
-<div class="line">+-------+-------------+--------+------------+</div>
-<div class="line">| Index | Date (Y-M-D)| Time   | Temp.      |</div>
-<div class="line">+-------+-------------+--------+------------+</div>
-<div class="line">| 0     | 2023-01-15  | 12:30  |  -5°C      |</div>
-<div class="line">| 1     | 2023-01-15  | 18:45  |  -7°C      |</div>
-<div class="line">+-------+-------------+--------+------------+</div>
-<div class="line">Total records: 2</div>
-</div><!-- fragment --><h1 class="doxsection"><a class="anchor" id="autotoc_md11"></a>
-Сборка</h1>
-<p>Для сборки проекта используйте команду: </p><div class="fragment"><div class="line">make rebuild</div>
-</div><!-- fragment --><p> или скрипт: </p><div class="fragment"><div class="line">./Rebuild.sh</div>
-</div><!-- fragment --><h1 class="doxsection"><a class="anchor" id="autotoc_md12"></a>
-Ограничения</h1>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md2"></a>
+Основные функции</h1>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md3"></a>
+Управление данными</h2>
 <ul>
-<li>Максимальное количество записей: 100000 (определено в <span class="tt"><a class="el" href="climate__data_8h.html" title="Заголовочный файл для работы с данными о температуре">climate_data.h</a></span>)</li>
-<li>Температура должна быть в диапазоне от <span class="tt">-99</span> до <span class="tt">99</span> градусов</li>
-<li>Месяц должен быть в диапазоне от <span class="tt">1</span> до <span class="tt">12</span></li>
+<li>Хранение до 900 000 записей (настраивается в <span class="tt"><a class="el" href="config_8h.html" title="Конфигурационные константы и структуры данных">config.h</a></span>)</li>
+<li>Добавление записей с полной валидацией</li>
+<li>Удаление записей по индексу или точному совпадению</li>
+<li>Просмотр всех записей в форматированной таблице</li>
+</ul>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md4"></a>
+Статистический анализ</h2>
+<ul>
+<li>Месячная статистика (средняя, мин, макс)</li>
+<li>Годовая сводка</li>
+<li>Сравнение месяцев за разные годы</li>
+<li>Комплексная проверка корректности данных</li>
+</ul>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md5"></a>
+Работа с файлами</h2>
+<ul>
+<li>Загрузка данных из CSV-файлов со строгой проверкой формата</li>
+<li>Индикация прогресса при загрузке больших файлов</li>
+<li>Специальная обработка файла <span class="tt">temperature_big.csv</span></li>
+</ul>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md6"></a>
+Установка и использование</h1>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md7"></a>
+Сборка проекта</h2>
+<div class="fragment"><div class="line"># С помощью make</div>
+<div class="line">make rebuild</div>
+<div class="line"> </div>
+<div class="line"># Или используя скрипт</div>
+<div class="line">./Rebuild.sh</div>
+<div class="line">## Командная строка:</div>
+</div><!-- fragment --><p>Программа поддерживает следующие аргументы командной строки:</p>
+<div class="fragment"><div class="line">./temperature_stats -h                # Показать справку</div>
+<div class="line">./temperature_stats -f data.csv       # Загрузить указанный CSV-файл</div>
+<div class="line">./temperature_stats -m 2              # Показать статистику за февраль из temperature_big.csv</div>
+</div><!-- fragment --><h1 class="doxsection"><a class="anchor" id="autotoc_md8"></a>
+Интерактивный режим.</h1>
+<p>Запуск без аргументов для работы с меню:</p>
+<div class="fragment"><div class="line">1. Добавить новую запись</div>
+<div class="line">2. Удалить запись</div>
+<div class="line">3. Просмотр статистики</div>
+<div class="line">4. Загрузить данные из файла</div>
+<div class="line">5. Просмотреть все записи</div>
+<div class="line">0. Выход</div>
+</div><!-- fragment --><h1 class="doxsection"><a class="anchor" id="autotoc_md9"></a>
+Формат данных.</h1>
+<p>CSV-файлы должны строго соответствовать формату:</p>
+<div class="fragment"><div class="line">Год;Месяц;День;Часы;Минуты;Температура</div>
+<div class="line">2021;01;16;01;01;-47</div>
+<div class="line">2021;01;16;01;03;-44</div>
+</div><!-- fragment --><h2 class="doxsection"><a class="anchor" id="autotoc_md10"></a>
+Правила валидации:</h2>
+<ul>
+<li>Год: 1900-2100;</li>
+<li>Месяц: 1-12;</li>
+<li>День: С учётом количества дней в месяце (високосные года обрабатываются);</li>
+<li>Время: 00:00 до 23:59;</li>
+<li>Температура: от -99°C до +99°C;</li>
+</ul>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md11"></a>
+Техническая документация.</h1>
+<div class="fragment"><div class="line">+---------------------+------------------------------------+</div>
+<div class="line">|   Файл              |      Назначение                    |</div>
+<div class="line">+---------------------+------------------------------------+</div>
+<div class="line">|main.c               | Точка входа, обработка аргументов  |</div>
+<div class="line">+---------------------+------------------------------------+</div>
+<div class="line">|climate_data.[hc]    |    Ядро программы, структуры данных|</div>
+<div class="line">+---------------------+------------------------------------+</div>
+<div class="line">|menu.[hc]            | Интерактивное меню                 | </div>
+<div class="line">+---------------------+------------------------------------+</div>
+<div class="line">|readFileToBuffer.[hc]|  Работа с файлами                  |</div>
+<div class="line">+---------------------+------------------------------------+</div>
+<div class="line">|config.h             |Конфигурационные константы          |</div>
+<div class="line">+----------------------------------------------------------+</div>
+</div><!-- fragment --> <h1 class="doxsection"><a class="anchor" id="autotoc_md12"></a>
+Коды ошибок</h1>
+<ul>
+<li><span class="tt">0 (SUCCESS)</span>: Успешное выполнение</li>
+<li><span class="tt">-1 (FILE_OPEN_ERROR)</span>: Файл не найден</li>
+<li><span class="tt">-2 (INVALID_FORMAT)</span>: Ошибка формата данных</li>
+<li><span class="tt">-3 (BUFFER_OVERFLOW)</span>: Превышено максимальное количество записей</li>
+<li><span class="tt">-4 (INVALID_EXTENSION)</span>: Не CSV-файл</li>
+<li><span class="tt">-5 (INVALID_PARAM)</span>: Некорректные параметры</li>
 </ul>
 <h1 class="doxsection"><a class="anchor" id="autotoc_md13"></a>
 Примеры использования</h1>
-<ol type="1">
-<li>Просмотр статистики за год:</li>
-</ol>
-<div class="fragment"><div class="line">Enter year: 2023</div>
-</div><!-- fragment --><ol type="1">
-<li>Добавление новой записи:</li>
-</ol>
-<div class="fragment"><div class="line">Enter year: 2023</div>
-<div class="line">Enter month (1-12): 5</div>
-<div class="line">Enter day (1-31): 15</div>
-<div class="line">Enter hours (0-23): 14</div>
-<div class="line">Enter minutes (0-59): 30</div>
-<div class="line">Enter temperature (-99 to 99): 25</div>
-</div><!-- fragment --><ol type="1">
-<li>Загрузка данных из файла: <div class="fragment"><div class="line">Загрузка данных из файла:</div>
-</div><!-- fragment --></li>
-</ol>
-<h1 class="doxsection"><a class="anchor" id="autotoc_md14"></a>
+<div class="fragment"><div class="line">Введите год: 2023</div>
+<div class="line">Введите месяц (1-12): 5</div>
+<div class="line">Введите день (1-31): 15</div>
+<div class="line">Введите часы (0-23): 14</div>
+<div class="line">Введите минуты (0-59): 30</div>
+<div class="line">Введите температуру (-99 до 99): 25</div>
+<div class="line">Запись успешно добавлена!</div>
+</div><!-- fragment --><h1 class="doxsection"><a class="anchor" id="autotoc_md14"></a>
+Пример статистики</h1>
+<div class="fragment"><div class="line">Месяц 02:</div>
+<div class="line">  Средняя: -5.2°C</div>
+<div class="line">  Минимальная: -12°C</div>
+<div class="line">  Максимальная: 3°C</div>
+</div><!-- fragment --><h1 class="doxsection"><a class="anchor" id="autotoc_md15"></a>
 Требования для сборки программы</h1>
-<p>Для успешной сборки и работы программы Temperature Statistics необходимы следующие инструменты и библиотеки:</p><ol type="1">
+<p>Для успешной сборки и работы программы Temperature Statistics необходимы следующие инструменты и библиотеки:</p>
+<ol type="1">
 <li>Компилятор C<ul>
 <li><span class="tt">GCC (GNU Compiler Collection)</span> – рекомендуется для Linux/macOS.</li>
 <li><span class="tt">MinGW-w64</span> – для Windows (если сборка выполняется в этой ОС).</li>
+<li>Стандартные библиотеки C</li>
 </ul>
 </li>
 </ol>
-<p>Установка:</p>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md16"></a>
+Поддерживаемые платформы</h1>
+<ul>
+<li><span class="tt">Linux</span> Протестировано на Ubuntu/Debian</li>
+<li><span class="tt">Windows</span> Требуется MinGW или WSL</li>
+</ul>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md17"></a>
+Установка:</h2>
 <ul>
 <li>Linux (Debian/Ubuntu):</li>
 </ul>
@@ -284,15 +280,15 @@ Temperature Statistics Program</h1>
 </ol>
 <p>Установка:</p>
 <ul>
-<li>Linux</li>
+<li><span class="tt">Linux</span></li>
 </ul>
 <div class="fragment"><div class="line">sudo apt-get install git</div>
 </div><!-- fragment --><ul>
-<li><p class="startli">Windows:</p>
+<li><p class="startli"><span class="tt">Windows</span>:</p>
 <p class="startli">Скачать с <a href="https://git-scm.com/">официального сайта</a>.</p>
 </li>
 </ul>
-<h1 class="doxsection"><a class="anchor" id="autotoc_md15"></a>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md18"></a>
 Инструкция по сборке</h1>
 <ol type="1">
 <li>Клонирование репозитория:</li>
@@ -312,18 +308,14 @@ Temperature Statistics Program</h1>
 <li>Запуск программы:</li>
 </ol>
 <div class="fragment"><div class="line">./temperature_stats</div>
-</div><!-- fragment --><h1 class="doxsection"><a class="anchor" id="autotoc_md16"></a>
-Поддержка ОС</h1>
-<p>Программа должна работать на:</p>
-<ul>
-<li><span class="tt">Linux</span> (тестировано на Ubuntu/Debian)</li>
-<li><span class="tt">Windows</span> (через MinGW-w64 или WSL)</li>
-</ul>
-<h2 class="doxsection"><a class="anchor" id="autotoc_md17"></a>
+</div><!-- fragment --><h2 class="doxsection"><a class="anchor" id="autotoc_md19"></a>
 Дополнительные заметки</h2>
 <ul>
-<li>Для <span class="tt">Windows</span> рекомендуется собирать программу в <span class="tt">WSL</span> (<span class="tt">Windows Subsystem for Linux</span>) или через <span class="tt">MSYS2</span> для лучшей совместимости. </li>
+<li>Для <span class="tt">Windows</span> рекомендуется собирать программу в <span class="tt">WSL</span> (<span class="tt">Windows Subsystem for Linux</span>) или через <span class="tt">MSYS2</span> для лучшей совместимости.</li>
 </ul>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md20"></a>
+Лицензия</h2>
+<p>Открытое ПО - подробности в репозитории </p>
 </div><!-- contents -->
 </div><!-- doc-content -->
 <div id="page-nav" class="page-nav-panel">

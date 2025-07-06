@@ -3,6 +3,7 @@ var climate__data_8h =
     [ "addRecord", "climate__data_8h.html#a7391dac1dfdc4ea6ae022ecf72eb7161", null ],
     [ "countMonthlyRecords", "climate__data_8h.html#a3322e4894367bc7388d9bdccdd560137", null ],
     [ "findAndRemoveRecord", "climate__data_8h.html#ae73cf9a1052ea014dba8739619c6cda0", null ],
+    [ "freeTemperatureList", "climate__data_8h.html#a39082ffb8cc77e087bf07ba73740c43e", null ],
     [ "getAverageMonthlyTemp", "climate__data_8h.html#ac2aeaec92546ae66147f7147ee287601", null ],
     [ "getAverageYearlyTemp", "climate__data_8h.html#a779b0677c864ee2d5111e3d1d102ab25", null ],
     [ "getMaxMonthlyTemp", "climate__data_8h.html#adb241010c87bc22a48a1b9bc85727c63", null ],

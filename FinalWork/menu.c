@@ -160,7 +160,6 @@ void displayRemoveRecordMenu() {
     
     printf("\n=== Remove Temperature Record ===\n");
     
-    
     printAllRecords();
     
     if (recordsCount == 0) {
@@ -179,16 +178,26 @@ void displayRemoveRecordMenu() {
         printf("Invalid index!\n");
         return;
     }
-       
+    
+    TemperatureNode *current = sensorDataHead;
+    for (size_t i = 0; i < index && current; i++) {
+        current = current->next;
+    }
+    
+    if (!current) {
+        printf("Record not found!\n");
+        return;
+    }
+    
     printf("\nRemoving record:\n");
     printf("Index %zu: %04d-%02d-%02d %02d:%02d, Temperature: %d°C\n",
            index,
-           sensorData[index].year,
-           sensorData[index].month,
-           sensorData[index].day,
-           sensorData[index].hours,
-           sensorData[index].minutes,
-           sensorData[index].temperature);
+           current->data.year,
+           current->data.month,
+           current->data.day,
+           current->data.hours,
+           current->data.minutes,
+           current->data.temperature);
     
     printf("Are you sure? (1 = Yes, 0 = No): ");
     int confirm;
@@ -282,7 +291,7 @@ void loadDataFromFile() {
         return;
     }
     
-    
+    // Проверка расширения .csv
     char *dot = strrchr(fileName, '.');
     if (dot == NULL || strcmp(dot, ".csv") != 0) {
         printf("Error: File must have .csv extension!\n");
@@ -292,12 +301,11 @@ void loadDataFromFile() {
     char buffer[SIZE] = {'\0'};
     int result = readFileToBuffer(fileName, buffer);
     
-    switch (result)
-        {
+    switch (result) {
         case 0:
             printf(GREEN_TEXT"File loaded successfully.\n"RESET_TEXT);
             break;
-         case -1:
+        case -1:
             printf(RED_TEXT"Error: Opening file. File not found.\n"RESET_TEXT);
             break;    
         case -3:
@@ -308,7 +316,7 @@ void loadDataFromFile() {
             break;
         default:
             printf(RED_TEXT"Error: loading file\n"RESET_TEXT);
-        }
+    }
 }
 
 /**

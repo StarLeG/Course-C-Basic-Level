@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['заметки_0',['Дополнительные заметки',['../D:/Qt_Project/MFTI/Course-C-Basic-Level/FinalWork/ReadMe.md#autotoc_md17',1,'']]],
-  ['записей_1',['Пример вывода всех записей',['../D:/Qt_Project/MFTI/Course-C-Basic-Level/FinalWork/ReadMe.md#autotoc_md10',1,'']]]
+  ['коды_20ошибок_0',['Коды ошибок',['../D:/Qt_Project/MFTI/Course-C-Basic-Level/FinalWork/ReadMe.md#autotoc_md12',1,'']]]
 ];
