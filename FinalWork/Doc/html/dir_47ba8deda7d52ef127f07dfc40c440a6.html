@@ -28,6 +28,7 @@
   <td id="projectalign">
    <div id="projectname">Temperature Statistics<span id="projectnumber">&#160;1.0.0</span>
    </div>
+   <div id="projectbrief">Программа анализа температурных данных</div>
   </td>
  </tr>
  </tbody>
@@ -100,6 +101,7 @@ Files</h2></td></tr>
 <tr class="memdesc:climate__data_8h"><td class="mdescLeft">&#160;</td><td class="mdescRight">Заголовочный файл для работы с данными о температуре <br /></td></tr>
 <tr class="memitem:config_2Eh" id="r_config_2Eh"><td class="memItemLeft" align="right" valign="top"><a href="config_8h_source.html"><span class="icondoc"><div class="doc-icon"></div></span></a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="config_8h.html">config.h</a></td></tr>
 <tr class="memdesc:config_8h"><td class="mdescLeft">&#160;</td><td class="mdescRight">Конфигурационные константы и структуры данных <br /></td></tr>
+<tr class="memitem:main_2Ec" id="r_main_2Ec"><td class="memItemLeft" align="right" valign="top"><span class="icondoc"><div class="doc-icon"></div></span>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8c.html">main.c</a></td></tr>
 <tr class="memitem:menu_2Ec" id="r_menu_2Ec"><td class="memItemLeft" align="right" valign="top"><span class="icondoc"><div class="doc-icon"></div></span>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="menu_8c.html">menu.c</a></td></tr>
 <tr class="memdesc:menu_8c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Реализация функций меню для программы статистики температуры <br /></td></tr>
 <tr class="memitem:menu_2Eh" id="r_menu_2Eh"><td class="memItemLeft" align="right" valign="top"><a href="menu_8h_source.html"><span class="icondoc"><div class="doc-icon"></div></span></a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="menu_8h.html">menu.h</a></td></tr>
@@ -177,7 +179,7 @@ Files</h2></td></tr>
 <div class="line">./temperature_stats -f data.csv       # Загрузить указанный CSV-файл</div>
 <div class="line">./temperature_stats -m 2              # Показать статистику за февраль из temperature_big.csv</div>
 </div><!-- fragment --><h1 class="doxsection"><a class="anchor" id="autotoc_md9"></a>
-Интерактивный режим.</h1>
+Интерактивный режим</h1>
 <p>Запуск без аргументов для работы с меню:</p>
 <div class="fragment"><div class="line">1. Добавить новую запись</div>
 <div class="line">2. Удалить запись</div>
@@ -186,13 +188,13 @@ Files</h2></td></tr>
 <div class="line">5. Просмотреть все записи</div>
 <div class="line">0. Выход</div>
 </div><!-- fragment --><h1 class="doxsection"><a class="anchor" id="autotoc_md10"></a>
-Формат данных.</h1>
+Формат данных</h1>
 <p>CSV-файлы должны строго соответствовать формату:</p>
 <div class="fragment"><div class="line">Год;Месяц;День;Часы;Минуты;Температура</div>
 <div class="line">2021;01;16;01;01;-47</div>
 <div class="line">2021;01;16;01;03;-44</div>
 </div><!-- fragment --><h2 class="doxsection"><a class="anchor" id="autotoc_md11"></a>
-Правила валидации:</h2>
+Правила валидации</h2>
 <ul>
 <li>Год: 1900-2100;</li>
 <li>Месяц: 1-12;</li>
@@ -201,7 +203,7 @@ Files</h2></td></tr>
 <li>Температура: от -99°C до +99°C;</li>
 </ul>
 <h1 class="doxsection"><a class="anchor" id="autotoc_md12"></a>
-Техническая документация.</h1>
+Техническая документация</h1>
 <div class="fragment"><div class="line">+---------------------+------------------------------------+</div>
 <div class="line">|   Файл              |      Назначение                    |</div>
 <div class="line">+---------------------+------------------------------------+</div>
@@ -209,13 +211,13 @@ Files</h2></td></tr>
 <div class="line">+---------------------+------------------------------------+</div>
 <div class="line">|climate_data.[hc]    |    Ядро программы, структуры данных|</div>
 <div class="line">+---------------------+------------------------------------+</div>
-<div class="line">|menu.[hc]            | Интерактивное меню                 | </div>
+<div class="line">|menu.[hc]           | Интерактивное меню                 | </div>
 <div class="line">+---------------------+------------------------------------+</div>
 <div class="line">|readFileToBuffer.[hc]|  Работа с файлами                  |</div>
 <div class="line">+---------------------+------------------------------------+</div>
-<div class="line">|config.h             |Конфигурационные константы          |</div>
+<div class="line">|config.h           |Конфигурационные константы          |</div>
 <div class="line">+----------------------------------------------------------+</div>
-</div><!-- fragment --> <h1 class="doxsection"><a class="anchor" id="autotoc_md13"></a>
+</div><!-- fragment --><h1 class="doxsection"><a class="anchor" id="autotoc_md13"></a>
 Коды ошибок</h1>
 <ul>
 <li><span class="tt">0 (SUCCESS)</span>: Успешное выполнение</li>
@@ -258,7 +260,7 @@ Files</h2></td></tr>
 <li><span class="tt">Windows</span> Требуется MinGW или WSL</li>
 </ul>
 <h2 class="doxsection"><a class="anchor" id="autotoc_md18"></a>
-Установка:</h2>
+Установка</h2>
 <ul>
 <li>Linux (Debian/Ubuntu):</li>
 </ul>
@@ -270,8 +272,7 @@ Files</h2></td></tr>
 </li>
 </ul>
 <ol type="1">
-<li>Утилита <span class="tt">make</span> <br  />
-<ul>
+<li>Утилита <span class="tt">make</span><ul>
 <li><p class="startli">Используется для автоматизации сборки (запускает <span class="tt">Makefile</span>).</p>
 <p class="startli">Установка:</p><ul>
 <li>Linux/macOS: Обычно входит в <span class="tt">build-essential</span> или <span class="tt">Xcode Command Line Tools</span>.<ul>
@@ -309,11 +310,11 @@ Files</h2></td></tr>
 <div class="fragment"><div class="line">git clone &lt;репозиторий&gt;</div>
 <div class="line">cd &lt;папка_проекта&gt;</div>
 </div><!-- fragment --><ol type="1">
-<li>Сборка проекта:<ul>
+<li>Сборка проекта:</li>
+</ol>
+<ul>
 <li>Через <span class="tt">make</span>:</li>
 </ul>
-</li>
-</ol>
 <div class="fragment"><div class="line">make rebuild</div>
 </div><!-- fragment --><p>или</p>
 <div class="fragment"><div class="line">./Rebuild.sh  # если используется скрипт</div>
@@ -328,7 +329,17 @@ Files</h2></td></tr>
 </ul>
 <h2 class="doxsection"><a class="anchor" id="autotoc_md21"></a>
 Лицензия</h2>
-<p>Открытое ПО - подробности в репозитории </p>
+<p>Открытое ПО</p>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md22"></a>
+Авторы</h1>
+<p>Проект разработан:</p>
+<ul>
+<li><p class="startli"><b>Старинский Олег Григорьевич</b> <br  />
+</p>
+<p class="startli">Архитектор системы, основной разработчик <br  />
+ Контакты: <a href="#" onclick="location.href='mai'+'lto:'+'ole'+'g.'+'sta'+'ry'+'nsk'+'i@'+'gma'+'il'+'.co'+'m'; return false;">oleg.<span class="obfuscator">.nosp@m.</span>star<span class="obfuscator">.nosp@m.</span>ynski<span class="obfuscator">.nosp@m.</span>@gma<span class="obfuscator">.nosp@m.</span>il.co<span class="obfuscator">.nosp@m.</span>m</a> </p>
+</li>
+</ul>
 </div><!-- contents -->
 </div><!-- doc-content -->
 <div id="page-nav" class="page-nav-panel">

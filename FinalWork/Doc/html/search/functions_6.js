@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['loaddatafromfile_0',['loadDataFromFile',['../menu_8c.html#a4cfa87a81a57d04b37b450580084e9d2',1,'loadDataFromFile():&#160;menu.c'],['../menu_8h.html#a4cfa87a81a57d04b37b450580084e9d2',1,'loadDataFromFile():&#160;menu.c']]]
+  ['isvalidrecord_0',['isValidRecord',['../climate__data_8c.html#a96fa7c78cbe87ff45edb3f685fc73efb',1,'climate_data.c']]]
 ];

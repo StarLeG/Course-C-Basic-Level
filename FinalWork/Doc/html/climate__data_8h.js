@@ -14,5 +14,7 @@ var climate__data_8h =
     [ "printMonthlyStats", "climate__data_8h.html#a42c079ec254dc577cd8e2b4b3698dcfd", null ],
     [ "printStatsForMonthAllYears", "climate__data_8h.html#a8ddf9e35e6921ed4007347001a6e38db", null ],
     [ "printYearlyStats", "climate__data_8h.html#aea96cf324190bf44ab42572fdd07867f", null ],
-    [ "removeRecord", "climate__data_8h.html#a8d97a34f6ece203fca28132592c722d9", null ]
+    [ "removeRecord", "climate__data_8h.html#a8d97a34f6ece203fca28132592c722d9", null ],
+    [ "recordsCount", "climate__data_8h.html#a5e1e713784bbe237d1efd41da4be17b4", null ],
+    [ "sensorDataHead", "climate__data_8h.html#aff71978f4c4b583d63318a62ed67b58b", null ]
 ];

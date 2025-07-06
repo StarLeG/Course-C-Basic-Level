@@ -1,9 +1,7 @@
 var searchData=
 [
-  ['документация_0',['Документация',['../D:/Qt_Project/MFTI/Course-C-Basic-Level/FinalWork/ReadMe.md#autotoc_md2',1,'']]],
-  ['дополнительные_20заметки_1',['Дополнительные заметки',['../D:/Qt_Project/MFTI/Course-C-Basic-Level/FinalWork/ReadMe.md#autotoc_md20',1,'']]],
-  ['данными_2',['Управление данными',['../D:/Qt_Project/MFTI/Course-C-Basic-Level/FinalWork/ReadMe.md#autotoc_md4',1,'']]],
-  ['данных_3',['данных',['../D:/Qt_Project/MFTI/Course-C-Basic-Level/FinalWork/ReadMe.md#autotoc_md0',1,'Программа статистики температурных данных'],['../D:/Qt_Project/MFTI/Course-C-Basic-Level/FinalWork/ReadMe.md#autotoc_md10',1,'Формат данных.']]],
-  ['для_20сборки_20программы_4',['Требования для сборки программы',['../D:/Qt_Project/MFTI/Course-C-Basic-Level/FinalWork/ReadMe.md#autotoc_md16',1,'']]],
-  ['документация_5',['Техническая документация.',['../D:/Qt_Project/MFTI/Course-C-Basic-Level/FinalWork/ReadMe.md#autotoc_md12',1,'']]]
+  ['temperature_0',['temperature',['../struct_temperature_record.html#a64d67c7a0daa7db501c94c8c3a47cef5',1,'TemperatureRecord']]],
+  ['temperature_20statistics_20program_1',['Temperature Statistics Program',['../index.html',1,'']]],
+  ['temperaturenode_2',['TemperatureNode',['../struct_temperature_node.html',1,'TemperatureNode'],['../config_8h.html#a716a0003ac246a011bd1998b4e2a53fe',1,'TemperatureNode:&#160;config.h']]],
+  ['temperaturerecord_3',['TemperatureRecord',['../struct_temperature_record.html',1,'']]]
 ];

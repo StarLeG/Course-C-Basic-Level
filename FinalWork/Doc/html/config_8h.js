@@ -1,7 +1,7 @@
 var config_8h =
 [
-    [ "TemperatureRecord", "struct_temperature_record.html", null ],
-    [ "TemperatureNode", "struct_temperature_node.html", null ],
+    [ "TemperatureRecord", "struct_temperature_record.html", "struct_temperature_record" ],
+    [ "TemperatureNode", "struct_temperature_node.html", "struct_temperature_node" ],
     [ "GREEN_TEXT", "config_8h.html#aaad9cb092d673eb55addd81bdc69f532", null ],
     [ "MAX_RECORDS", "config_8h.html#a475c77257e5782fb60199a7d12a7e53f", null ],
     [ "RED_TEXT", "config_8h.html#ac6b49286f191080eef7f1891a32b6596", null ],

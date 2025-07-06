@@ -28,6 +28,7 @@
   <td id="projectalign">
    <div id="projectname">Temperature Statistics<span id="projectnumber">&#160;1.0.0</span>
    </div>
+   <div id="projectbrief">Программа анализа температурных данных</div>
   </td>
  </tr>
  </tbody>
@@ -101,6 +102,8 @@ $(function(){initNavTree('climate__data_8c.html','',''); });
 </div><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-func-members" class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
+<tr class="memitem:a96fa7c78cbe87ff45edb3f685fc73efb" id="r_a96fa7c78cbe87ff45edb3f685fc73efb"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a96fa7c78cbe87ff45edb3f685fc73efb">isValidRecord</a> (uint16_t year, uint8_t month, uint8_t day, uint8_t hours, uint8_t minutes, int8_t temp)</td></tr>
+<tr class="memdesc:a96fa7c78cbe87ff45edb3f685fc73efb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Проверяет корректность данных температуры  <br /></td></tr>
 <tr class="memitem:a7391dac1dfdc4ea6ae022ecf72eb7161" id="r_a7391dac1dfdc4ea6ae022ecf72eb7161"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a7391dac1dfdc4ea6ae022ecf72eb7161">addRecord</a> (uint16_t year, uint8_t month, uint8_t day, uint8_t hours, uint8_t minutes, int8_t temperature)</td></tr>
 <tr class="memdesc:a7391dac1dfdc4ea6ae022ecf72eb7161"><td class="mdescLeft">&#160;</td><td class="mdescRight">Добавляет новую запись о температуре  <br /></td></tr>
 <tr class="memitem:a8d97a34f6ece203fca28132592c722d9" id="r_a8d97a34f6ece203fca28132592c722d9"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8d97a34f6ece203fca28132592c722d9">removeRecord</a> (size_t index)</td></tr>
@@ -127,19 +130,15 @@ Functions</h2></td></tr>
 <tr class="memdesc:aea96cf324190bf44ab42572fdd07867f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Выводит годовую статистику  <br /></td></tr>
 <tr class="memitem:a8ddf9e35e6921ed4007347001a6e38db" id="r_a8ddf9e35e6921ed4007347001a6e38db"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8ddf9e35e6921ed4007347001a6e38db">printStatsForMonthAllYears</a> (uint8_t month)</td></tr>
 <tr class="memdesc:a8ddf9e35e6921ed4007347001a6e38db"><td class="mdescLeft">&#160;</td><td class="mdescRight">Выводит статистику по конкретному месяцу за все годы  <br /></td></tr>
-<tr class="memitem:a88d147364e977477ff26ef0f081a20ab" id="r_a88d147364e977477ff26ef0f081a20ab"><td class="memItemLeft" align="right" valign="top"><a id="a88d147364e977477ff26ef0f081a20ab" name="a88d147364e977477ff26ef0f081a20ab"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>printAllRecords</b> ()</td></tr>
-<tr class="memdesc:a88d147364e977477ff26ef0f081a20ab"><td class="mdescLeft">&#160;</td><td class="mdescRight">Выводит все записи в форматированной таблице <br /></td></tr>
-<tr class="memitem:a39082ffb8cc77e087bf07ba73740c43e" id="r_a39082ffb8cc77e087bf07ba73740c43e"><td class="memItemLeft" align="right" valign="top"><a id="a39082ffb8cc77e087bf07ba73740c43e" name="a39082ffb8cc77e087bf07ba73740c43e"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>freeTemperatureList</b> ()</td></tr>
-<tr class="memdesc:a39082ffb8cc77e087bf07ba73740c43e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Освобождает память, занятую списком <br /></td></tr>
+<tr class="memitem:a88d147364e977477ff26ef0f081a20ab" id="r_a88d147364e977477ff26ef0f081a20ab"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a88d147364e977477ff26ef0f081a20ab">printAllRecords</a> ()</td></tr>
+<tr class="memdesc:a88d147364e977477ff26ef0f081a20ab"><td class="mdescLeft">&#160;</td><td class="mdescRight">Выводит все записи в форматированной таблице  <br /></td></tr>
+<tr class="memitem:a39082ffb8cc77e087bf07ba73740c43e" id="r_a39082ffb8cc77e087bf07ba73740c43e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a39082ffb8cc77e087bf07ba73740c43e">freeTemperatureList</a> ()</td></tr>
+<tr class="memdesc:a39082ffb8cc77e087bf07ba73740c43e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Освобождает память, занятую списком  <br /></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-var-members" class="groupheader"><a id="var-members" name="var-members"></a>
 Variables</h2></td></tr>
-<tr class="memitem:aff71978f4c4b583d63318a62ed67b58b" id="r_aff71978f4c4b583d63318a62ed67b58b"><td class="memItemLeft" align="right" valign="top"><a id="aff71978f4c4b583d63318a62ed67b58b" name="aff71978f4c4b583d63318a62ed67b58b"></a>
-<a class="el" href="struct_temperature_node.html">TemperatureNode</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>sensorDataHead</b> = NULL</td></tr>
-<tr class="memitem:a5e1e713784bbe237d1efd41da4be17b4" id="r_a5e1e713784bbe237d1efd41da4be17b4"><td class="memItemLeft" align="right" valign="top"><a id="a5e1e713784bbe237d1efd41da4be17b4" name="a5e1e713784bbe237d1efd41da4be17b4"></a>
-size_t&#160;</td><td class="memItemRight" valign="bottom"><b>recordsCount</b> = 0</td></tr>
+<tr class="memitem:aff71978f4c4b583d63318a62ed67b58b" id="r_aff71978f4c4b583d63318a62ed67b58b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_temperature_node.html">TemperatureNode</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aff71978f4c4b583d63318a62ed67b58b">sensorDataHead</a> = NULL</td></tr>
+<tr class="memitem:a5e1e713784bbe237d1efd41da4be17b4" id="r_a5e1e713784bbe237d1efd41da4be17b4"><td class="memItemLeft" align="right" valign="top">size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5e1e713784bbe237d1efd41da4be17b4">recordsCount</a> = 0</td></tr>
 </table>
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Реализация функций работы с данными о температуре </p>
@@ -281,6 +280,25 @@ size_t&#160;</td><td class="memItemRight" valign="bottom"><b>recordsCount</b> = 
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>int 1 если найдена и удалена, 0 в противном случае </dd></dl>
+
+</div>
+</div>
+<a id="a39082ffb8cc77e087bf07ba73740c43e" name="a39082ffb8cc77e087bf07ba73740c43e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a39082ffb8cc77e087bf07ba73740c43e">&#9670;&#160;</a></span>freeTemperatureList()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void freeTemperatureList </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Освобождает память, занятую списком </p>
 
 </div>
 </div>
@@ -455,6 +473,76 @@ size_t&#160;</td><td class="memItemRight" valign="bottom"><b>recordsCount</b> = 
 
 </div>
 </div>
+<a id="a96fa7c78cbe87ff45edb3f685fc73efb" name="a96fa7c78cbe87ff45edb3f685fc73efb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a96fa7c78cbe87ff45edb3f685fc73efb">&#9670;&#160;</a></span>isValidRecord()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool isValidRecord </td>
+          <td>(</td>
+          <td class="paramtype">uint16_t</td>          <td class="paramname"><span class="paramname"><em>year</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint8_t</td>          <td class="paramname"><span class="paramname"><em>month</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint8_t</td>          <td class="paramname"><span class="paramname"><em>day</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint8_t</td>          <td class="paramname"><span class="paramname"><em>hours</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint8_t</td>          <td class="paramname"><span class="paramname"><em>minutes</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int8_t</td>          <td class="paramname"><span class="paramname"><em>temp</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Проверяет корректность данных температуры </p>
+
+</div>
+</div>
+<a id="a88d147364e977477ff26ef0f081a20ab" name="a88d147364e977477ff26ef0f081a20ab"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a88d147364e977477ff26ef0f081a20ab">&#9670;&#160;</a></span>printAllRecords()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void printAllRecords </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Выводит все записи в форматированной таблице </p>
+
+</div>
+</div>
 <a id="a42c079ec254dc577cd8e2b4b3698dcfd" name="a42c079ec254dc577cd8e2b4b3698dcfd"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a42c079ec254dc577cd8e2b4b3698dcfd">&#9670;&#160;</a></span>printMonthlyStats()</h2>
 
@@ -552,6 +640,35 @@ size_t&#160;</td><td class="memItemRight" valign="bottom"><b>recordsCount</b> = 
   </table>
   </dd>
 </dl>
+
+</div>
+</div>
+<a name="doc-var-members" id="doc-var-members"></a><h2 id="header-doc-var-members" class="groupheader">Variable Documentation</h2>
+<a id="a5e1e713784bbe237d1efd41da4be17b4" name="a5e1e713784bbe237d1efd41da4be17b4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5e1e713784bbe237d1efd41da4be17b4">&#9670;&#160;</a></span>recordsCount</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">size_t recordsCount = 0</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aff71978f4c4b583d63318a62ed67b58b" name="aff71978f4c4b583d63318a62ed67b58b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aff71978f4c4b583d63318a62ed67b58b">&#9670;&#160;</a></span>sensorDataHead</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="struct_temperature_node.html">TemperatureNode</a>* sensorDataHead = NULL</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
 
 </div>
 </div>

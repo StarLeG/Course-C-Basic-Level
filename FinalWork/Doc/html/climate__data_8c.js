@@ -10,9 +10,12 @@ var climate__data_8c =
     [ "getMaxYearlyTemp", "climate__data_8c.html#a9b85fc9c6d1ffb68b08330452c1a7d2c", null ],
     [ "getMinMonthlyTemp", "climate__data_8c.html#a89d7112e3d6f5ba622db73d2263da4fe", null ],
     [ "getMinYearlyTemp", "climate__data_8c.html#a774649890449a014b7cf3f1c8bc01131", null ],
+    [ "isValidRecord", "climate__data_8c.html#a96fa7c78cbe87ff45edb3f685fc73efb", null ],
     [ "printAllRecords", "climate__data_8c.html#a88d147364e977477ff26ef0f081a20ab", null ],
     [ "printMonthlyStats", "climate__data_8c.html#a42c079ec254dc577cd8e2b4b3698dcfd", null ],
     [ "printStatsForMonthAllYears", "climate__data_8c.html#a8ddf9e35e6921ed4007347001a6e38db", null ],
     [ "printYearlyStats", "climate__data_8c.html#aea96cf324190bf44ab42572fdd07867f", null ],
-    [ "removeRecord", "climate__data_8c.html#a8d97a34f6ece203fca28132592c722d9", null ]
+    [ "removeRecord", "climate__data_8c.html#a8d97a34f6ece203fca28132592c722d9", null ],
+    [ "recordsCount", "climate__data_8c.html#a5e1e713784bbe237d1efd41da4be17b4", null ],
+    [ "sensorDataHead", "climate__data_8c.html#aff71978f4c4b583d63318a62ed67b58b", null ]
 ];
