@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['формат_20данных_0',['Формат данных.',['../D:/Qt_Project/MFTI/Course-C-Basic-Level/FinalWork/ReadMe.md#autotoc_md9',1,'']]],
-  ['файлами_1',['Работа с файлами',['../D:/Qt_Project/MFTI/Course-C-Basic-Level/FinalWork/ReadMe.md#autotoc_md5',1,'']]],
-  ['функции_2',['Основные функции',['../D:/Qt_Project/MFTI/Course-C-Basic-Level/FinalWork/ReadMe.md#autotoc_md2',1,'']]]
+  ['управление_20данными_0',['Управление данными',['../D:/Qt_Project/MFTI/Course-C-Basic-Level/FinalWork/ReadMe.md#autotoc_md4',1,'']]],
+  ['установка_20и_20использование_1',['Установка и использование',['../D:/Qt_Project/MFTI/Course-C-Basic-Level/FinalWork/ReadMe.md#autotoc_md7',1,'']]],
+  ['установка_3a_2',['Установка:',['../D:/Qt_Project/MFTI/Course-C-Basic-Level/FinalWork/ReadMe.md#autotoc_md18',1,'']]]
 ];

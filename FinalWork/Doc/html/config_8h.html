@@ -109,14 +109,15 @@ Data Structures</h2></td></tr>
 Macros</h2></td></tr>
 <tr class="memitem:a70ed59adcb4159ac551058053e649640" id="r_a70ed59adcb4159ac551058053e649640"><td class="memItemLeft" align="right" valign="top"><a id="a70ed59adcb4159ac551058053e649640" name="a70ed59adcb4159ac551058053e649640"></a>
 #define&#160;</td><td class="memItemRight" valign="bottom"><b>SIZE</b>&#160;&#160;&#160;1000000</td></tr>
-<tr class="memitem:a475c77257e5782fb60199a7d12a7e53f" id="r_a475c77257e5782fb60199a7d12a7e53f"><td class="memItemLeft" align="right" valign="top"><a id="a475c77257e5782fb60199a7d12a7e53f" name="a475c77257e5782fb60199a7d12a7e53f"></a>
-#define&#160;</td><td class="memItemRight" valign="bottom"><b>MAX_RECORDS</b>&#160;&#160;&#160;900000</td></tr>
-<tr class="memitem:ac6b49286f191080eef7f1891a32b6596" id="r_ac6b49286f191080eef7f1891a32b6596"><td class="memItemLeft" align="right" valign="top"><a id="ac6b49286f191080eef7f1891a32b6596" name="ac6b49286f191080eef7f1891a32b6596"></a>
-#define&#160;</td><td class="memItemRight" valign="bottom"><b>RED_TEXT</b>&#160;&#160;&#160;&quot;\x1B[31m&quot;</td></tr>
-<tr class="memitem:aaad9cb092d673eb55addd81bdc69f532" id="r_aaad9cb092d673eb55addd81bdc69f532"><td class="memItemLeft" align="right" valign="top"><a id="aaad9cb092d673eb55addd81bdc69f532" name="aaad9cb092d673eb55addd81bdc69f532"></a>
-#define&#160;</td><td class="memItemRight" valign="bottom"><b>GREEN_TEXT</b>&#160;&#160;&#160;&quot;\x1B[32m&quot;</td></tr>
-<tr class="memitem:a038ea114ff75076e05108db5158bef66" id="r_a038ea114ff75076e05108db5158bef66"><td class="memItemLeft" align="right" valign="top"><a id="a038ea114ff75076e05108db5158bef66" name="a038ea114ff75076e05108db5158bef66"></a>
-#define&#160;</td><td class="memItemRight" valign="bottom"><b>RESET_TEXT</b>&#160;&#160;&#160;&quot;\x1B[0m&quot;</td></tr>
+<tr class="memdesc:a70ed59adcb4159ac551058053e649640"><td class="mdescLeft">&#160;</td><td class="mdescRight">Максимальный размер буфера для чтения файлов (в байтах) <br /></td></tr>
+<tr class="memitem:a475c77257e5782fb60199a7d12a7e53f" id="r_a475c77257e5782fb60199a7d12a7e53f"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a475c77257e5782fb60199a7d12a7e53f">MAX_RECORDS</a>&#160;&#160;&#160;900000</td></tr>
+<tr class="memdesc:a475c77257e5782fb60199a7d12a7e53f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Максимальное количество температурных записей в программе  <br /></td></tr>
+<tr class="memitem:ac6b49286f191080eef7f1891a32b6596" id="r_ac6b49286f191080eef7f1891a32b6596"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac6b49286f191080eef7f1891a32b6596">RED_TEXT</a>&#160;&#160;&#160;&quot;\x1B[31m&quot;</td></tr>
+<tr class="memdesc:ac6b49286f191080eef7f1891a32b6596"><td class="mdescLeft">&#160;</td><td class="mdescRight">ANSI-код для вывода текста красным цветом в терминале  <br /></td></tr>
+<tr class="memitem:aaad9cb092d673eb55addd81bdc69f532" id="r_aaad9cb092d673eb55addd81bdc69f532"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aaad9cb092d673eb55addd81bdc69f532">GREEN_TEXT</a>&#160;&#160;&#160;&quot;\x1B[32m&quot;</td></tr>
+<tr class="memdesc:aaad9cb092d673eb55addd81bdc69f532"><td class="mdescLeft">&#160;</td><td class="mdescRight">ANSI-код для вывода текста зеленым цветом в терминале  <br /></td></tr>
+<tr class="memitem:a038ea114ff75076e05108db5158bef66" id="r_a038ea114ff75076e05108db5158bef66"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a038ea114ff75076e05108db5158bef66">RESET_TEXT</a>&#160;&#160;&#160;&quot;\x1B[0m&quot;</td></tr>
+<tr class="memdesc:a038ea114ff75076e05108db5158bef66"><td class="mdescLeft">&#160;</td><td class="mdescRight">ANSI-код для сброса цветового форматирования в терминале  <br /></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-typedef-members" class="groupheader"><a id="typedef-members" name="typedef-members"></a>
 Typedefs</h2></td></tr>
@@ -126,7 +127,76 @@ typedef struct TemperatureNode&#160;</td><td class="memItemRight" valign="bottom
 </table>
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Конфигурационные константы и структуры данных </p>
-</div></div><!-- contents -->
+</div><a name="doc-define-members" id="doc-define-members"></a><h2 id="header-doc-define-members" class="groupheader">Macro Definition Documentation</h2>
+<a id="aaad9cb092d673eb55addd81bdc69f532" name="aaad9cb092d673eb55addd81bdc69f532"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aaad9cb092d673eb55addd81bdc69f532">&#9670;&#160;</a></span>GREEN_TEXT</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define GREEN_TEXT&#160;&#160;&#160;&quot;\x1B[32m&quot;</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>ANSI-код для вывода текста зеленым цветом в терминале </p>
+<dl class="section note"><dt>Note</dt><dd>Используется для успешных операций </dd></dl>
+
+</div>
+</div>
+<a id="a475c77257e5782fb60199a7d12a7e53f" name="a475c77257e5782fb60199a7d12a7e53f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a475c77257e5782fb60199a7d12a7e53f">&#9670;&#160;</a></span>MAX_RECORDS</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define MAX_RECORDS&#160;&#160;&#160;900000</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Максимальное количество температурных записей в программе </p>
+<dl class="section warning"><dt>Warning</dt><dd>Превышение этого значения приведет к ошибке BUFFER_OVERFLOW </dd></dl>
+
+</div>
+</div>
+<a id="ac6b49286f191080eef7f1891a32b6596" name="ac6b49286f191080eef7f1891a32b6596"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac6b49286f191080eef7f1891a32b6596">&#9670;&#160;</a></span>RED_TEXT</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define RED_TEXT&#160;&#160;&#160;&quot;\x1B[31m&quot;</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>ANSI-код для вывода текста красным цветом в терминале </p>
+<dl class="section note"><dt>Note</dt><dd>Используется для сообщений об ошибках </dd></dl>
+
+</div>
+</div>
+<a id="a038ea114ff75076e05108db5158bef66" name="a038ea114ff75076e05108db5158bef66"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a038ea114ff75076e05108db5158bef66">&#9670;&#160;</a></span>RESET_TEXT</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define RESET_TEXT&#160;&#160;&#160;&quot;\x1B[0m&quot;</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>ANSI-код для сброса цветового форматирования в терминале </p>
+<dl class="section note"><dt>Note</dt><dd>Должен использоваться после цветных сообщений </dd></dl>
+
+</div>
+</div>
+</div><!-- contents -->
 </div><!-- doc-content -->
 <div id="page-nav" class="page-nav-panel">
 <div id="page-nav-resize-handle"></div>

@@ -125,8 +125,23 @@ Files</h2></td></tr>
 <li>Режим командной строки</li>
 </ul>
 <h1 class="doxsection"><a class="anchor" id="autotoc_md2"></a>
+Документация</h1>
+<p>Полная документация по проекту сгенерирована при помощи <a href="https://www.doxygen.nl/"><b>Doxygen</b></a> и расположена в папке: <br  />
+ 📂 <span class="tt">Doc/html/</span> <br  />
+</p>
+<p>Для просмотра откройте файл: <br  />
+ 📄 <span class="tt">Doc/html/index.html</span> <br  />
+</p>
+<p>Документация включает:</p>
+<ul>
+<li>Подробное описание всех функций и структур данных</li>
+<li>Графы вызовов функций</li>
+<li>Диаграммы зависимостей модулей</li>
+<li>Примеры использования API</li>
+</ul>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md3"></a>
 Основные функции</h1>
-<h2 class="doxsection"><a class="anchor" id="autotoc_md3"></a>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md4"></a>
 Управление данными</h2>
 <ul>
 <li>Хранение до 900 000 записей (настраивается в <span class="tt"><a class="el" href="config_8h.html" title="Конфигурационные константы и структуры данных">config.h</a></span>)</li>
@@ -134,7 +149,7 @@ Files</h2></td></tr>
 <li>Удаление записей по индексу или точному совпадению</li>
 <li>Просмотр всех записей в форматированной таблице</li>
 </ul>
-<h2 class="doxsection"><a class="anchor" id="autotoc_md4"></a>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md5"></a>
 Статистический анализ</h2>
 <ul>
 <li>Месячная статистика (средняя, мин, макс)</li>
@@ -142,16 +157,16 @@ Files</h2></td></tr>
 <li>Сравнение месяцев за разные годы</li>
 <li>Комплексная проверка корректности данных</li>
 </ul>
-<h2 class="doxsection"><a class="anchor" id="autotoc_md5"></a>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md6"></a>
 Работа с файлами</h2>
 <ul>
 <li>Загрузка данных из CSV-файлов со строгой проверкой формата</li>
 <li>Индикация прогресса при загрузке больших файлов</li>
 <li>Специальная обработка файла <span class="tt">temperature_big.csv</span></li>
 </ul>
-<h1 class="doxsection"><a class="anchor" id="autotoc_md6"></a>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md7"></a>
 Установка и использование</h1>
-<h2 class="doxsection"><a class="anchor" id="autotoc_md7"></a>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md8"></a>
 Сборка проекта</h2>
 <div class="fragment"><div class="line"># С помощью make</div>
 <div class="line">make rebuild</div>
@@ -163,7 +178,7 @@ Files</h2></td></tr>
 <div class="fragment"><div class="line">./temperature_stats -h                # Показать справку</div>
 <div class="line">./temperature_stats -f data.csv       # Загрузить указанный CSV-файл</div>
 <div class="line">./temperature_stats -m 2              # Показать статистику за февраль из temperature_big.csv</div>
-</div><!-- fragment --><h1 class="doxsection"><a class="anchor" id="autotoc_md8"></a>
+</div><!-- fragment --><h1 class="doxsection"><a class="anchor" id="autotoc_md9"></a>
 Интерактивный режим.</h1>
 <p>Запуск без аргументов для работы с меню:</p>
 <div class="fragment"><div class="line">1. Добавить новую запись</div>
@@ -172,13 +187,13 @@ Files</h2></td></tr>
 <div class="line">4. Загрузить данные из файла</div>
 <div class="line">5. Просмотреть все записи</div>
 <div class="line">0. Выход</div>
-</div><!-- fragment --><h1 class="doxsection"><a class="anchor" id="autotoc_md9"></a>
+</div><!-- fragment --><h1 class="doxsection"><a class="anchor" id="autotoc_md10"></a>
 Формат данных.</h1>
 <p>CSV-файлы должны строго соответствовать формату:</p>
 <div class="fragment"><div class="line">Год;Месяц;День;Часы;Минуты;Температура</div>
 <div class="line">2021;01;16;01;01;-47</div>
 <div class="line">2021;01;16;01;03;-44</div>
-</div><!-- fragment --><h2 class="doxsection"><a class="anchor" id="autotoc_md10"></a>
+</div><!-- fragment --><h2 class="doxsection"><a class="anchor" id="autotoc_md11"></a>
 Правила валидации:</h2>
 <ul>
 <li>Год: 1900-2100;</li>
@@ -187,7 +202,7 @@ Files</h2></td></tr>
 <li>Время: 00:00 до 23:59;</li>
 <li>Температура: от -99°C до +99°C;</li>
 </ul>
-<h1 class="doxsection"><a class="anchor" id="autotoc_md11"></a>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md12"></a>
 Техническая документация.</h1>
 <div class="fragment"><div class="line">+---------------------+------------------------------------+</div>
 <div class="line">|   Файл              |      Назначение                    |</div>
@@ -202,7 +217,7 @@ Files</h2></td></tr>
 <div class="line">+---------------------+------------------------------------+</div>
 <div class="line">|config.h             |Конфигурационные константы          |</div>
 <div class="line">+----------------------------------------------------------+</div>
-</div><!-- fragment --> <h1 class="doxsection"><a class="anchor" id="autotoc_md12"></a>
+</div><!-- fragment --> <h1 class="doxsection"><a class="anchor" id="autotoc_md13"></a>
 Коды ошибок</h1>
 <ul>
 <li><span class="tt">0 (SUCCESS)</span>: Успешное выполнение</li>
@@ -212,7 +227,7 @@ Files</h2></td></tr>
 <li><span class="tt">-4 (INVALID_EXTENSION)</span>: Не CSV-файл</li>
 <li><span class="tt">-5 (INVALID_PARAM)</span>: Некорректные параметры</li>
 </ul>
-<h1 class="doxsection"><a class="anchor" id="autotoc_md13"></a>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md14"></a>
 Примеры использования</h1>
 <div class="fragment"><div class="line">Введите год: 2023</div>
 <div class="line">Введите месяц (1-12): 5</div>
@@ -221,13 +236,13 @@ Files</h2></td></tr>
 <div class="line">Введите минуты (0-59): 30</div>
 <div class="line">Введите температуру (-99 до 99): 25</div>
 <div class="line">Запись успешно добавлена!</div>
-</div><!-- fragment --><h1 class="doxsection"><a class="anchor" id="autotoc_md14"></a>
+</div><!-- fragment --><h1 class="doxsection"><a class="anchor" id="autotoc_md15"></a>
 Пример статистики</h1>
 <div class="fragment"><div class="line">Месяц 02:</div>
 <div class="line">  Средняя: -5.2°C</div>
 <div class="line">  Минимальная: -12°C</div>
 <div class="line">  Максимальная: 3°C</div>
-</div><!-- fragment --><h1 class="doxsection"><a class="anchor" id="autotoc_md15"></a>
+</div><!-- fragment --><h1 class="doxsection"><a class="anchor" id="autotoc_md16"></a>
 Требования для сборки программы</h1>
 <p>Для успешной сборки и работы программы Temperature Statistics необходимы следующие инструменты и библиотеки:</p>
 <ol type="1">
@@ -238,13 +253,13 @@ Files</h2></td></tr>
 </ul>
 </li>
 </ol>
-<h1 class="doxsection"><a class="anchor" id="autotoc_md16"></a>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md17"></a>
 Поддерживаемые платформы</h1>
 <ul>
 <li><span class="tt">Linux</span> Протестировано на Ubuntu/Debian</li>
 <li><span class="tt">Windows</span> Требуется MinGW или WSL</li>
 </ul>
-<h2 class="doxsection"><a class="anchor" id="autotoc_md17"></a>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md18"></a>
 Установка:</h2>
 <ul>
 <li>Linux (Debian/Ubuntu):</li>
@@ -288,7 +303,7 @@ Files</h2></td></tr>
 <p class="startli">Скачать с <a href="https://git-scm.com/">официального сайта</a>.</p>
 </li>
 </ul>
-<h1 class="doxsection"><a class="anchor" id="autotoc_md18"></a>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md19"></a>
 Инструкция по сборке</h1>
 <ol type="1">
 <li>Клонирование репозитория:</li>
@@ -308,12 +323,12 @@ Files</h2></td></tr>
 <li>Запуск программы:</li>
 </ol>
 <div class="fragment"><div class="line">./temperature_stats</div>
-</div><!-- fragment --><h2 class="doxsection"><a class="anchor" id="autotoc_md19"></a>
+</div><!-- fragment --><h2 class="doxsection"><a class="anchor" id="autotoc_md20"></a>
 Дополнительные заметки</h2>
 <ul>
 <li>Для <span class="tt">Windows</span> рекомендуется собирать программу в <span class="tt">WSL</span> (<span class="tt">Windows Subsystem for Linux</span>) или через <span class="tt">MSYS2</span> для лучшей совместимости.</li>
 </ul>
-<h2 class="doxsection"><a class="anchor" id="autotoc_md20"></a>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md21"></a>
 Лицензия</h2>
 <p>Открытое ПО - подробности в репозитории </p>
 </div><!-- contents -->

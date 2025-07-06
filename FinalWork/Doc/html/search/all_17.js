@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['управление_20данными_0',['Управление данными',['../D:/Qt_Project/MFTI/Course-C-Basic-Level/FinalWork/ReadMe.md#autotoc_md3',1,'']]],
-  ['установка_20и_20использование_1',['Установка и использование',['../D:/Qt_Project/MFTI/Course-C-Basic-Level/FinalWork/ReadMe.md#autotoc_md6',1,'']]],
-  ['установка_3a_2',['Установка:',['../D:/Qt_Project/MFTI/Course-C-Basic-Level/FinalWork/ReadMe.md#autotoc_md17',1,'']]]
+  ['техническая_20документация_0',['Техническая документация.',['../D:/Qt_Project/MFTI/Course-C-Basic-Level/FinalWork/ReadMe.md#autotoc_md12',1,'']]],
+  ['требования_20для_20сборки_20программы_1',['Требования для сборки программы',['../D:/Qt_Project/MFTI/Course-C-Basic-Level/FinalWork/ReadMe.md#autotoc_md16',1,'']]],
+  ['температурных_20данных_2',['Программа статистики температурных данных',['../D:/Qt_Project/MFTI/Course-C-Basic-Level/FinalWork/ReadMe.md#autotoc_md0',1,'']]]
 ];
