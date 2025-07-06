@@ -13,22 +13,21 @@
 #include "menu.h"
 #include "config.h"
 
+
 /**
  * @brief Главная функция программы
  * @param argc Количество аргументов
  * @param argv Массив аргументов
  * @return int Статус завершения программы
  */
-
 int main(int argc, char *argv[])
 {
-      
     if (argc > 1)
     {
         int result = 0;
         char fileName[255] = {'\0'};
 
-        while ((result = getopt(argc, argv, "hf:m:")) != -1)
+        while ((result = getopt(argc, argv, "hf:m:d")) != -1)
         {
             switch (result)
             {
@@ -59,12 +58,12 @@ int main(int argc, char *argv[])
                 }
                 printStatsForMonthAllYears(month);
                 return 0;
+            
             case '?':
                 printf("Error found !\n");
                 break;
             }
         }        
-
     }
 
     int choice;

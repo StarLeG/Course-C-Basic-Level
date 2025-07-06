@@ -7,11 +7,13 @@ The Temperature Statistics program is designed to work with temperature data, al
 - Display statistics by month and year
 - Load data from CSV files
 - View all records in a formatted table
+- Open documentation in browser DOC/html/index.html
 
 COMMAND LINE OPTIONS:
 -h       : Display this help message
 -f <file>: Load data from the specified CSV file
 -m <1-12>: Display statistics for the specified month (1=Jan, 12=Dec)
+
 
 INTERACTIVE MENU OPTIONS:
 1. Add new temperature record
