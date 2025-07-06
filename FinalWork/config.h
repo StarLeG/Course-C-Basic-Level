@@ -45,20 +45,59 @@
 
 /**
  * @brief Структура для хранения данных о температуре
+ * @details Содержит полную информацию о моменте измерения температуры
  */
 typedef struct {
+    /** 
+     * @brief Год измерения (1900-2100)
+     * @warning Значения вне диапазона считаются невалидными
+     */
     uint16_t year;
+
+    /** 
+     * @brief Месяц измерения (1-12)
+     * @note 1 - Январь, ..., 12 - Декабрь
+     */
     uint8_t month;
+
+    /** 
+     * @brief День измерения (1-31)
+     * @details Автоматически валидируется в зависимости от месяца
+     */
     uint8_t day;
+
+    /** 
+     * @brief Часы измерения (0-23)
+     * @note 24-часовой формат
+     */
     uint8_t hours;
+
+    /** 
+     * @brief Минуты измерения (0-59)
+     */
     uint8_t minutes;
+
+    /** 
+     * @brief Значение температуры (-99..+99 °C)
+     * @warning Значения за пределами диапазона отбрасываются
+     */
     int8_t temperature;
 } TemperatureRecord;
 
 /**
  * @brief Узел односвязного списка для TemperatureRecord
+ * @details Используется для организации связного списка записей
  */
 typedef struct TemperatureNode {
+    /** 
+     * @brief Данные температурной записи
+     * @see TemperatureRecord
+     */
     TemperatureRecord data;
+
+    /** 
+     * @brief Указатель на следующий узел списка
+     * @warning NULL для последнего элемента
+     */
     struct TemperatureNode* next;
 } TemperatureNode;
