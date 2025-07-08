@@ -1,11 +1,20 @@
 /**
  * @mainpage Temperature Statistics Program
- * @brief Программа для сбора и анализа температурных данных
+ * @brief Итоговая работа по курсу «Программирование на языке С (базовый уровень)»
  * @author Старинский Олег Григорьевич
  * @date 2025
  * 
  * @section intro_sec Введение
- * Программа предоставляет функционал для работы с температурными данными...
+ * Консольное приложение "Temperature Statistics", которое осуществляет считывание текстового файла csv,
+ * состоящего из строк следующего формата:
+ * YEAR;MONTH;DAY;HOUR;MINUTE;TEMPERATURE
+ * dddd;mm;dd;hh;mm;temperature
+ * dddd - год 4 цифры
+ * mm - месяц 2 цифры
+ * dd - день 2 цифры
+ * hh - часы 2 цифры
+ * mm - минуты 2 цифры
+ *  temperature - целое число от -99 до 99
  */
 
 #include <stdio.h>
@@ -77,23 +86,24 @@ int main(int argc, char *argv[])
             }
             case 'm':
             {
-                char buffer[SIZE];
-                int loadStatus = readFileToBuffer("temperature_big.csv", buffer);
+                // char buffer[SIZE];
+                // int loadStatus = readFileToBuffer("temperature_big.csv", buffer);
 
-                if (loadStatus != SUCCESS)
-                {
-                    printf(RED_TEXT "Error loading temperature_big.csv (code: %d)\n" RESET_TEXT, loadStatus);
-                    return 1;
-                }
+                // if (loadStatus != SUCCESS)
+                // {
+                //     printf(RED_TEXT "Error loading temperature_big.csv (code: %d)\n" RESET_TEXT, loadStatus);
+                //     return 1;
+                // }
 
                 int month = atoi(optarg);
                 if (month < 1 || month > 12)
                 {
-                    printf("Incorrect month! Acceptable values ​​are 1-12.\n");
+                    printf(RED_TEXT"Incorrect month! Acceptable values ​​are 1-12.\n"RESET_TEXT);
                     return 1;
                 }
 
-                printf(GREEN_TEXT "Data loaded successfully!\n" RESET_TEXT);
+                //printf(GREEN_TEXT "Data loaded successfully!\n" RESET_TEXT);
+                
                 printStatsForMonthAllYears(month);
                 return 0;
             }
