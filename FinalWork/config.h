@@ -10,17 +10,11 @@
 #include <stdint.h>
 
 /** 
- * @def SIZE
- * @brief Максимальный размер буфера для чтения файлов (в байтах)
- */
-#define SIZE 1000000
-
-/** 
  * @def MAX_RECORDS
  * @brief Максимальное количество температурных записей в программе
  * @warning Превышение этого значения приведет к ошибке BUFFER_OVERFLOW
  */
-#define MAX_RECORDS 900000
+#define MAX_RECORDS 527040
 
 /** 
  * @def RED_TEXT

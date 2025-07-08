@@ -12,13 +12,12 @@
 
 /**
  * @brief Читает данные о температуре из CSV файла в буфер
- * @param fileName Имя файла для чтения
- * @param buffer Буфер для хранения содержимого файла
+ * @param fileName Имя файла для чтения * 
  * @return int Код статуса (SUCCESS или код ошибки)
  */
-int readFileToBuffer(char *fileName, char *buffer)
+int readFileToBuffer(char *fileName)
 {
-    if (!fileName || !buffer)
+    if (!fileName)
         return INVALID_PARAM;
 
     const char *dot = strrchr(fileName, '.');

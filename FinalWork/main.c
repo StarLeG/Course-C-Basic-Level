@@ -61,9 +61,8 @@ int main(int argc, char *argv[])
 
             case 'f':
             {
-                strcpy(fileName, optarg);
-                char buffer[SIZE];
-                int loadStatus = readFileToBuffer(fileName, buffer);
+                strcpy(fileName, optarg);                
+                int loadStatus = readFileToBuffer(fileName);
 
                 if (loadStatus != SUCCESS)
                 {
