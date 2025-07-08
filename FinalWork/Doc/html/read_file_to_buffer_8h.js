@@ -6,5 +6,5 @@ var read_file_to_buffer_8h =
     [ "INVALID_FORMAT", "read_file_to_buffer_8h.html#a93760118ddb4cf03cfc65b2f2068930b", null ],
     [ "INVALID_PARAM", "read_file_to_buffer_8h.html#a84b8de4d668a81384973b5f84430fc4c", null ],
     [ "SUCCESS", "read_file_to_buffer_8h.html#aa90cac659d18e8ef6294c7ae337f6b58", null ],
-    [ "readFileToBuffer", "read_file_to_buffer_8h.html#a2b1d20e37df3855f78444e99668b79be", null ]
+    [ "readFileToBuffer", "read_file_to_buffer_8h.html#ada12e1997ced9a813d0dcea2d9310b5c", null ]
 ];

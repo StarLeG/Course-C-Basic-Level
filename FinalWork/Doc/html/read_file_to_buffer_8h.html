@@ -106,16 +106,22 @@ $(function(){initNavTree('read_file_to_buffer_8h.html','',''); });
 <tr class="heading"><td colspan="2"><h2 id="header-define-members" class="groupheader"><a id="define-members" name="define-members"></a>
 Macros</h2></td></tr>
 <tr class="memitem:aa90cac659d18e8ef6294c7ae337f6b58" id="r_aa90cac659d18e8ef6294c7ae337f6b58"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa90cac659d18e8ef6294c7ae337f6b58">SUCCESS</a>&#160;&#160;&#160;0</td></tr>
+<tr class="memdesc:aa90cac659d18e8ef6294c7ae337f6b58"><td class="mdescLeft">&#160;</td><td class="mdescRight">Код успешного выполнения операции  <br /></td></tr>
 <tr class="memitem:abde48ee05fd7b864a4f44ed92afd066e" id="r_abde48ee05fd7b864a4f44ed92afd066e"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#abde48ee05fd7b864a4f44ed92afd066e">FILE_OPEN_ERROR</a>&#160;&#160;&#160;-1</td></tr>
+<tr class="memdesc:abde48ee05fd7b864a4f44ed92afd066e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Ошибка открытия файла  <br /></td></tr>
 <tr class="memitem:a93760118ddb4cf03cfc65b2f2068930b" id="r_a93760118ddb4cf03cfc65b2f2068930b"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a93760118ddb4cf03cfc65b2f2068930b">INVALID_FORMAT</a>&#160;&#160;&#160;-2</td></tr>
+<tr class="memdesc:a93760118ddb4cf03cfc65b2f2068930b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Ошибка формата данных  <br /></td></tr>
 <tr class="memitem:a6f03a5b05aec3a0d5f69128cee8b4968" id="r_a6f03a5b05aec3a0d5f69128cee8b4968"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a6f03a5b05aec3a0d5f69128cee8b4968">BUFFER_OVERFLOW</a>&#160;&#160;&#160;-3</td></tr>
+<tr class="memdesc:a6f03a5b05aec3a0d5f69128cee8b4968"><td class="mdescLeft">&#160;</td><td class="mdescRight">Переполнение буфера  <br /></td></tr>
 <tr class="memitem:a98e3929e6949250eb69f579b5fa83f3d" id="r_a98e3929e6949250eb69f579b5fa83f3d"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a98e3929e6949250eb69f579b5fa83f3d">INVALID_EXTENSION</a>&#160;&#160;&#160;-4</td></tr>
+<tr class="memdesc:a98e3929e6949250eb69f579b5fa83f3d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Некорректное расширение файла  <br /></td></tr>
 <tr class="memitem:a84b8de4d668a81384973b5f84430fc4c" id="r_a84b8de4d668a81384973b5f84430fc4c"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a84b8de4d668a81384973b5f84430fc4c">INVALID_PARAM</a>&#160;&#160;&#160;-5</td></tr>
+<tr class="memdesc:a84b8de4d668a81384973b5f84430fc4c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Некорректный параметр  <br /></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-func-members" class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:a2b1d20e37df3855f78444e99668b79be" id="r_a2b1d20e37df3855f78444e99668b79be"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2b1d20e37df3855f78444e99668b79be">readFileToBuffer</a> (char *fileName, char *buffer)</td></tr>
-<tr class="memdesc:a2b1d20e37df3855f78444e99668b79be"><td class="mdescLeft">&#160;</td><td class="mdescRight">Читает содержимое файла в буфер  <br /></td></tr>
+<tr class="memitem:ada12e1997ced9a813d0dcea2d9310b5c" id="r_ada12e1997ced9a813d0dcea2d9310b5c"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ada12e1997ced9a813d0dcea2d9310b5c">readFileToBuffer</a> (char *fileName)</td></tr>
+<tr class="memdesc:ada12e1997ced9a813d0dcea2d9310b5c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Читает содержимое файла в буфер  <br /></td></tr>
 </table>
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Заголовочный файл для функций чтения файлов </p>
@@ -132,6 +138,9 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Переполнение буфера </p>
+<p>Возвращается при попытке добавить запись сверх установленного лимита MAX_RECORDS </p>
+
 </div>
 </div>
 <a id="abde48ee05fd7b864a4f44ed92afd066e" name="abde48ee05fd7b864a4f44ed92afd066e"></a>
@@ -145,6 +154,9 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Ошибка открытия файла </p>
+<p>Возвращается когда файл не может быть открыт (не найден, нет прав доступа и т.д.) </p>
 
 </div>
 </div>
@@ -160,6 +172,9 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Некорректное расширение файла </p>
+<p>Возвращается когда файл имеет недопустимое расширение (требуется .csv) </p>
+
 </div>
 </div>
 <a id="a93760118ddb4cf03cfc65b2f2068930b" name="a93760118ddb4cf03cfc65b2f2068930b"></a>
@@ -173,6 +188,9 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Ошибка формата данных </p>
+<p>Возвращается при несоответствии формата данных ожидаемому (например, некорректный CSV) </p>
 
 </div>
 </div>
@@ -188,6 +206,9 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Некорректный параметр </p>
+<p>Возвращается при передаче недопустимых параметров в функцию (например, NULL вместо имени файла) </p>
+
 </div>
 </div>
 <a id="aa90cac659d18e8ef6294c7ae337f6b58" name="aa90cac659d18e8ef6294c7ae337f6b58"></a>
@@ -202,11 +223,14 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Код успешного выполнения операции </p>
+<p>Возвращается при корректном завершении функции без ошибок </p>
+
 </div>
 </div>
 <a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Function Documentation</h2>
-<a id="a2b1d20e37df3855f78444e99668b79be" name="a2b1d20e37df3855f78444e99668b79be"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a2b1d20e37df3855f78444e99668b79be">&#9670;&#160;</a></span>readFileToBuffer()</h2>
+<a id="ada12e1997ced9a813d0dcea2d9310b5c" name="ada12e1997ced9a813d0dcea2d9310b5c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ada12e1997ced9a813d0dcea2d9310b5c">&#9670;&#160;</a></span>readFileToBuffer()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -214,12 +238,8 @@ Functions</h2></td></tr>
         <tr>
           <td class="memname">int readFileToBuffer </td>
           <td>(</td>
-          <td class="paramtype">char *</td>          <td class="paramname"><span class="paramname"><em>fileName</em></span>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
+          <td class="paramtype">char *</td>          <td class="paramname"><span class="paramname"><em>fileName</em></span></td><td>)</td>
           <td></td>
-          <td class="paramtype">char *</td>          <td class="paramname"><span class="paramname"><em>buffer</em></span>&#160;)</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -228,7 +248,6 @@ Functions</h2></td></tr>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">fileName</td><td>Имя файла для чтения </td></tr>
-    <tr><td class="paramname">buffer</td><td>Буфер для хранения содержимого </td></tr>
   </table>
   </dd>
 </dl>
@@ -236,8 +255,7 @@ Functions</h2></td></tr>
 <p>Читает содержимое файла в буфер</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">fileName</td><td>Имя файла для чтения </td></tr>
-    <tr><td class="paramname">buffer</td><td>Буфер для хранения содержимого файла </td></tr>
+    <tr><td class="paramname">fileName</td><td>Имя файла для чтения * </td></tr>
   </table>
   </dd>
 </dl>
