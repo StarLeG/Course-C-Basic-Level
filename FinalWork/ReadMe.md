@@ -78,8 +78,8 @@ make rebuild
 
 ```bash
 ./temperature_stats -h                # Показать справку
-./temperature_stats -f data.csv       # Загрузить указанный CSV-файл
-./temperature_stats -m 2              # Показать статистику за февраль из temperature_big.csv
+./temperature_stats -f *.csv       # Загрузить указанный CSV-файл
+./temperature_stats -f *.csv -m 2  # Показать статистику за февраль из *.csv
 ```
 
 ## Интерактивный режим
