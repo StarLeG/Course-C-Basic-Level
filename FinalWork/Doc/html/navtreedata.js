@@ -26,22 +26,22 @@ var NAVTREE =
 [
   [ "Temperature Statistics", "index.html", [
     [ "Temperature Statistics Program", "index.html", "index" ],
-    [ "Data Structures", "annotated.html", [
-      [ "Data Structures", "annotated.html", "annotated_dup" ],
-      [ "Data Structure Index", "classes.html", null ],
-      [ "Data Fields", "functions.html", [
-        [ "All", "functions.html", null ],
-        [ "Variables", "functions_vars.html", null ]
+    [ "Структуры данных", "annotated.html", [
+      [ "Структуры данных", "annotated.html", "annotated_dup" ],
+      [ "Алфавитный указатель структур данных", "classes.html", null ],
+      [ "Поля структур", "functions.html", [
+        [ "Указатель", "functions.html", null ],
+        [ "Переменные", "functions_vars.html", null ]
       ] ]
     ] ],
-    [ "Files", "files.html", [
-      [ "File List", "files.html", "files_dup" ],
-      [ "Globals", "globals.html", [
-        [ "All", "globals.html", null ],
-        [ "Functions", "globals_func.html", null ],
-        [ "Variables", "globals_vars.html", null ],
-        [ "Typedefs", "globals_type.html", null ],
-        [ "Macros", "globals_defs.html", null ]
+    [ "Файлы", "files.html", [
+      [ "Файлы", "files.html", "files_dup" ],
+      [ "Список членов всех файлов", "globals.html", [
+        [ "Указатель", "globals.html", null ],
+        [ "Функции", "globals_func.html", null ],
+        [ "Переменные", "globals_vars.html", null ],
+        [ "Определения типов", "globals_type.html", null ],
+        [ "Макросы", "globals_defs.html", null ]
       ] ]
     ] ]
   ] ]
@@ -52,6 +52,6 @@ var NAVTREEINDEX =
 "annotated.html"
 ];
 
-var SYNCONMSG = 'click to disable panel synchronization';
-var SYNCOFFMSG = 'click to enable panel synchronization';
-var LISTOFALLMEMBERS = 'List of all members';
+var SYNCONMSG = 'нажмите на выключить для синхронизации панелей';
+var SYNCOFFMSG = 'нажмите на включить для синхронизации панелей';
+var LISTOFALLMEMBERS = 'Полный список членов класса';

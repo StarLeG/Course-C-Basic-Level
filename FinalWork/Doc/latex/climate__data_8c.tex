@@ -1,5 +1,5 @@
-\doxysection{D\+:/\+Qt\+\_\+\+Project/\+MFTI/\+Course-\/\+C-\/\+Basic-\/\+Level/\+Final\+Work/climate\+\_\+data.c File Reference}
-\hypertarget{climate__data_8c}{}\label{climate__data_8c}\index{D:/Qt\_Project/MFTI/Course-\/C-\/Basic-\/Level/FinalWork/climate\_data.c@{D:/Qt\_Project/MFTI/Course-\/C-\/Basic-\/Level/FinalWork/climate\_data.c}}
+\doxysection{Файл D\+:/\+Qt\+\_\+\+Project/\+MFTI/\+Course-\/\+C-\/\+Basic-\/\+Level/\+Final\+Work/climate\+\_\+data.c}
+\label{climate__data_8c}\index{D:/Qt\_Project/MFTI/Course-\/C-\/Basic-\/Level/FinalWork/climate\_data.c@{D:/Qt\_Project/MFTI/Course-\/C-\/Basic-\/Level/FinalWork/climate\_data.c}}
 
 
 Реализация функций работы с данными о температуре  
@@ -8,60 +8,61 @@
 {\ttfamily \#include "{}climate\+\_\+data.\+h"{}}\newline
 {\ttfamily \#include $<$stdio.\+h$>$}\newline
 {\ttfamily \#include $<$limits.\+h$>$}\newline
-\doxysubsubsection*{Functions}
+{\ttfamily \#include $<$stdlib.\+h$>$}\newline
+\doxysubsubsection*{Функции}
 \begin{DoxyCompactItemize}
 \item 
-void \mbox{\hyperlink{climate__data_8c_a7391dac1dfdc4ea6ae022ecf72eb7161}{add\+Record}} (uint16\+\_\+t year, uint8\+\_\+t month, uint8\+\_\+t day, uint8\+\_\+t hours, uint8\+\_\+t minutes, int8\+\_\+t temperature)
+static bool \textbf{ is\+Valid\+Record} (uint16\+\_\+t year, uint8\+\_\+t month, uint8\+\_\+t day, uint8\+\_\+t hours, uint8\+\_\+t minutes, int8\+\_\+t temp)
+\begin{DoxyCompactList}\small\item\em Проверяет корректность данных температуры \end{DoxyCompactList}\item 
+void \textbf{ add\+Record} (uint16\+\_\+t year, uint8\+\_\+t month, uint8\+\_\+t day, uint8\+\_\+t hours, uint8\+\_\+t minutes, int8\+\_\+t temperature)
 \begin{DoxyCompactList}\small\item\em Добавляет новую запись о температуре \end{DoxyCompactList}\item 
-void \mbox{\hyperlink{climate__data_8c_a8d97a34f6ece203fca28132592c722d9}{remove\+Record}} (size\+\_\+t index)
+void \textbf{ remove\+Record} (size\+\_\+t index)
 \begin{DoxyCompactList}\small\item\em Удаляет запись по индексу \end{DoxyCompactList}\item 
-int \mbox{\hyperlink{climate__data_8c_ae73cf9a1052ea014dba8739619c6cda0}{find\+And\+Remove\+Record}} (uint16\+\_\+t year, uint8\+\_\+t month, uint8\+\_\+t day, uint8\+\_\+t hours, uint8\+\_\+t minutes, int8\+\_\+t temperature)
+int \textbf{ find\+And\+Remove\+Record} (uint16\+\_\+t year, uint8\+\_\+t month, uint8\+\_\+t day, uint8\+\_\+t hours, uint8\+\_\+t minutes, int8\+\_\+t temperature)
 \begin{DoxyCompactList}\small\item\em Находит и удаляет конкретную запись \end{DoxyCompactList}\item 
-float \mbox{\hyperlink{climate__data_8c_ac2aeaec92546ae66147f7147ee287601}{get\+Average\+Monthly\+Temp}} (uint16\+\_\+t year, uint8\+\_\+t month)
+float \textbf{ get\+Average\+Monthly\+Temp} (uint16\+\_\+t year, uint8\+\_\+t month)
 \begin{DoxyCompactList}\small\item\em Получает среднюю температуру за месяц \end{DoxyCompactList}\item 
-int8\+\_\+t \mbox{\hyperlink{climate__data_8c_a89d7112e3d6f5ba622db73d2263da4fe}{get\+Min\+Monthly\+Temp}} (uint16\+\_\+t year, uint8\+\_\+t month)
+int8\+\_\+t \textbf{ get\+Min\+Monthly\+Temp} (uint16\+\_\+t year, uint8\+\_\+t month)
 \begin{DoxyCompactList}\small\item\em Получает минимальную температуру за месяц \end{DoxyCompactList}\item 
-int8\+\_\+t \mbox{\hyperlink{climate__data_8c_adb241010c87bc22a48a1b9bc85727c63}{get\+Max\+Monthly\+Temp}} (uint16\+\_\+t year, uint8\+\_\+t month)
+int8\+\_\+t \textbf{ get\+Max\+Monthly\+Temp} (uint16\+\_\+t year, uint8\+\_\+t month)
 \begin{DoxyCompactList}\small\item\em Получает максимальную температуру за месяц \end{DoxyCompactList}\item 
-float \mbox{\hyperlink{climate__data_8c_a779b0677c864ee2d5111e3d1d102ab25}{get\+Average\+Yearly\+Temp}} (uint16\+\_\+t year)
+float \textbf{ get\+Average\+Yearly\+Temp} (uint16\+\_\+t year)
 \begin{DoxyCompactList}\small\item\em Получает среднюю температуру за год \end{DoxyCompactList}\item 
-int8\+\_\+t \mbox{\hyperlink{climate__data_8c_a774649890449a014b7cf3f1c8bc01131}{get\+Min\+Yearly\+Temp}} (uint16\+\_\+t year)
+int8\+\_\+t \textbf{ get\+Min\+Yearly\+Temp} (uint16\+\_\+t year)
 \begin{DoxyCompactList}\small\item\em Получает минимальную температуру за год \end{DoxyCompactList}\item 
-int8\+\_\+t \mbox{\hyperlink{climate__data_8c_a9b85fc9c6d1ffb68b08330452c1a7d2c}{get\+Max\+Yearly\+Temp}} (uint16\+\_\+t year)
+int8\+\_\+t \textbf{ get\+Max\+Yearly\+Temp} (uint16\+\_\+t year)
 \begin{DoxyCompactList}\small\item\em Получает максимальную температуру за год \end{DoxyCompactList}\item 
-size\+\_\+t \mbox{\hyperlink{climate__data_8c_a3322e4894367bc7388d9bdccdd560137}{count\+Monthly\+Records}} (uint16\+\_\+t year, uint8\+\_\+t month)
+size\+\_\+t \textbf{ count\+Monthly\+Records} (uint16\+\_\+t year, uint8\+\_\+t month)
 \begin{DoxyCompactList}\small\item\em Подсчитывает записи за конкретный месяц \end{DoxyCompactList}\item 
-void \mbox{\hyperlink{climate__data_8c_a42c079ec254dc577cd8e2b4b3698dcfd}{print\+Monthly\+Stats}} (uint16\+\_\+t year)
+void \textbf{ print\+Monthly\+Stats} (uint16\+\_\+t year)
 \begin{DoxyCompactList}\small\item\em Выводит месячную статистику за год \end{DoxyCompactList}\item 
-void \mbox{\hyperlink{climate__data_8c_aea96cf324190bf44ab42572fdd07867f}{print\+Yearly\+Stats}} (uint16\+\_\+t year)
+void \textbf{ print\+Yearly\+Stats} (uint16\+\_\+t year)
 \begin{DoxyCompactList}\small\item\em Выводит годовую статистику \end{DoxyCompactList}\item 
-void \mbox{\hyperlink{climate__data_8c_a8ddf9e35e6921ed4007347001a6e38db}{print\+Stats\+For\+Month\+All\+Years}} (uint8\+\_\+t month)
+void \textbf{ print\+Stats\+For\+Month\+All\+Years} (uint8\+\_\+t month)
 \begin{DoxyCompactList}\small\item\em Выводит статистику по конкретному месяцу за все годы \end{DoxyCompactList}\item 
-\Hypertarget{climate__data_8c_a88d147364e977477ff26ef0f081a20ab}\label{climate__data_8c_a88d147364e977477ff26ef0f081a20ab} 
-void {\bfseries print\+All\+Records} ()
-\begin{DoxyCompactList}\small\item\em Выводит все записи в форматированной таблице \end{DoxyCompactList}\end{DoxyCompactItemize}
-\doxysubsubsection*{Variables}
+void \textbf{ print\+All\+Records} ()
+\begin{DoxyCompactList}\small\item\em Выводит все записи в форматированной таблице \end{DoxyCompactList}\item 
+void \textbf{ free\+Temperature\+List} ()
+\begin{DoxyCompactList}\small\item\em Освобождает память, занятую списком \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Переменные}
 \begin{DoxyCompactItemize}
 \item 
-\Hypertarget{climate__data_8c_ab3c2d339ddba8d59d96407e70f859c7f}\label{climate__data_8c_ab3c2d339ddba8d59d96407e70f859c7f} 
-\mbox{\hyperlink{struct_temperature_record}{Temperature\+Record}} {\bfseries sensor\+Data} \mbox{[}MAX\+\_\+\+RECORDS\mbox{]}
+\textbf{ Temperature\+Node} $\ast$ \textbf{ sensor\+Data\+Head} = NULL
 \item 
-\Hypertarget{climate__data_8c_a5e1e713784bbe237d1efd41da4be17b4}\label{climate__data_8c_a5e1e713784bbe237d1efd41da4be17b4} 
-size\+\_\+t {\bfseries records\+Count} = 0
+size\+\_\+t \textbf{ records\+Count} = 0
 \end{DoxyCompactItemize}
 
 
-\doxysubsection{Detailed Description}
+\doxysubsection{Подробное описание}
 Реализация функций работы с данными о температуре 
 
 
 
 \label{doc-func-members}
-\Hypertarget{climate__data_8c_doc-func-members}
-\doxysubsection{Function Documentation}
-\Hypertarget{climate__data_8c_a7391dac1dfdc4ea6ae022ecf72eb7161}\index{climate\_data.c@{climate\_data.c}!addRecord@{addRecord}}
+\doxysubsection{Функции}
+\index{climate\_data.c@{climate\_data.c}!addRecord@{addRecord}}
 \index{addRecord@{addRecord}!climate\_data.c@{climate\_data.c}}
-\doxysubsubsection{\texorpdfstring{addRecord()}{addRecord()}}
+\doxysubsubsection{addRecord()}
 {\footnotesize\ttfamily \label{climate__data_8c_a7391dac1dfdc4ea6ae022ecf72eb7161} 
 void add\+Record (\begin{DoxyParamCaption}\item[{uint16\+\_\+t}]{year}{, }\item[{uint8\+\_\+t}]{month}{, }\item[{uint8\+\_\+t}]{day}{, }\item[{uint8\+\_\+t}]{hours}{, }\item[{uint8\+\_\+t}]{minutes}{, }\item[{int8\+\_\+t}]{temperature}{}\end{DoxyParamCaption})}
 
@@ -70,7 +71,7 @@ void add\+Record (\begin{DoxyParamCaption}\item[{uint16\+\_\+t}]{year}{, }\item[
 Добавляет новую запись о температуре 
 
 
-\begin{DoxyParams}{Parameters}
+\begin{DoxyParams}{Аргументы}
 {\em year} & Год записи \\
 \hline
 {\em month} & Месяц записи (1-\/12) \\
@@ -84,9 +85,9 @@ void add\+Record (\begin{DoxyParamCaption}\item[{uint16\+\_\+t}]{year}{, }\item[
 {\em temperature} & Значение температуры (-\/99 до 99) \\
 \hline
 \end{DoxyParams}
-\Hypertarget{climate__data_8c_a3322e4894367bc7388d9bdccdd560137}\index{climate\_data.c@{climate\_data.c}!countMonthlyRecords@{countMonthlyRecords}}
+\index{climate\_data.c@{climate\_data.c}!countMonthlyRecords@{countMonthlyRecords}}
 \index{countMonthlyRecords@{countMonthlyRecords}!climate\_data.c@{climate\_data.c}}
-\doxysubsubsection{\texorpdfstring{countMonthlyRecords()}{countMonthlyRecords()}}
+\doxysubsubsection{countMonthlyRecords()}
 {\footnotesize\ttfamily \label{climate__data_8c_a3322e4894367bc7388d9bdccdd560137} 
 size\+\_\+t count\+Monthly\+Records (\begin{DoxyParamCaption}\item[{uint16\+\_\+t}]{year}{, }\item[{uint8\+\_\+t}]{month}{}\end{DoxyParamCaption})}
 
@@ -95,18 +96,18 @@ size\+\_\+t count\+Monthly\+Records (\begin{DoxyParamCaption}\item[{uint16\+\_\+
 Подсчитывает записи за конкретный месяц 
 
 
-\begin{DoxyParams}{Parameters}
+\begin{DoxyParams}{Аргументы}
 {\em year} & Год для подсчета \\
 \hline
 {\em month} & Месяц для подсчета (1-\/12) \\
 \hline
 \end{DoxyParams}
-\begin{DoxyReturn}{Returns}
+\begin{DoxyReturn}{Возвращает}
 size\+\_\+t Количество найденных записей 
 \end{DoxyReturn}
-\Hypertarget{climate__data_8c_ae73cf9a1052ea014dba8739619c6cda0}\index{climate\_data.c@{climate\_data.c}!findAndRemoveRecord@{findAndRemoveRecord}}
+\index{climate\_data.c@{climate\_data.c}!findAndRemoveRecord@{findAndRemoveRecord}}
 \index{findAndRemoveRecord@{findAndRemoveRecord}!climate\_data.c@{climate\_data.c}}
-\doxysubsubsection{\texorpdfstring{findAndRemoveRecord()}{findAndRemoveRecord()}}
+\doxysubsubsection{findAndRemoveRecord()}
 {\footnotesize\ttfamily \label{climate__data_8c_ae73cf9a1052ea014dba8739619c6cda0} 
 int find\+And\+Remove\+Record (\begin{DoxyParamCaption}\item[{uint16\+\_\+t}]{year}{, }\item[{uint8\+\_\+t}]{month}{, }\item[{uint8\+\_\+t}]{day}{, }\item[{uint8\+\_\+t}]{hours}{, }\item[{uint8\+\_\+t}]{minutes}{, }\item[{int8\+\_\+t}]{temperature}{}\end{DoxyParamCaption})}
 
@@ -115,7 +116,7 @@ int find\+And\+Remove\+Record (\begin{DoxyParamCaption}\item[{uint16\+\_\+t}]{ye
 Находит и удаляет конкретную запись 
 
 
-\begin{DoxyParams}{Parameters}
+\begin{DoxyParams}{Аргументы}
 {\em year} & Год для поиска \\
 \hline
 {\em month} & Месяц для поиска (1-\/12) \\
@@ -129,12 +130,22 @@ int find\+And\+Remove\+Record (\begin{DoxyParamCaption}\item[{uint16\+\_\+t}]{ye
 {\em temperature} & Температура для поиска \\
 \hline
 \end{DoxyParams}
-\begin{DoxyReturn}{Returns}
+\begin{DoxyReturn}{Возвращает}
 int 1 если найдена и удалена, 0 в противном случае 
 \end{DoxyReturn}
-\Hypertarget{climate__data_8c_ac2aeaec92546ae66147f7147ee287601}\index{climate\_data.c@{climate\_data.c}!getAverageMonthlyTemp@{getAverageMonthlyTemp}}
+\index{climate\_data.c@{climate\_data.c}!freeTemperatureList@{freeTemperatureList}}
+\index{freeTemperatureList@{freeTemperatureList}!climate\_data.c@{climate\_data.c}}
+\doxysubsubsection{freeTemperatureList()}
+{\footnotesize\ttfamily \label{climate__data_8c_a39082ffb8cc77e087bf07ba73740c43e} 
+void free\+Temperature\+List (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Освобождает память, занятую списком 
+
+\index{climate\_data.c@{climate\_data.c}!getAverageMonthlyTemp@{getAverageMonthlyTemp}}
 \index{getAverageMonthlyTemp@{getAverageMonthlyTemp}!climate\_data.c@{climate\_data.c}}
-\doxysubsubsection{\texorpdfstring{getAverageMonthlyTemp()}{getAverageMonthlyTemp()}}
+\doxysubsubsection{getAverageMonthlyTemp()}
 {\footnotesize\ttfamily \label{climate__data_8c_ac2aeaec92546ae66147f7147ee287601} 
 float get\+Average\+Monthly\+Temp (\begin{DoxyParamCaption}\item[{uint16\+\_\+t}]{year}{, }\item[{uint8\+\_\+t}]{month}{}\end{DoxyParamCaption})}
 
@@ -143,18 +154,18 @@ float get\+Average\+Monthly\+Temp (\begin{DoxyParamCaption}\item[{uint16\+\_\+t}
 Получает среднюю температуру за месяц 
 
 
-\begin{DoxyParams}{Parameters}
+\begin{DoxyParams}{Аргументы}
 {\em year} & Год для проверки \\
 \hline
 {\em month} & Месяц для проверки (1-\/12) \\
 \hline
 \end{DoxyParams}
-\begin{DoxyReturn}{Returns}
+\begin{DoxyReturn}{Возвращает}
 float Средняя температура 
 \end{DoxyReturn}
-\Hypertarget{climate__data_8c_a779b0677c864ee2d5111e3d1d102ab25}\index{climate\_data.c@{climate\_data.c}!getAverageYearlyTemp@{getAverageYearlyTemp}}
+\index{climate\_data.c@{climate\_data.c}!getAverageYearlyTemp@{getAverageYearlyTemp}}
 \index{getAverageYearlyTemp@{getAverageYearlyTemp}!climate\_data.c@{climate\_data.c}}
-\doxysubsubsection{\texorpdfstring{getAverageYearlyTemp()}{getAverageYearlyTemp()}}
+\doxysubsubsection{getAverageYearlyTemp()}
 {\footnotesize\ttfamily \label{climate__data_8c_a779b0677c864ee2d5111e3d1d102ab25} 
 float get\+Average\+Yearly\+Temp (\begin{DoxyParamCaption}\item[{uint16\+\_\+t}]{year}{}\end{DoxyParamCaption})}
 
@@ -163,16 +174,16 @@ float get\+Average\+Yearly\+Temp (\begin{DoxyParamCaption}\item[{uint16\+\_\+t}]
 Получает среднюю температуру за год 
 
 
-\begin{DoxyParams}{Parameters}
+\begin{DoxyParams}{Аргументы}
 {\em year} & Год для проверки \\
 \hline
 \end{DoxyParams}
-\begin{DoxyReturn}{Returns}
+\begin{DoxyReturn}{Возвращает}
 float Средняя температура 
 \end{DoxyReturn}
-\Hypertarget{climate__data_8c_adb241010c87bc22a48a1b9bc85727c63}\index{climate\_data.c@{climate\_data.c}!getMaxMonthlyTemp@{getMaxMonthlyTemp}}
+\index{climate\_data.c@{climate\_data.c}!getMaxMonthlyTemp@{getMaxMonthlyTemp}}
 \index{getMaxMonthlyTemp@{getMaxMonthlyTemp}!climate\_data.c@{climate\_data.c}}
-\doxysubsubsection{\texorpdfstring{getMaxMonthlyTemp()}{getMaxMonthlyTemp()}}
+\doxysubsubsection{getMaxMonthlyTemp()}
 {\footnotesize\ttfamily \label{climate__data_8c_adb241010c87bc22a48a1b9bc85727c63} 
 int8\+\_\+t get\+Max\+Monthly\+Temp (\begin{DoxyParamCaption}\item[{uint16\+\_\+t}]{year}{, }\item[{uint8\+\_\+t}]{month}{}\end{DoxyParamCaption})}
 
@@ -181,18 +192,18 @@ int8\+\_\+t get\+Max\+Monthly\+Temp (\begin{DoxyParamCaption}\item[{uint16\+\_\+
 Получает максимальную температуру за месяц 
 
 
-\begin{DoxyParams}{Parameters}
+\begin{DoxyParams}{Аргументы}
 {\em year} & Год для проверки \\
 \hline
 {\em month} & Месяц для проверки (1-\/12) \\
 \hline
 \end{DoxyParams}
-\begin{DoxyReturn}{Returns}
+\begin{DoxyReturn}{Возвращает}
 int8\+\_\+t Максимальная температура 
 \end{DoxyReturn}
-\Hypertarget{climate__data_8c_a9b85fc9c6d1ffb68b08330452c1a7d2c}\index{climate\_data.c@{climate\_data.c}!getMaxYearlyTemp@{getMaxYearlyTemp}}
+\index{climate\_data.c@{climate\_data.c}!getMaxYearlyTemp@{getMaxYearlyTemp}}
 \index{getMaxYearlyTemp@{getMaxYearlyTemp}!climate\_data.c@{climate\_data.c}}
-\doxysubsubsection{\texorpdfstring{getMaxYearlyTemp()}{getMaxYearlyTemp()}}
+\doxysubsubsection{getMaxYearlyTemp()}
 {\footnotesize\ttfamily \label{climate__data_8c_a9b85fc9c6d1ffb68b08330452c1a7d2c} 
 int8\+\_\+t get\+Max\+Yearly\+Temp (\begin{DoxyParamCaption}\item[{uint16\+\_\+t}]{year}{}\end{DoxyParamCaption})}
 
@@ -201,16 +212,16 @@ int8\+\_\+t get\+Max\+Yearly\+Temp (\begin{DoxyParamCaption}\item[{uint16\+\_\+t
 Получает максимальную температуру за год 
 
 
-\begin{DoxyParams}{Parameters}
+\begin{DoxyParams}{Аргументы}
 {\em year} & Год для проверки \\
 \hline
 \end{DoxyParams}
-\begin{DoxyReturn}{Returns}
+\begin{DoxyReturn}{Возвращает}
 int8\+\_\+t Максимальная температура 
 \end{DoxyReturn}
-\Hypertarget{climate__data_8c_a89d7112e3d6f5ba622db73d2263da4fe}\index{climate\_data.c@{climate\_data.c}!getMinMonthlyTemp@{getMinMonthlyTemp}}
+\index{climate\_data.c@{climate\_data.c}!getMinMonthlyTemp@{getMinMonthlyTemp}}
 \index{getMinMonthlyTemp@{getMinMonthlyTemp}!climate\_data.c@{climate\_data.c}}
-\doxysubsubsection{\texorpdfstring{getMinMonthlyTemp()}{getMinMonthlyTemp()}}
+\doxysubsubsection{getMinMonthlyTemp()}
 {\footnotesize\ttfamily \label{climate__data_8c_a89d7112e3d6f5ba622db73d2263da4fe} 
 int8\+\_\+t get\+Min\+Monthly\+Temp (\begin{DoxyParamCaption}\item[{uint16\+\_\+t}]{year}{, }\item[{uint8\+\_\+t}]{month}{}\end{DoxyParamCaption})}
 
@@ -219,18 +230,18 @@ int8\+\_\+t get\+Min\+Monthly\+Temp (\begin{DoxyParamCaption}\item[{uint16\+\_\+
 Получает минимальную температуру за месяц 
 
 
-\begin{DoxyParams}{Parameters}
+\begin{DoxyParams}{Аргументы}
 {\em year} & Год для проверки \\
 \hline
 {\em month} & Месяц для проверки (1-\/12) \\
 \hline
 \end{DoxyParams}
-\begin{DoxyReturn}{Returns}
+\begin{DoxyReturn}{Возвращает}
 int8\+\_\+t Минимальная температура 
 \end{DoxyReturn}
-\Hypertarget{climate__data_8c_a774649890449a014b7cf3f1c8bc01131}\index{climate\_data.c@{climate\_data.c}!getMinYearlyTemp@{getMinYearlyTemp}}
+\index{climate\_data.c@{climate\_data.c}!getMinYearlyTemp@{getMinYearlyTemp}}
 \index{getMinYearlyTemp@{getMinYearlyTemp}!climate\_data.c@{climate\_data.c}}
-\doxysubsubsection{\texorpdfstring{getMinYearlyTemp()}{getMinYearlyTemp()}}
+\doxysubsubsection{getMinYearlyTemp()}
 {\footnotesize\ttfamily \label{climate__data_8c_a774649890449a014b7cf3f1c8bc01131} 
 int8\+\_\+t get\+Min\+Yearly\+Temp (\begin{DoxyParamCaption}\item[{uint16\+\_\+t}]{year}{}\end{DoxyParamCaption})}
 
@@ -239,16 +250,36 @@ int8\+\_\+t get\+Min\+Yearly\+Temp (\begin{DoxyParamCaption}\item[{uint16\+\_\+t
 Получает минимальную температуру за год 
 
 
-\begin{DoxyParams}{Parameters}
+\begin{DoxyParams}{Аргументы}
 {\em year} & Год для проверки \\
 \hline
 \end{DoxyParams}
-\begin{DoxyReturn}{Returns}
+\begin{DoxyReturn}{Возвращает}
 int8\+\_\+t Минимальная температура 
 \end{DoxyReturn}
-\Hypertarget{climate__data_8c_a42c079ec254dc577cd8e2b4b3698dcfd}\index{climate\_data.c@{climate\_data.c}!printMonthlyStats@{printMonthlyStats}}
+\index{climate\_data.c@{climate\_data.c}!isValidRecord@{isValidRecord}}
+\index{isValidRecord@{isValidRecord}!climate\_data.c@{climate\_data.c}}
+\doxysubsubsection{isValidRecord()}
+{\footnotesize\ttfamily \label{climate__data_8c_a96fa7c78cbe87ff45edb3f685fc73efb} 
+bool is\+Valid\+Record (\begin{DoxyParamCaption}\item[{uint16\+\_\+t}]{year}{, }\item[{uint8\+\_\+t}]{month}{, }\item[{uint8\+\_\+t}]{day}{, }\item[{uint8\+\_\+t}]{hours}{, }\item[{uint8\+\_\+t}]{minutes}{, }\item[{int8\+\_\+t}]{temp}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Проверяет корректность данных температуры 
+
+\index{climate\_data.c@{climate\_data.c}!printAllRecords@{printAllRecords}}
+\index{printAllRecords@{printAllRecords}!climate\_data.c@{climate\_data.c}}
+\doxysubsubsection{printAllRecords()}
+{\footnotesize\ttfamily \label{climate__data_8c_a88d147364e977477ff26ef0f081a20ab} 
+void print\+All\+Records (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Выводит все записи в форматированной таблице 
+
+\index{climate\_data.c@{climate\_data.c}!printMonthlyStats@{printMonthlyStats}}
 \index{printMonthlyStats@{printMonthlyStats}!climate\_data.c@{climate\_data.c}}
-\doxysubsubsection{\texorpdfstring{printMonthlyStats()}{printMonthlyStats()}}
+\doxysubsubsection{printMonthlyStats()}
 {\footnotesize\ttfamily \label{climate__data_8c_a42c079ec254dc577cd8e2b4b3698dcfd} 
 void print\+Monthly\+Stats (\begin{DoxyParamCaption}\item[{uint16\+\_\+t}]{year}{}\end{DoxyParamCaption})}
 
@@ -257,13 +288,13 @@ void print\+Monthly\+Stats (\begin{DoxyParamCaption}\item[{uint16\+\_\+t}]{year}
 Выводит месячную статистику за год 
 
 
-\begin{DoxyParams}{Parameters}
-{\em year} & Год для вывода статистики \\
+\begin{DoxyParams}{Аргументы}
+{\em year} & Год для вывода статистикиФ \\
 \hline
 \end{DoxyParams}
-\Hypertarget{climate__data_8c_a8ddf9e35e6921ed4007347001a6e38db}\index{climate\_data.c@{climate\_data.c}!printStatsForMonthAllYears@{printStatsForMonthAllYears}}
+\index{climate\_data.c@{climate\_data.c}!printStatsForMonthAllYears@{printStatsForMonthAllYears}}
 \index{printStatsForMonthAllYears@{printStatsForMonthAllYears}!climate\_data.c@{climate\_data.c}}
-\doxysubsubsection{\texorpdfstring{printStatsForMonthAllYears()}{printStatsForMonthAllYears()}}
+\doxysubsubsection{printStatsForMonthAllYears()}
 {\footnotesize\ttfamily \label{climate__data_8c_a8ddf9e35e6921ed4007347001a6e38db} 
 void print\+Stats\+For\+Month\+All\+Years (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{month}{}\end{DoxyParamCaption})}
 
@@ -272,13 +303,13 @@ void print\+Stats\+For\+Month\+All\+Years (\begin{DoxyParamCaption}\item[{uint8\
 Выводит статистику по конкретному месяцу за все годы 
 
 
-\begin{DoxyParams}{Parameters}
+\begin{DoxyParams}{Аргументы}
 {\em month} & Месяц для вывода статистики (1-\/12) \\
 \hline
 \end{DoxyParams}
-\Hypertarget{climate__data_8c_aea96cf324190bf44ab42572fdd07867f}\index{climate\_data.c@{climate\_data.c}!printYearlyStats@{printYearlyStats}}
+\index{climate\_data.c@{climate\_data.c}!printYearlyStats@{printYearlyStats}}
 \index{printYearlyStats@{printYearlyStats}!climate\_data.c@{climate\_data.c}}
-\doxysubsubsection{\texorpdfstring{printYearlyStats()}{printYearlyStats()}}
+\doxysubsubsection{printYearlyStats()}
 {\footnotesize\ttfamily \label{climate__data_8c_aea96cf324190bf44ab42572fdd07867f} 
 void print\+Yearly\+Stats (\begin{DoxyParamCaption}\item[{uint16\+\_\+t}]{year}{}\end{DoxyParamCaption})}
 
@@ -287,13 +318,13 @@ void print\+Yearly\+Stats (\begin{DoxyParamCaption}\item[{uint16\+\_\+t}]{year}{
 Выводит годовую статистику 
 
 
-\begin{DoxyParams}{Parameters}
+\begin{DoxyParams}{Аргументы}
 {\em year} & Год для вывода статистики \\
 \hline
 \end{DoxyParams}
-\Hypertarget{climate__data_8c_a8d97a34f6ece203fca28132592c722d9}\index{climate\_data.c@{climate\_data.c}!removeRecord@{removeRecord}}
+\index{climate\_data.c@{climate\_data.c}!removeRecord@{removeRecord}}
 \index{removeRecord@{removeRecord}!climate\_data.c@{climate\_data.c}}
-\doxysubsubsection{\texorpdfstring{removeRecord()}{removeRecord()}}
+\doxysubsubsection{removeRecord()}
 {\footnotesize\ttfamily \label{climate__data_8c_a8d97a34f6ece203fca28132592c722d9} 
 void remove\+Record (\begin{DoxyParamCaption}\item[{size\+\_\+t}]{index}{}\end{DoxyParamCaption})}
 
@@ -302,7 +333,23 @@ void remove\+Record (\begin{DoxyParamCaption}\item[{size\+\_\+t}]{index}{}\end{D
 Удаляет запись по индексу 
 
 
-\begin{DoxyParams}{Parameters}
+\begin{DoxyParams}{Аргументы}
 {\em index} & Индекс записи для удаления \\
 \hline
 \end{DoxyParams}
+
+
+\label{doc-var-members}
+\doxysubsection{Переменные}
+\index{climate\_data.c@{climate\_data.c}!recordsCount@{recordsCount}}
+\index{recordsCount@{recordsCount}!climate\_data.c@{climate\_data.c}}
+\doxysubsubsection{recordsCount}
+{\footnotesize\ttfamily \label{climate__data_8c_a5e1e713784bbe237d1efd41da4be17b4} 
+size\+\_\+t records\+Count = 0}
+
+\index{climate\_data.c@{climate\_data.c}!sensorDataHead@{sensorDataHead}}
+\index{sensorDataHead@{sensorDataHead}!climate\_data.c@{climate\_data.c}}
+\doxysubsubsection{sensorDataHead}
+{\footnotesize\ttfamily \label{climate__data_8c_aff71978f4c4b583d63318a62ed67b58b} 
+\textbf{ Temperature\+Node}$\ast$ sensor\+Data\+Head = NULL}
+

@@ -1,257 +1,198 @@
-\doxysection{D\+:/\+Qt\+\_\+\+Project/\+MFTI/\+Course-\/\+C-\/\+Basic-\/\+Level/\+Final\+Work Directory Reference}
-\hypertarget{dir_47ba8deda7d52ef127f07dfc40c440a6}{}\label{dir_47ba8deda7d52ef127f07dfc40c440a6}\index{D:/Qt\_Project/MFTI/Course-\/C-\/Basic-\/Level/FinalWork Directory Reference@{D:/Qt\_Project/MFTI/Course-\/C-\/Basic-\/Level/FinalWork Directory Reference}}
-\doxysubsubsection*{Files}
+\doxysection{Содержание директории D\+:/\+Qt\+\_\+\+Project/\+MFTI/\+Course-\/\+C-\/\+Basic-\/\+Level/\+Final\+Work}
+\label{dir_47ba8deda7d52ef127f07dfc40c440a6}\index{Содержание директории D:/Qt\_Project/MFTI/Course-\/C-\/Basic-\/Level/FinalWork@{Содержание директории D:/Qt\_Project/MFTI/Course-\/C-\/Basic-\/Level/FinalWork}}
+\doxysubsubsection*{Файлы}
 \begin{DoxyCompactItemize}
 \item 
-file \mbox{\hyperlink{climate__data_8c}{climate\+\_\+data.\+c}}
+файл \textbf{ climate\+\_\+data.\+c}
 \begin{DoxyCompactList}\small\item\em Реализация функций работы с данными о температуре \end{DoxyCompactList}\item 
-file \mbox{\hyperlink{climate__data_8h}{climate\+\_\+data.\+h}}
+файл \textbf{ climate\+\_\+data.\+h}
 \begin{DoxyCompactList}\small\item\em Заголовочный файл для работы с данными о температуре \end{DoxyCompactList}\item 
-file \mbox{\hyperlink{config_8h}{config.\+h}}
+файл \textbf{ config.\+h}
 \begin{DoxyCompactList}\small\item\em Конфигурационные константы и структуры данных \end{DoxyCompactList}\item 
-file \mbox{\hyperlink{main_8c}{main.\+c}}
-\begin{DoxyCompactList}\small\item\em Главный модуль программы статистики температуры \end{DoxyCompactList}\item 
-file \mbox{\hyperlink{menu_8c}{menu.\+c}}
+файл \textbf{ main.\+c}
+\item 
+файл \textbf{ menu.\+c}
 \begin{DoxyCompactList}\small\item\em Реализация функций меню для программы статистики температуры \end{DoxyCompactList}\item 
-file \mbox{\hyperlink{menu_8h}{menu.\+h}}
+файл \textbf{ menu.\+h}
 \begin{DoxyCompactList}\small\item\em Заголовочный файл для функций меню \end{DoxyCompactList}\item 
-file \mbox{\hyperlink{read_file_to_buffer_8c}{read\+File\+To\+Buffer.\+c}}
+файл \textbf{ read\+File\+To\+Buffer.\+c}
 \begin{DoxyCompactList}\small\item\em Реализация функций чтения данных о температуре из файла \end{DoxyCompactList}\item 
-file \mbox{\hyperlink{read_file_to_buffer_8h}{read\+File\+To\+Buffer.\+h}}
+файл \textbf{ read\+File\+To\+Buffer.\+h}
 \begin{DoxyCompactList}\small\item\em Заголовочный файл для функций чтения файлов \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
-\doxysubsection{Detailed Description}
-\hypertarget{ReadMe.md_autotoc_md0}{}\doxysubsection{\texorpdfstring{Temperature Statistics Program}{Temperature Statistics Program}}\label{ReadMe.md_autotoc_md0}
-\hypertarget{ReadMe.md_autotoc_md1}{}\doxysubsection{\texorpdfstring{Описание}{Описание}}\label{ReadMe.md_autotoc_md1}
-Программа Temperature Statistics предназначена для работы с данными о температуре. Она позволяет\+:
+\doxysubsection{Подробное описание}
+\doxysubsection{Программа статистики температурных данных}\label{ReadMe.md_autotoc_md0}
+\doxysubsection{Описание}\label{ReadMe.md_autotoc_md1}
+Программа {\ttfamily Temperature Statistics} для сбора, хранения и анализа температурных данных с привязкой ко времени. Основные возможности\+:
 
 
-\begin{DoxyEnumerate}
-\item Хранить записи о температуре с указанием даты и времени
-\item Анализировать температурные данные
-\item Отображать статистику по месяцам и годам
-\item Загружать данные из CSV-\/файлов
-\end{DoxyEnumerate}\hypertarget{ReadMe.md_autotoc_md2}{}\doxysubsection{\texorpdfstring{Функциональность}{Функциональность}}\label{ReadMe.md_autotoc_md2}
-\hypertarget{ReadMe.md_autotoc_md3}{}\doxysubsubsection{\texorpdfstring{Основные возможности\+:}{Основные возможности\+:}}\label{ReadMe.md_autotoc_md3}
+\begin{DoxyItemize}
+\item Управление базой температурных записей
+\item Расширенный статистический анализ
+\item Импорт/экспорт данных в {\ttfamily $\ast$.CSV}
+\item Интерактивный консольный интерфейс
+\item Режим командной строки
+\end{DoxyItemize}\doxysubsection{Документация}\label{ReadMe.md_autotoc_md2}
+Полная документация по проекту сгенерирована при помощи {\texttt{{\bfseries{Doxygen}}}} и расположена в папке\+: ~\newline
+ 📂 {\ttfamily Doc/html/} ~\newline
 
-\begin{DoxyEnumerate}
-\item Добавление новых записей о температуре
-\item Удаление существующих записей
-\item Просмотр статистики\+:
 
-3.\+1. Средняя, минимальная и максимальная температура по месяцам
+Для просмотра откройте файл\+: ~\newline
+ 📄 {\ttfamily Doc/html/index.\+html} ~\newline
 
-3.\+2. Средняя, минимальная и максимальная температура по годам
 
-3.\+3. Статистика для конкретного месяца за все годы
-\item Загрузка данных из CSV-\/файлов
-\end{DoxyEnumerate}\hypertarget{ReadMe.md_autotoc_md4}{}\doxysubsection{\texorpdfstring{Командная строка\+:}{Командная строка\+:}}\label{ReadMe.md_autotoc_md4}
+Документация включает\+:
+
+
+\begin{DoxyItemize}
+\item Подробное описание всех функций и структур данных
+\item Графы вызовов функций
+\item Диаграммы зависимостей модулей
+\item Примеры использования API
+\end{DoxyItemize}\doxysubsection{Структура проекта}\label{ReadMe.md_autotoc_md3}
+Основные файлы программы\+:
+
+\tabulinesep=1mm
+\begin{longtabu}spread 0pt [c]{*{2}{|X[-1]}|}
+\hline
+\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Файл  }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Описание  }\\\cline{1-2}
+\endfirsthead
+\hline
+\endfoot
+\hline
+\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Файл  }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Описание  }\\\cline{1-2}
+\endhead
+{\ttfamily \doxyref{main.\+c}{стр.}{main_8c}}  &Главный модуль программы, обработка аргументов командной строки  \\\cline{1-2}
+{\ttfamily climate\+\_\+data.[hc]}  &Ядро программы, работа с температурными данными и статистикой  \\\cline{1-2}
+{\ttfamily menu.[hc]}  &Реализация интерактивного меню  \\\cline{1-2}
+{\ttfamily read\+File\+To\+Buffer.[hc]}  &Чтение данных из CSV-\/файлов  \\\cline{1-2}
+{\ttfamily \doxyref{config.\+h}{стр.}{config_8h}}  &Конфигурационные константы и структуры данных  \\\cline{1-2}
+{\ttfamily Rebuild.\+sh}  &Скрипт для пересборки проекта  \\\cline{1-2}
+{\ttfamily help.\+txt}  &Текст справки, отображаемый при запуске с опцией {\ttfamily -\/h}  \\\cline{1-2}
+\end{longtabu}
+\doxysubsection{Основные функции}\label{ReadMe.md_autotoc_md4}
+\doxysubsubsection{Управление данными}\label{ReadMe.md_autotoc_md5}
+
+\begin{DoxyItemize}
+\item Хранение до 527040 записей (настраивается в {\ttfamily \doxyref{config.\+h}{стр.}{config_8h}})
+\item Добавление записей с полной валидацией
+\item Удаление записей по индексу или точному совпадению
+\item Просмотр всех записей в форматированной таблице
+\end{DoxyItemize}\doxysubsubsection{Статистический анализ}\label{ReadMe.md_autotoc_md6}
+
+\begin{DoxyItemize}
+\item Месячная статистика (средняя, мин, макс)
+\item Годовая сводка
+\item Сравнение месяцев за разные годы
+\item Комплексная проверка корректности данных
+\end{DoxyItemize}\doxysubsubsection{Работа с файлами}\label{ReadMe.md_autotoc_md7}
+
+\begin{DoxyItemize}
+\item Загрузка данных из CSV-\/файлов со строгой проверкой формата
+\item Индикация прогресса при загрузке больших файлов
+\item Специальная обработка файла {\ttfamily temperature\+\_\+big.\+csv}
+\end{DoxyItemize}\doxysubsection{Установка и использование}\label{ReadMe.md_autotoc_md8}
+\doxysubsubsection{Сборка проекта}\label{ReadMe.md_autotoc_md9}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\#\ С\ помощью\ make}
+\DoxyCodeLine{make\ rebuild}
+\DoxyCodeLine{}
+\DoxyCodeLine{\#\ Или\ используя\ скрипт}
+\DoxyCodeLine{./Rebuild.sh}
+\DoxyCodeLine{\#\#\ Командная\ строка:}
+
+\end{DoxyCode}
+
+
 Программа поддерживает следующие аргументы командной строки\+:
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{-\/h}
-
-\end{DoxyCode}
- -\/ отображение справки
-
-
-\begin{DoxyCode}{0}
-\DoxyCodeLine{-\/f\ <fileName>}
-
-\end{DoxyCode}
- -\/ загрузка данных из указанного файла
-
-
-\begin{DoxyCode}{0}
-\DoxyCodeLine{-\/m\ <xx>}
-
-\end{DoxyCode}
- -\/ отображение статистики для указанного месяца {\ttfamily (1-\/12)}\hypertarget{ReadMe.md_autotoc_md5}{}\doxysubsection{\texorpdfstring{Структура проекта}{Структура проекта}}\label{ReadMe.md_autotoc_md5}
-\hypertarget{ReadMe.md_autotoc_md6}{}\doxysubsubsection{\texorpdfstring{Основные файлы\+:}{Основные файлы\+:}}\label{ReadMe.md_autotoc_md6}
-
-\begin{DoxyCode}{0}
-\DoxyCodeLine{.c}
-
-\end{DoxyCode}
- -\/ точка входа в программу, обработка аргументов командной строки
-
-
-\begin{DoxyCode}{0}
-\DoxyCodeLine{\_data.h/c}
-
-\end{DoxyCode}
- -\/ работа с температурными данными и статистикой
-
-
-\begin{DoxyCode}{0}
-\DoxyCodeLine{.h/c}
-
-\end{DoxyCode}
- -\/ реализация пользовательского меню
-
-
-\begin{DoxyCode}{0}
-\DoxyCodeLine{.h/c}
-
-\end{DoxyCode}
- -\/ функции для чтения данных из файлов
-
-
-\begin{DoxyCode}{0}
-\DoxyCodeLine{.h}
-
-\end{DoxyCode}
- -\/ конфигурационные параметры
-
-Вспомогательные файлы\+:
-
-
-\begin{DoxyCode}{0}
-\DoxyCodeLine{.txt}
-
-\end{DoxyCode}
- -\/ файл справки
-
-
-\begin{DoxyCode}{0}
-\DoxyCodeLine{.sh}
-
-\end{DoxyCode}
- -\/ скрипт для пересборки проекта
-
-
-\begin{DoxyCode}{0}
-\DoxyCodeLine{*.csv}
-
-\end{DoxyCode}
- -\/ пример файла с данными\hypertarget{ReadMe.md_autotoc_md7}{}\doxysubsubsection{\texorpdfstring{Документация\+:}{Документация\+:}}\label{ReadMe.md_autotoc_md7}
-\href{Doc\\html\\index.html}{\texttt{Документация Doxygen}} -\/ полная документация по проекту, сгенерированная с помощью Doxygen.\hypertarget{ReadMe.md_autotoc_md8}{}\doxysubsection{\texorpdfstring{Использование}{Использование}}\label{ReadMe.md_autotoc_md8}
-
-\begin{DoxyEnumerate}
-\item Запуск программы\+: 
-\begin{DoxyCode}{0}
-\DoxyCodeLine{./temperature\_stats}
-
-\end{DoxyCode}
-
-\item Аргументы командной строки\+: 
-\begin{DoxyCode}{0}
 \DoxyCodeLine{./temperature\_stats\ -\/h\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \#\ Показать\ справку}
-\DoxyCodeLine{./temperature\_stats\ -\/f\ data.csv\ \ \ \ \ \ \ \#\ Загрузить\ данные\ из\ файла}
-\DoxyCodeLine{./temperature\_stats\ -\/m\ 2\ \ \ \ \ \ \ \ \ \ \ \ \ \ \#\ Показать\ статистику\ для\ февраля}
+\DoxyCodeLine{./temperature\_stats\ -\/f\ *.csv\ \ \ \ \ \ \ \#\ Загрузить\ указанный\ CSV-\/файл}
+\DoxyCodeLine{./temperature\_stats\ -\/f\ *.csv\ -\/m\ 2\ \ \#\ Показать\ статистику\ за\ февраль\ из\ *.csv}
 
 \end{DoxyCode}
-
-\item Интерактивное меню\+:
-\end{DoxyEnumerate}
-
-После запуска программы без аргументов отображается интерактивное меню с возможностью\+:
+\doxysubsection{Интерактивный режим}\label{ReadMe.md_autotoc_md10}
+Запуск без аргументов для работы с меню\+:
 
 
-\begin{DoxyItemize}
-\item Добавления новых записей
-\item Удаления записей
-\item Просмотра статистики
-\item Загрузки данных из файла
-\end{DoxyItemize}\hypertarget{ReadMe.md_autotoc_md9}{}\doxysubsection{\texorpdfstring{Формат данных}{Формат данных}}\label{ReadMe.md_autotoc_md9}
-Программа ожидает данные в следующем формате\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1.\ Добавить\ новую\ запись}
+\DoxyCodeLine{2.\ Удалить\ запись}
+\DoxyCodeLine{3.\ Просмотр\ статистики}
+\DoxyCodeLine{4.\ Загрузить\ данные\ из\ файла}
+\DoxyCodeLine{5.\ Просмотреть\ все\ записи}
+\DoxyCodeLine{0.\ Выход}
+
+\end{DoxyCode}
+\doxysubsection{Формат данных}\label{ReadMe.md_autotoc_md11}
+CSV-\/файлы должны строго соответствовать формату\+:
+
+
 \begin{DoxyCode}{0}
 \DoxyCodeLine{Год;Месяц;День;Часы;Минуты;Температура}
-\DoxyCodeLine{dddd;mm;dd;hh;mm;temperature\ }
-\DoxyCodeLine{dddd\ -\/\ год\ 4\ цифры\ \ }
-\DoxyCodeLine{mm\ -\/\ месяц\ 2\ цифры\ }
-\DoxyCodeLine{dd\ -\/\ день\ 2\ цифры\ }
-\DoxyCodeLine{hh\ -\/\ \ \ часы\ 2\ цифры\ }
-\DoxyCodeLine{mm\ -\/\ минуты\ 2\ цифры\ }
-\DoxyCodeLine{temperature\ -\/\ \ \ целое\ число\ от\ -\/99\ до\ 99}
-
-\end{DoxyCode}
- Пример\+: 
-\begin{DoxyCode}{0}
 \DoxyCodeLine{2021;01;16;01;01;-\/47}
 \DoxyCodeLine{2021;01;16;01;03;-\/44}
 
 \end{DoxyCode}
-\hypertarget{ReadMe.md_autotoc_md10}{}\doxysubsection{\texorpdfstring{Пример вывода всех записей}{Пример вывода всех записей}}\label{ReadMe.md_autotoc_md10}
-
-\begin{DoxyCode}{0}
-\DoxyCodeLine{===\ All\ Temperature\ Records\ ===}
-\DoxyCodeLine{+-\/-\/-\/-\/-\/-\/-\/+-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/+-\/-\/-\/-\/-\/-\/-\/-\/+-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/+}
-\DoxyCodeLine{|\ Index\ |\ Date\ (Y-\/M-\/D)|\ Time\ \ \ |\ Temp.\ \ \ \ \ \ |}
-\DoxyCodeLine{+-\/-\/-\/-\/-\/-\/-\/+-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/+-\/-\/-\/-\/-\/-\/-\/-\/+-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/+}
-\DoxyCodeLine{|\ 0\ \ \ \ \ |\ 2023-\/01-\/15\ \ |\ 12:30\ \ |\ \ -\/5°C\ \ \ \ \ \ |}
-\DoxyCodeLine{|\ 1\ \ \ \ \ |\ 2023-\/01-\/15\ \ |\ 18:45\ \ |\ \ -\/7°C\ \ \ \ \ \ |}
-\DoxyCodeLine{+-\/-\/-\/-\/-\/-\/-\/+-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/+-\/-\/-\/-\/-\/-\/-\/-\/+-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/+}
-\DoxyCodeLine{Total\ records:\ 2}
-
-\end{DoxyCode}
-\hypertarget{ReadMe.md_autotoc_md11}{}\doxysubsection{\texorpdfstring{Сборка}{Сборка}}\label{ReadMe.md_autotoc_md11}
-Для сборки проекта используйте команду\+: 
-\begin{DoxyCode}{0}
-\DoxyCodeLine{make\ rebuild}
-
-\end{DoxyCode}
- или скрипт\+: 
-\begin{DoxyCode}{0}
-\DoxyCodeLine{./Rebuild.sh}
-
-\end{DoxyCode}
-\hypertarget{ReadMe.md_autotoc_md12}{}\doxysubsection{\texorpdfstring{Ограничения}{Ограничения}}\label{ReadMe.md_autotoc_md12}
+\doxysubsubsection{Правила валидации}\label{ReadMe.md_autotoc_md12}
 
 \begin{DoxyItemize}
-\item Максимальное количество записей\+: 100000 (определено в {\ttfamily \doxylink{climate__data_8h}{climate\+\_\+data.\+h}})
-\item Температура должна быть в диапазоне от {\ttfamily -\/99} до {\ttfamily 99} градусов
-\item Месяц должен быть в диапазоне от {\ttfamily 1} до {\ttfamily 12}
-\end{DoxyItemize}\hypertarget{ReadMe.md_autotoc_md13}{}\doxysubsection{\texorpdfstring{Примеры использования}{Примеры использования}}\label{ReadMe.md_autotoc_md13}
+\item Год\+: 1900-\/2100;
+\item Месяц\+: 1-\/12;
+\item День\+: С учётом количества дней в месяце (високосные года обрабатываются);
+\item Время\+: 00\+:00 до 23\+:59;
+\item Температура\+: от -\/99°C до +99°C;
+\end{DoxyItemize}\doxysubsection{Коды ошибок}\label{ReadMe.md_autotoc_md13}
 
-\begin{DoxyEnumerate}
-\item Просмотр статистики за год\+:
-\end{DoxyEnumerate}
-
-
-\begin{DoxyCode}{0}
-\DoxyCodeLine{Enter\ year:\ 2023}
-
-\end{DoxyCode}
-
-
-
-\begin{DoxyEnumerate}
-\item Добавление новой записи\+:
-\end{DoxyEnumerate}
-
+\begin{DoxyItemize}
+\item {\ttfamily -\/0 (SUCCESS)}\+: Успешное выполнение
+\item {\ttfamily -\/1 (FILE\+\_\+\+OPEN\+\_\+\+ERROR)}\+: Файл не найден
+\item {\ttfamily -\/2 (INVALID\+\_\+\+FORMAT)}\+: Ошибка формата данных
+\item {\ttfamily -\/3 (BUFFER\+\_\+\+OVERFLOW)}\+: Превышено максимальное количество записей
+\item {\ttfamily -\/4 (INVALID\+\_\+\+EXTENSION)}\+: Не CSV-\/файл
+\item {\ttfamily -\/5 (INVALID\+\_\+\+PARAM)}\+: Некорректные параметры
+\end{DoxyItemize}\doxysubsection{Примеры использования}\label{ReadMe.md_autotoc_md14}
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{Enter\ year:\ 2023}
-\DoxyCodeLine{Enter\ month\ (1-\/12):\ 5}
-\DoxyCodeLine{Enter\ day\ (1-\/31):\ 15}
-\DoxyCodeLine{Enter\ hours\ (0-\/23):\ 14}
-\DoxyCodeLine{Enter\ minutes\ (0-\/59):\ 30}
-\DoxyCodeLine{Enter\ temperature\ (-\/99\ to\ 99):\ 25}
+\DoxyCodeLine{Введите\ год:\ 2023}
+\DoxyCodeLine{Введите\ месяц\ (1-\/12):\ 5}
+\DoxyCodeLine{Введите\ день\ (1-\/31):\ 15}
+\DoxyCodeLine{Введите\ часы\ (0-\/23):\ 14}
+\DoxyCodeLine{Введите\ минуты\ (0-\/59):\ 30}
+\DoxyCodeLine{Введите\ температуру\ (-\/99\ до\ 99):\ 25}
+\DoxyCodeLine{Запись\ успешно\ добавлена!}
 
 \end{DoxyCode}
+\doxysubsection{Пример статистики}\label{ReadMe.md_autotoc_md15}
 
-\begin{DoxyEnumerate}
-\item Загрузка данных из файла\+: 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{Загрузка\ данных\ из\ файла:}
+\DoxyCodeLine{Месяц\ 02:}
+\DoxyCodeLine{\ \ Средняя:\ -\/5.2°C}
+\DoxyCodeLine{\ \ Минимальная:\ -\/12°C}
+\DoxyCodeLine{\ \ Максимальная:\ 3°C}
 
 \end{DoxyCode}
-
-\end{DoxyEnumerate}\hypertarget{ReadMe.md_autotoc_md14}{}\doxysubsection{\texorpdfstring{Требования для сборки программы}{Требования для сборки программы}}\label{ReadMe.md_autotoc_md14}
+\doxysubsection{Требования для сборки программы}\label{ReadMe.md_autotoc_md16}
 Для успешной сборки и работы программы Temperature Statistics необходимы следующие инструменты и библиотеки\+:
+
+
 \begin{DoxyEnumerate}
 \item Компилятор C
 \begin{DoxyItemize}
 \item {\ttfamily GCC (GNU Compiler Collection)} – рекомендуется для Linux/mac\+OS.
 \item {\ttfamily Min\+GW-\/w64} – для Windows (если сборка выполняется в этой ОС).
+\item Стандартные библиотеки C
 \end{DoxyItemize}
-\end{DoxyEnumerate}
+\end{DoxyEnumerate}\doxysubsection{Поддерживаемые платформы}\label{ReadMe.md_autotoc_md17}
 
-Установка\+:
-
+\begin{DoxyItemize}
+\item {\ttfamily Linux} Протестировано на Ubuntu/\+Debian
+\item {\ttfamily Windows} Требуется Min\+GW или WSL
+\end{DoxyItemize}\doxysubsubsection{Установка}\label{ReadMe.md_autotoc_md18}
 
 \begin{DoxyItemize}
 \item Linux (Debian/\+Ubuntu)\+:
@@ -263,15 +204,16 @@ file \mbox{\hyperlink{read_file_to_buffer_8h}{read\+File\+To\+Buffer.\+h}}
 
 \end{DoxyCode}
 
+
+
 \begin{DoxyItemize}
 \item Windows (Min\+GW-\/w64)\+:
 
-Скачать с \href{https://www.mingw-w64.org/}{\texttt{официального сайта}} или через \href{https://www.msys2.org/}{\texttt{MSYS2}}. ~\newline
+Скачать с {\texttt{официального сайта}} или через {\texttt{MSYS2}}. ~\newline
 
 \end{DoxyItemize}
 \begin{DoxyEnumerate}
-\item Утилита {\ttfamily make} ~\newline
-
+\item Утилита {\ttfamily make}
 \begin{DoxyItemize}
 \item Используется для автоматизации сборки (запускает {\ttfamily Makefile}).
 
@@ -297,7 +239,7 @@ file \mbox{\hyperlink{read_file_to_buffer_8h}{read\+File\+To\+Buffer.\+h}}
 
 
 \begin{DoxyItemize}
-\item Linux
+\item {\ttfamily Linux}
 \end{DoxyItemize}
 
 
@@ -306,11 +248,13 @@ file \mbox{\hyperlink{read_file_to_buffer_8h}{read\+File\+To\+Buffer.\+h}}
 
 \end{DoxyCode}
 
-\begin{DoxyItemize}
-\item Windows\+:
 
-Скачать с \href{https://git-scm.com/}{\texttt{официального сайта}}.
-\end{DoxyItemize}\hypertarget{ReadMe.md_autotoc_md15}{}\doxysubsection{\texorpdfstring{Инструкция по сборке}{Инструкция по сборке}}\label{ReadMe.md_autotoc_md15}
+
+\begin{DoxyItemize}
+\item {\ttfamily Windows}\+:
+
+Скачать с {\texttt{официального сайта}}.
+\end{DoxyItemize}\doxysubsection{Инструкция по сборке}\label{ReadMe.md_autotoc_md19}
 
 \begin{DoxyEnumerate}
 \item Клонирование репозитория\+:
@@ -327,10 +271,10 @@ file \mbox{\hyperlink{read_file_to_buffer_8h}{read\+File\+To\+Buffer.\+h}}
 
 \begin{DoxyEnumerate}
 \item Сборка проекта\+:
+\end{DoxyEnumerate}
 \begin{DoxyItemize}
 \item Через {\ttfamily make}\+:
 \end{DoxyItemize}
-\end{DoxyEnumerate}
 
 
 \begin{DoxyCode}{0}
@@ -358,15 +302,19 @@ file \mbox{\hyperlink{read_file_to_buffer_8h}{read\+File\+To\+Buffer.\+h}}
 \DoxyCodeLine{./temperature\_stats}
 
 \end{DoxyCode}
-\hypertarget{ReadMe.md_autotoc_md16}{}\doxysubsection{\texorpdfstring{Поддержка ОС}{Поддержка ОС}}\label{ReadMe.md_autotoc_md16}
-Программа должна работать на\+:
+\doxysubsubsection{Дополнительные заметки}\label{ReadMe.md_autotoc_md20}
+
+\begin{DoxyItemize}
+\item Для {\ttfamily Windows} рекомендуется собирать программу в {\ttfamily WSL} ({\ttfamily Windows Subsystem for Linux}) или через {\ttfamily MSYS2} для лучшей совместимости.
+\end{DoxyItemize}\doxysubsubsection{Лицензия}\label{ReadMe.md_autotoc_md21}
+Открытое ПО\doxysubsection{Авторы}\label{ReadMe.md_autotoc_md22}
+Проект разработан\+:
 
 
 \begin{DoxyItemize}
-\item {\ttfamily Linux} (тестировано на Ubuntu/\+Debian)
-\item {\ttfamily Windows} (через Min\+GW-\/w64 или WSL)
-\end{DoxyItemize}\hypertarget{ReadMe.md_autotoc_md17}{}\doxysubsubsection{\texorpdfstring{Дополнительные заметки}{Дополнительные заметки}}\label{ReadMe.md_autotoc_md17}
+\item {\bfseries{Старинский Олег Григорьевич}} ~\newline
 
-\begin{DoxyItemize}
-\item Для {\ttfamily Windows} рекомендуется собирать программу в {\ttfamily WSL} ({\ttfamily Windows Subsystem for Linux}) или через {\ttfamily MSYS2} для лучшей совместимости. 
+
+Архитектор системы, основной разработчик ~\newline
+ Контакты\+: {\texttt{oleg.\+starynski@gmail.\+com}} 
 \end{DoxyItemize}

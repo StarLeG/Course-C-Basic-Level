@@ -1,36 +1,113 @@
-\doxysection{D\+:/\+Qt\+\_\+\+Project/\+MFTI/\+Course-\/\+C-\/\+Basic-\/\+Level/\+Final\+Work/config.h File Reference}
-\hypertarget{config_8h}{}\label{config_8h}\index{D:/Qt\_Project/MFTI/Course-\/C-\/Basic-\/Level/FinalWork/config.h@{D:/Qt\_Project/MFTI/Course-\/C-\/Basic-\/Level/FinalWork/config.h}}
+\doxysection{Файл D\+:/\+Qt\+\_\+\+Project/\+MFTI/\+Course-\/\+C-\/\+Basic-\/\+Level/\+Final\+Work/config.h}
+\label{config_8h}\index{D:/Qt\_Project/MFTI/Course-\/C-\/Basic-\/Level/FinalWork/config.h@{D:/Qt\_Project/MFTI/Course-\/C-\/Basic-\/Level/FinalWork/config.h}}
 
 
 Конфигурационные константы и структуры данных  
 
 
 {\ttfamily \#include $<$stdint.\+h$>$}\newline
-\doxysubsubsection*{Data Structures}
+\doxysubsubsection*{Структуры данных}
 \begin{DoxyCompactItemize}
 \item 
-struct \mbox{\hyperlink{struct_temperature_record}{Temperature\+Record}}
-\begin{DoxyCompactList}\small\item\em Структура для хранения данных о температуре \end{DoxyCompactList}\end{DoxyCompactItemize}
-\doxysubsubsection*{Macros}
+struct \textbf{ Temperature\+Record}
+\begin{DoxyCompactList}\small\item\em Структура для хранения данных о температуре \end{DoxyCompactList}\item 
+struct \textbf{ Temperature\+Node}
+\begin{DoxyCompactList}\small\item\em Узел односвязного списка для \doxyref{Temperature\+Record}{стр.}{struct_temperature_record}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Макросы}
 \begin{DoxyCompactItemize}
 \item 
-\Hypertarget{config_8h_a70ed59adcb4159ac551058053e649640}\label{config_8h_a70ed59adcb4159ac551058053e649640} 
-\#define {\bfseries SIZE}~1000000
+\#define \textbf{ MAX\+\_\+\+RECORDS}~527040
+\begin{DoxyCompactList}\small\item\em Максимальное количество температурных записей в программе \end{DoxyCompactList}\item 
+\#define \textbf{ RED\+\_\+\+TEXT}~"{}\textbackslash{}x1B[31m"{}
+\begin{DoxyCompactList}\small\item\em ANSI-\/код для вывода текста красным цветом в терминале \end{DoxyCompactList}\item 
+\#define \textbf{ GREEN\+\_\+\+TEXT}~"{}\textbackslash{}x1B[32m"{}
+\begin{DoxyCompactList}\small\item\em ANSI-\/код для вывода текста зеленым цветом в терминале \end{DoxyCompactList}\item 
+\#define \textbf{ RESET\+\_\+\+TEXT}~"{}\textbackslash{}x1B[0m"{}
+\begin{DoxyCompactList}\small\item\em ANSI-\/код для сброса цветового форматирования в терминале \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Определения типов}
+\begin{DoxyCompactItemize}
 \item 
-\Hypertarget{config_8h_a475c77257e5782fb60199a7d12a7e53f}\label{config_8h_a475c77257e5782fb60199a7d12a7e53f} 
-\#define {\bfseries MAX\+\_\+\+RECORDS}~900000
-\item 
-\Hypertarget{config_8h_ac6b49286f191080eef7f1891a32b6596}\label{config_8h_ac6b49286f191080eef7f1891a32b6596} 
-\#define {\bfseries RED\+\_\+\+TEXT}~"{}\textbackslash{}x1B\mbox{[}31m"{}
-\item 
-\Hypertarget{config_8h_aaad9cb092d673eb55addd81bdc69f532}\label{config_8h_aaad9cb092d673eb55addd81bdc69f532} 
-\#define {\bfseries GREEN\+\_\+\+TEXT}~"{}\textbackslash{}x1B\mbox{[}32m"{}
-\item 
-\Hypertarget{config_8h_a038ea114ff75076e05108db5158bef66}\label{config_8h_a038ea114ff75076e05108db5158bef66} 
-\#define {\bfseries RESET\+\_\+\+TEXT}~"{}\textbackslash{}x1B\mbox{[}0m"{}
-\end{DoxyCompactItemize}
+typedef struct Temperature\+Node \textbf{ Temperature\+Node}
+\begin{DoxyCompactList}\small\item\em Узел односвязного списка для \doxyref{Temperature\+Record}{стр.}{struct_temperature_record}. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
-\doxysubsection{Detailed Description}
+\doxysubsection{Подробное описание}
 Конфигурационные константы и структуры данных 
 
+\begin{DoxyAuthor}{Автор}
+Старинский Олег Григорьевич 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Дата}
+2025 
+\end{DoxyDate}
+
+
+\label{doc-define-members}
+\doxysubsection{Макросы}
+\index{config.h@{config.h}!GREEN\_TEXT@{GREEN\_TEXT}}
+\index{GREEN\_TEXT@{GREEN\_TEXT}!config.h@{config.h}}
+\doxysubsubsection{GREEN\_TEXT}
+{\footnotesize\ttfamily \label{config_8h_aaad9cb092d673eb55addd81bdc69f532} 
+\#define GREEN\+\_\+\+TEXT~"{}\textbackslash{}x1B[32m"{}}
+
+
+
+ANSI-\/код для вывода текста зеленым цветом в терминале 
+
+\begin{DoxyNote}{Заметки}
+Используется для успешных операций 
+\end{DoxyNote}
+\index{config.h@{config.h}!MAX\_RECORDS@{MAX\_RECORDS}}
+\index{MAX\_RECORDS@{MAX\_RECORDS}!config.h@{config.h}}
+\doxysubsubsection{MAX\_RECORDS}
+{\footnotesize\ttfamily \label{config_8h_a475c77257e5782fb60199a7d12a7e53f} 
+\#define MAX\+\_\+\+RECORDS~527040}
+
+
+
+Максимальное количество температурных записей в программе 
+
+\begin{DoxyWarning}{Предупреждения}
+Превышение этого значения приведет к ошибке BUFFER\+\_\+\+OVERFLOW 
+\end{DoxyWarning}
+\index{config.h@{config.h}!RED\_TEXT@{RED\_TEXT}}
+\index{RED\_TEXT@{RED\_TEXT}!config.h@{config.h}}
+\doxysubsubsection{RED\_TEXT}
+{\footnotesize\ttfamily \label{config_8h_ac6b49286f191080eef7f1891a32b6596} 
+\#define RED\+\_\+\+TEXT~"{}\textbackslash{}x1B[31m"{}}
+
+
+
+ANSI-\/код для вывода текста красным цветом в терминале 
+
+\begin{DoxyNote}{Заметки}
+Используется для сообщений об ошибках 
+\end{DoxyNote}
+\index{config.h@{config.h}!RESET\_TEXT@{RESET\_TEXT}}
+\index{RESET\_TEXT@{RESET\_TEXT}!config.h@{config.h}}
+\doxysubsubsection{RESET\_TEXT}
+{\footnotesize\ttfamily \label{config_8h_a038ea114ff75076e05108db5158bef66} 
+\#define RESET\+\_\+\+TEXT~"{}\textbackslash{}x1B[0m"{}}
+
+
+
+ANSI-\/код для сброса цветового форматирования в терминале 
+
+\begin{DoxyNote}{Заметки}
+Должен использоваться после цветных сообщений 
+\end{DoxyNote}
+
+
+\label{doc-typedef-members}
+\doxysubsection{Типы}
+\index{config.h@{config.h}!TemperatureNode@{TemperatureNode}}
+\index{TemperatureNode@{TemperatureNode}!config.h@{config.h}}
+\doxysubsubsection{TemperatureNode}
+{\footnotesize\ttfamily \label{config_8h_a716a0003ac246a011bd1998b4e2a53fe} 
+typedef struct Temperature\+Node Temperature\+Node}
+
+
+
+Узел односвязного списка для \doxyref{Temperature\+Record}{стр.}{struct_temperature_record}. 
+
+Используется для организации связного списка записей 

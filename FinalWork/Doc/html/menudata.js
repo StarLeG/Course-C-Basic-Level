@@ -23,17 +23,17 @@
  @licend  The above is the entire license notice for the JavaScript code in this file
 */
 var menudata={children:[
-{text:"Main Page",url:"index.html"},
-{text:"Data Structures",url:"annotated.html",children:[
-{text:"Data Structures",url:"annotated.html"},
-{text:"Data Structure Index",url:"classes.html"},
-{text:"Data Fields",url:"functions.html",children:[
-{text:"All",url:"functions.html"},
-{text:"Variables",url:"functions_vars.html"}]}]},
-{text:"Files",url:"files.html",children:[
-{text:"File List",url:"files.html"},
-{text:"Globals",url:"globals.html",children:[
-{text:"All",url:"globals.html",children:[
+{text:"Титульная страница",url:"index.html"},
+{text:"Структуры данных",url:"annotated.html",children:[
+{text:"Структуры данных",url:"annotated.html"},
+{text:"Алфавитный указатель структур данных",url:"classes.html"},
+{text:"Поля структур",url:"functions.html",children:[
+{text:"Указатель",url:"functions.html"},
+{text:"Переменные",url:"functions_vars.html"}]}]},
+{text:"Файлы",url:"files.html",children:[
+{text:"Файлы",url:"files.html"},
+{text:"Список членов всех файлов",url:"globals.html",children:[
+{text:"Указатель",url:"globals.html",children:[
 {text:"a",url:"globals.html#index_a"},
 {text:"b",url:"globals.html#index_b"},
 {text:"c",url:"globals.html#index_c"},
@@ -48,7 +48,7 @@ var menudata={children:[
 {text:"r",url:"globals.html#index_r"},
 {text:"s",url:"globals.html#index_s"},
 {text:"t",url:"globals.html#index_t"}]},
-{text:"Functions",url:"globals_func.html",children:[
+{text:"Функции",url:"globals_func.html",children:[
 {text:"a",url:"globals_func.html#index_a"},
 {text:"c",url:"globals_func.html#index_c"},
 {text:"d",url:"globals_func.html#index_d"},
@@ -60,6 +60,6 @@ var menudata={children:[
 {text:"m",url:"globals_func.html#index_m"},
 {text:"p",url:"globals_func.html#index_p"},
 {text:"r",url:"globals_func.html#index_r"}]},
-{text:"Variables",url:"globals_vars.html"},
-{text:"Typedefs",url:"globals_type.html"},
-{text:"Macros",url:"globals_defs.html"}]}]}]}
+{text:"Переменные",url:"globals_vars.html"},
+{text:"Определения типов",url:"globals_type.html"},
+{text:"Макросы",url:"globals_defs.html"}]}]}]}

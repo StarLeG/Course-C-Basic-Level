@@ -1,5 +1,5 @@
-\doxysection{Temperature\+Record Struct Reference}
-\hypertarget{struct_temperature_record}{}\label{struct_temperature_record}\index{TemperatureRecord@{TemperatureRecord}}
+\doxysection{Структура Temperature\+Record}
+\label{struct_temperature_record}\index{TemperatureRecord@{TemperatureRecord}}
 
 
 Структура для хранения данных о температуре  
@@ -9,32 +9,104 @@
 
 {\ttfamily \#include $<$config.\+h$>$}
 
-\doxysubsubsection*{Data Fields}
+\doxysubsubsection*{Поля данных}
 \begin{DoxyCompactItemize}
 \item 
-\Hypertarget{struct_temperature_record_a57ca98d8f6d4baf0fe41c583c7dcb0d5}\label{struct_temperature_record_a57ca98d8f6d4baf0fe41c583c7dcb0d5} 
-uint16\+\_\+t {\bfseries year}
-\item 
-\Hypertarget{struct_temperature_record_a3e00faf7fbf9805e9ec4d2edd6339050}\label{struct_temperature_record_a3e00faf7fbf9805e9ec4d2edd6339050} 
-uint8\+\_\+t {\bfseries month}
-\item 
-\Hypertarget{struct_temperature_record_a72369a1087b2aeffe374bb054cb97c12}\label{struct_temperature_record_a72369a1087b2aeffe374bb054cb97c12} 
-uint8\+\_\+t {\bfseries day}
-\item 
-\Hypertarget{struct_temperature_record_a00a531a34a1d603329df5778f1203ab6}\label{struct_temperature_record_a00a531a34a1d603329df5778f1203ab6} 
-uint8\+\_\+t {\bfseries hours}
-\item 
-\Hypertarget{struct_temperature_record_a7acca8be0094a19be6e308ac05924c4f}\label{struct_temperature_record_a7acca8be0094a19be6e308ac05924c4f} 
-uint8\+\_\+t {\bfseries minutes}
-\item 
-\Hypertarget{struct_temperature_record_a64d67c7a0daa7db501c94c8c3a47cef5}\label{struct_temperature_record_a64d67c7a0daa7db501c94c8c3a47cef5} 
-int8\+\_\+t {\bfseries temperature}
-\end{DoxyCompactItemize}
+uint16\+\_\+t \textbf{ year}
+\begin{DoxyCompactList}\small\item\em Год измерения (1900-\/2100) \end{DoxyCompactList}\item 
+uint8\+\_\+t \textbf{ month}
+\begin{DoxyCompactList}\small\item\em Месяц измерения (1-\/12) \end{DoxyCompactList}\item 
+uint8\+\_\+t \textbf{ day}
+\begin{DoxyCompactList}\small\item\em День измерения (1-\/31) \end{DoxyCompactList}\item 
+uint8\+\_\+t \textbf{ hours}
+\begin{DoxyCompactList}\small\item\em Часы измерения (0-\/23) \end{DoxyCompactList}\item 
+uint8\+\_\+t \textbf{ minutes}
+\begin{DoxyCompactList}\small\item\em Минуты измерения (0-\/59) \end{DoxyCompactList}\item 
+int8\+\_\+t \textbf{ temperature}
+\begin{DoxyCompactList}\small\item\em Значение температуры (-\/99..+99 °C) \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
-\doxysubsection{Detailed Description}
+\doxysubsection{Подробное описание}
 Структура для хранения данных о температуре 
 
-The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+Содержит полную информацию о моменте измерения температуры 
+
+\label{doc-variable-members}
+\doxysubsection{Поля}
+\index{TemperatureRecord@{TemperatureRecord}!day@{day}}
+\index{day@{day}!TemperatureRecord@{TemperatureRecord}}
+\doxysubsubsection{day}
+{\footnotesize\ttfamily \label{struct_temperature_record_a72369a1087b2aeffe374bb054cb97c12} 
+uint8\+\_\+t day}
+
+
+
+День измерения (1-\/31) 
+
+Автоматически валидируется в зависимости от месяца \index{TemperatureRecord@{TemperatureRecord}!hours@{hours}}
+\index{hours@{hours}!TemperatureRecord@{TemperatureRecord}}
+\doxysubsubsection{hours}
+{\footnotesize\ttfamily \label{struct_temperature_record_a00a531a34a1d603329df5778f1203ab6} 
+uint8\+\_\+t hours}
+
+
+
+Часы измерения (0-\/23) 
+
+\begin{DoxyNote}{Заметки}
+24-\/часовой формат 
+\end{DoxyNote}
+\index{TemperatureRecord@{TemperatureRecord}!minutes@{minutes}}
+\index{minutes@{minutes}!TemperatureRecord@{TemperatureRecord}}
+\doxysubsubsection{minutes}
+{\footnotesize\ttfamily \label{struct_temperature_record_a7acca8be0094a19be6e308ac05924c4f} 
+uint8\+\_\+t minutes}
+
+
+
+Минуты измерения (0-\/59) 
+
+\index{TemperatureRecord@{TemperatureRecord}!month@{month}}
+\index{month@{month}!TemperatureRecord@{TemperatureRecord}}
+\doxysubsubsection{month}
+{\footnotesize\ttfamily \label{struct_temperature_record_a3e00faf7fbf9805e9ec4d2edd6339050} 
+uint8\+\_\+t month}
+
+
+
+Месяц измерения (1-\/12) 
+
+\begin{DoxyNote}{Заметки}
+1 -\/ Январь, ..., 12 -\/ Декабрь 
+\end{DoxyNote}
+\index{TemperatureRecord@{TemperatureRecord}!temperature@{temperature}}
+\index{temperature@{temperature}!TemperatureRecord@{TemperatureRecord}}
+\doxysubsubsection{temperature}
+{\footnotesize\ttfamily \label{struct_temperature_record_a64d67c7a0daa7db501c94c8c3a47cef5} 
+int8\+\_\+t temperature}
+
+
+
+Значение температуры (-\/99..+99 °C) 
+
+\begin{DoxyWarning}{Предупреждения}
+Значения за пределами диапазона отбрасываются 
+\end{DoxyWarning}
+\index{TemperatureRecord@{TemperatureRecord}!year@{year}}
+\index{year@{year}!TemperatureRecord@{TemperatureRecord}}
+\doxysubsubsection{year}
+{\footnotesize\ttfamily \label{struct_temperature_record_a57ca98d8f6d4baf0fe41c583c7dcb0d5} 
+uint16\+\_\+t year}
+
+
+
+Год измерения (1900-\/2100) 
+
+\begin{DoxyWarning}{Предупреждения}
+Значения вне диапазона считаются невалидными 
+\end{DoxyWarning}
+
+
+Объявления и описания членов структуры находятся в файле\+:\begin{DoxyCompactItemize}
 \item 
-D\+:/\+Qt\+\_\+\+Project/\+MFTI/\+Course-\/\+C-\/\+Basic-\/\+Level/\+Final\+Work/\mbox{\hyperlink{config_8h}{config.\+h}}\end{DoxyCompactItemize}
+D\+:/\+Qt\+\_\+\+Project/\+MFTI/\+Course-\/\+C-\/\+Basic-\/\+Level/\+Final\+Work/\textbf{ config.\+h}\end{DoxyCompactItemize}

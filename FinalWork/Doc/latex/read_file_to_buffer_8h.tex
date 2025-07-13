@@ -1,5 +1,5 @@
-\doxysection{D\+:/\+Qt\+\_\+\+Project/\+MFTI/\+Course-\/\+C-\/\+Basic-\/\+Level/\+Final\+Work/read\+File\+To\+Buffer.h File Reference}
-\hypertarget{read_file_to_buffer_8h}{}\label{read_file_to_buffer_8h}\index{D:/Qt\_Project/MFTI/Course-\/C-\/Basic-\/Level/FinalWork/readFileToBuffer.h@{D:/Qt\_Project/MFTI/Course-\/C-\/Basic-\/Level/FinalWork/readFileToBuffer.h}}
+\doxysection{Файл D\+:/\+Qt\+\_\+\+Project/\+MFTI/\+Course-\/\+C-\/\+Basic-\/\+Level/\+Final\+Work/read\+File\+To\+Buffer.h}
+\label{read_file_to_buffer_8h}\index{D:/Qt\_Project/MFTI/Course-\/C-\/Basic-\/Level/FinalWork/readFileToBuffer.h@{D:/Qt\_Project/MFTI/Course-\/C-\/Basic-\/Level/FinalWork/readFileToBuffer.h}}
 
 
 Заголовочный файл для функций чтения файлов  
@@ -10,50 +10,124 @@
 {\ttfamily \#include $<$string.\+h$>$}\newline
 {\ttfamily \#include $<$ctype.\+h$>$}\newline
 {\ttfamily \#include "{}config.\+h"{}}\newline
-\doxysubsubsection*{Functions}
+\doxysubsubsection*{Макросы}
 \begin{DoxyCompactItemize}
 \item 
-int \mbox{\hyperlink{read_file_to_buffer_8h_a2b1d20e37df3855f78444e99668b79be}{read\+File\+To\+Buffer}} (char \texorpdfstring{$\ast$}{*}file\+Name, char \texorpdfstring{$\ast$}{*}buffer)
+\#define \textbf{ SUCCESS}~0
+\begin{DoxyCompactList}\small\item\em Код успешного выполнения операции \end{DoxyCompactList}\item 
+\#define \textbf{ FILE\+\_\+\+OPEN\+\_\+\+ERROR}~-\/1
+\begin{DoxyCompactList}\small\item\em Ошибка открытия файла \end{DoxyCompactList}\item 
+\#define \textbf{ INVALID\+\_\+\+FORMAT}~-\/2
+\begin{DoxyCompactList}\small\item\em Ошибка формата данных \end{DoxyCompactList}\item 
+\#define \textbf{ BUFFER\+\_\+\+OVERFLOW}~-\/3
+\begin{DoxyCompactList}\small\item\em Переполнение буфера \end{DoxyCompactList}\item 
+\#define \textbf{ INVALID\+\_\+\+EXTENSION}~-\/4
+\begin{DoxyCompactList}\small\item\em Некорректное расширение файла \end{DoxyCompactList}\item 
+\#define \textbf{ INVALID\+\_\+\+PARAM}~-\/5
+\begin{DoxyCompactList}\small\item\em Некорректный параметр \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Функции}
+\begin{DoxyCompactItemize}
+\item 
+int \textbf{ read\+File\+To\+Buffer} (char $\ast$file\+Name)
 \begin{DoxyCompactList}\small\item\em Читает содержимое файла в буфер \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
-\doxysubsection{Detailed Description}
+\doxysubsection{Подробное описание}
 Заголовочный файл для функций чтения файлов 
 
 
 
+\label{doc-define-members}
+\doxysubsection{Макросы}
+\index{readFileToBuffer.h@{readFileToBuffer.h}!BUFFER\_OVERFLOW@{BUFFER\_OVERFLOW}}
+\index{BUFFER\_OVERFLOW@{BUFFER\_OVERFLOW}!readFileToBuffer.h@{readFileToBuffer.h}}
+\doxysubsubsection{BUFFER\_OVERFLOW}
+{\footnotesize\ttfamily \label{read_file_to_buffer_8h_a6f03a5b05aec3a0d5f69128cee8b4968} 
+\#define BUFFER\+\_\+\+OVERFLOW~-\/3}
+
+
+
+Переполнение буфера 
+
+Возвращается при попытке добавить запись сверх установленного лимита MAX\+\_\+\+RECORDS \index{readFileToBuffer.h@{readFileToBuffer.h}!FILE\_OPEN\_ERROR@{FILE\_OPEN\_ERROR}}
+\index{FILE\_OPEN\_ERROR@{FILE\_OPEN\_ERROR}!readFileToBuffer.h@{readFileToBuffer.h}}
+\doxysubsubsection{FILE\_OPEN\_ERROR}
+{\footnotesize\ttfamily \label{read_file_to_buffer_8h_abde48ee05fd7b864a4f44ed92afd066e} 
+\#define FILE\+\_\+\+OPEN\+\_\+\+ERROR~-\/1}
+
+
+
+Ошибка открытия файла 
+
+Возвращается когда файл не может быть открыт (не найден, нет прав доступа и т.\+д.) \index{readFileToBuffer.h@{readFileToBuffer.h}!INVALID\_EXTENSION@{INVALID\_EXTENSION}}
+\index{INVALID\_EXTENSION@{INVALID\_EXTENSION}!readFileToBuffer.h@{readFileToBuffer.h}}
+\doxysubsubsection{INVALID\_EXTENSION}
+{\footnotesize\ttfamily \label{read_file_to_buffer_8h_a98e3929e6949250eb69f579b5fa83f3d} 
+\#define INVALID\+\_\+\+EXTENSION~-\/4}
+
+
+
+Некорректное расширение файла 
+
+Возвращается когда файл имеет недопустимое расширение (требуется .csv) \index{readFileToBuffer.h@{readFileToBuffer.h}!INVALID\_FORMAT@{INVALID\_FORMAT}}
+\index{INVALID\_FORMAT@{INVALID\_FORMAT}!readFileToBuffer.h@{readFileToBuffer.h}}
+\doxysubsubsection{INVALID\_FORMAT}
+{\footnotesize\ttfamily \label{read_file_to_buffer_8h_a93760118ddb4cf03cfc65b2f2068930b} 
+\#define INVALID\+\_\+\+FORMAT~-\/2}
+
+
+
+Ошибка формата данных 
+
+Возвращается при несоответствии формата данных ожидаемому (например, некорректный CSV) \index{readFileToBuffer.h@{readFileToBuffer.h}!INVALID\_PARAM@{INVALID\_PARAM}}
+\index{INVALID\_PARAM@{INVALID\_PARAM}!readFileToBuffer.h@{readFileToBuffer.h}}
+\doxysubsubsection{INVALID\_PARAM}
+{\footnotesize\ttfamily \label{read_file_to_buffer_8h_a84b8de4d668a81384973b5f84430fc4c} 
+\#define INVALID\+\_\+\+PARAM~-\/5}
+
+
+
+Некорректный параметр 
+
+Возвращается при передаче недопустимых параметров в функцию (например, NULL вместо имени файла) \index{readFileToBuffer.h@{readFileToBuffer.h}!SUCCESS@{SUCCESS}}
+\index{SUCCESS@{SUCCESS}!readFileToBuffer.h@{readFileToBuffer.h}}
+\doxysubsubsection{SUCCESS}
+{\footnotesize\ttfamily \label{read_file_to_buffer_8h_aa90cac659d18e8ef6294c7ae337f6b58} 
+\#define SUCCESS~0}
+
+
+
+Код успешного выполнения операции 
+
+Возвращается при корректном завершении функции без ошибок 
+
 \label{doc-func-members}
-\Hypertarget{read_file_to_buffer_8h_doc-func-members}
-\doxysubsection{Function Documentation}
-\Hypertarget{read_file_to_buffer_8h_a2b1d20e37df3855f78444e99668b79be}\index{readFileToBuffer.h@{readFileToBuffer.h}!readFileToBuffer@{readFileToBuffer}}
+\doxysubsection{Функции}
+\index{readFileToBuffer.h@{readFileToBuffer.h}!readFileToBuffer@{readFileToBuffer}}
 \index{readFileToBuffer@{readFileToBuffer}!readFileToBuffer.h@{readFileToBuffer.h}}
-\doxysubsubsection{\texorpdfstring{readFileToBuffer()}{readFileToBuffer()}}
-{\footnotesize\ttfamily \label{read_file_to_buffer_8h_a2b1d20e37df3855f78444e99668b79be} 
-int read\+File\+To\+Buffer (\begin{DoxyParamCaption}\item[{char \texorpdfstring{$\ast$}{*}}]{file\+Name}{, }\item[{char \texorpdfstring{$\ast$}{*}}]{buffer}{}\end{DoxyParamCaption})}
+\doxysubsubsection{readFileToBuffer()}
+{\footnotesize\ttfamily \label{read_file_to_buffer_8h_ada12e1997ced9a813d0dcea2d9310b5c} 
+int read\+File\+To\+Buffer (\begin{DoxyParamCaption}\item[{char $\ast$}]{file\+Name}{}\end{DoxyParamCaption})}
 
 
 
 Читает содержимое файла в буфер 
 
 
-\begin{DoxyParams}{Parameters}
+\begin{DoxyParams}{Аргументы}
 {\em file\+Name} & Имя файла для чтения \\
 \hline
-{\em buffer} & Буфер для хранения содержимого \\
-\hline
 \end{DoxyParams}
-\begin{DoxyReturn}{Returns}
+\begin{DoxyReturn}{Возвращает}
 int Код статуса (0 при успехе, отрицательный при ошибках)
 \end{DoxyReturn}
 Читает содержимое файла в буфер
 
 
-\begin{DoxyParams}{Parameters}
-{\em file\+Name} & Имя файла для чтения \\
-\hline
-{\em buffer} & Буфер для хранения содержимого файла \\
+\begin{DoxyParams}{Аргументы}
+{\em file\+Name} & Имя файла для чтения $\ast$ \\
 \hline
 \end{DoxyParams}
-\begin{DoxyReturn}{Returns}
+\begin{DoxyReturn}{Возвращает}
 int Код статуса (SUCCESS или код ошибки) 
 \end{DoxyReturn}

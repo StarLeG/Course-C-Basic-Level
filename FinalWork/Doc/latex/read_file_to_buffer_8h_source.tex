@@ -1,6 +1,6 @@
 \doxysection{read\+File\+To\+Buffer.\+h}
-\hypertarget{read_file_to_buffer_8h_source}{}\label{read_file_to_buffer_8h_source}\index{D:/Qt\_Project/MFTI/Course-\/C-\/Basic-\/Level/FinalWork/readFileToBuffer.h@{D:/Qt\_Project/MFTI/Course-\/C-\/Basic-\/Level/FinalWork/readFileToBuffer.h}}
-\mbox{\hyperlink{read_file_to_buffer_8h}{Go to the documentation of this file.}}
+\label{read_file_to_buffer_8h_source}\index{D:/Qt\_Project/MFTI/Course-\/C-\/Basic-\/Level/FinalWork/readFileToBuffer.h@{D:/Qt\_Project/MFTI/Course-\/C-\/Basic-\/Level/FinalWork/readFileToBuffer.h}}
+\textbf{ См. документацию.}
 \begin{DoxyCode}{0}
 \DoxyCodeLine{00001\ }
 \DoxyCodeLine{00005\ }
@@ -10,9 +10,20 @@
 \DoxyCodeLine{00009\ \textcolor{preprocessor}{\#include\ <stdlib.h>}}
 \DoxyCodeLine{00010\ \textcolor{preprocessor}{\#include\ <string.h>}}
 \DoxyCodeLine{00011\ \textcolor{preprocessor}{\#include\ <ctype.h>}}
-\DoxyCodeLine{00012\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{config_8h}{config.h}}"{}}}
+\DoxyCodeLine{00012\ \textcolor{preprocessor}{\#include\ "{}config.h"{}}}
 \DoxyCodeLine{00013\ }
+\DoxyCodeLine{00019\ \textcolor{preprocessor}{\#define\ SUCCESS\ 0}}
 \DoxyCodeLine{00020\ }
-\DoxyCodeLine{00021\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{read_file_to_buffer_8h_a2b1d20e37df3855f78444e99668b79be}{readFileToBuffer}}(\textcolor{keywordtype}{char}\ *fileName,\ \textcolor{keywordtype}{char}\ *buffer);}
+\DoxyCodeLine{00026\ \textcolor{preprocessor}{\#define\ FILE\_OPEN\_ERROR\ -\/1}}
+\DoxyCodeLine{00027\ }
+\DoxyCodeLine{00033\ \textcolor{preprocessor}{\#define\ INVALID\_FORMAT\ -\/2}}
+\DoxyCodeLine{00034\ }
+\DoxyCodeLine{00040\ \textcolor{preprocessor}{\#define\ BUFFER\_OVERFLOW\ -\/3}}
+\DoxyCodeLine{00041\ }
+\DoxyCodeLine{00047\ \textcolor{preprocessor}{\#define\ INVALID\_EXTENSION\ -\/4}}
+\DoxyCodeLine{00048\ }
+\DoxyCodeLine{00054\ \textcolor{preprocessor}{\#define\ INVALID\_PARAM\ -\/5}}
+\DoxyCodeLine{00055\ }
+\DoxyCodeLine{00061\ \textcolor{keywordtype}{int}\ readFileToBuffer(\textcolor{keywordtype}{char}\ *fileName);}
 
 \end{DoxyCode}

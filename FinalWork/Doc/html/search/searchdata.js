@@ -24,13 +24,13 @@ var indexSectionNames =
 
 var indexSectionLabels =
 {
-  0: "All",
-  1: "Data Structures",
-  2: "Files",
-  3: "Functions",
-  4: "Variables",
-  5: "Typedefs",
-  6: "Macros",
-  7: "Pages"
+  0: "Указатель",
+  1: "Структуры данных",
+  2: "Файлы",
+  3: "Функции",
+  4: "Переменные",
+  5: "Определения типов",
+  6: "Макросы",
+  7: "Страницы"
 };
 
