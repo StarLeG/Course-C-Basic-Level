@@ -33,7 +33,6 @@ int readFileToBuffer(char *fileName)
     char line[256];
     size_t linesRead = 0;
 
-   
     printf("Loading data...\n");
     fseek(file, 0, SEEK_END);
     long fileSize = ftell(file);
@@ -56,7 +55,16 @@ int readFileToBuffer(char *fileName)
         int Y, M, D, H, m, T;
         if (sscanf(line, "%d;%d;%d;%d;%d;%d", &Y, &M, &D, &H, &m, &T) != 6)
         {
+            printf(RED_TEXT "Error in line %zu: invalid format\n" RESET_TEXT, linesRead);
             continue; 
+        }
+
+        // Проверка корректности значений
+        if (Y < 1900 || Y > 2100 || M < 1 || M > 12 || D < 1 || D > 31 || 
+            H > 23 || m > 59 || T < -99 || T > 99)
+        {
+            printf(RED_TEXT "Error in line %zu: invalid values\n" RESET_TEXT, linesRead);
+            continue;
         }
 
         if (recordsCount >= MAX_RECORDS)
